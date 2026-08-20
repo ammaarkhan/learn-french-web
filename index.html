@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=9">
+<link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
 
@@ -18,11 +18,14 @@
     <button data-go="today">today</button>
     <button data-go="gaps">gaps</button>
     <button data-go="words">words</button>
+    <span class="sync-dot idle" id="sync-dot" title="synced"></span>
   </nav>
 </header>
 
+<p class="write-warning" id="write-warning" role="alert" hidden></p>
+
 <main id="main"></main>
 
-<script src="app.js?v=9"></script>
+<script src="app.js?v=10"></script>
 </body>
 </html>

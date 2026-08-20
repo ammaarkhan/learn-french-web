@@ -11,7 +11,16 @@ const MAX_RUNG = RUNGS.length;
 // a word's production card unlocks once its recognition card reaches this rung
 const MATURE_RUNG = 3;
 
-const LS_KEY = "lf.progress.v1";
+const DATA_REPO = "ammaarkhan/learn-french-data";
+const API = `https://api.github.com/repos/${DATA_REPO}/contents`;
+const LS = { token: "lf.token", prog: "lf.progress.v1" };
+
+/* On localhost the app keeps progress in this browser only: no token, no network, same app.
+   Anywhere else it reads and writes progress.json in the private data repo, so every device
+   sees the same ladder. */
+const LOCAL = ["localhost", "127.0.0.1"].includes(location.hostname);
+
+const PUSH_DEBOUNCE_MS = 2500;
 
 const GRADES = [
   { key: "blank", name: "blank", gap: true },
@@ -24,7 +33,10 @@ const GRADES = [
 
 const state = {
   words: [],
-  prog: null,
+  token: localStorage.getItem(LS.token) || "",
+  prog: null, // { data, sha, dirty }
+  sync: "idle",
+  writeError: null,
   view: "today",
   session: null,
   reveal: false,
@@ -64,25 +76,209 @@ function ivlText(days) {
 // ---------- progress ----------
 
 function emptyProgress() {
-  return { version: 1, cards: {}, gaps: [], sessions: [] };
+  return { version: 1, cards: {}, gaps: [], sessions: [], updatedAt: null };
 }
 
-const P = () => state.prog;
+const P = () => state.prog.data;
 
-function loadProgress() {
+function loadProgLocal() {
   try {
-    const raw = localStorage.getItem(LS_KEY);
-    state.prog = raw ? JSON.parse(raw) : emptyProgress();
+    const raw = localStorage.getItem(LS.prog);
+    if (raw) return JSON.parse(raw);
   } catch (e) {
-    state.prog = emptyProgress();
+    /* fall through to empty */
   }
-  for (const k of ["cards", "gaps", "sessions"]) {
-    if (!state.prog[k]) state.prog[k] = k === "cards" ? {} : [];
+  return null;
+}
+
+function saveProgLocal() {
+  localStorage.setItem(LS.prog, JSON.stringify(state.prog));
+}
+
+/* Every mutation goes through here: persist locally at once, then push when the dust settles. */
+function save() {
+  state.prog.dirty = true;
+  saveProgLocal();
+  if (!LOCAL) schedulePush();
+}
+
+// ---------- github ----------
+
+const b64encode = (t) => btoa(String.fromCharCode(...new TextEncoder().encode(t)));
+const b64decode = (t) =>
+  new TextDecoder().decode(Uint8Array.from(atob(t.replace(/\n/g, "")), (c) => c.charCodeAt(0)));
+
+async function ghGet(file) {
+  const res = await fetch(`${API}/${file}`, {
+    headers: { Authorization: `Bearer ${state.token}`, Accept: "application/vnd.github+json" },
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    const err = new Error(`GET ${file} ${res.status}`);
+    err.status = res.status;
+    throw err;
+  }
+  const j = await res.json();
+  return { data: JSON.parse(b64decode(j.content)), sha: j.sha };
+}
+
+async function ghPut(file, data, sha, message) {
+  const body = { message, content: b64encode(JSON.stringify(data, null, 1)) };
+  if (sha) body.sha = sha;
+  const res = await fetch(`${API}/${file}`, {
+    method: "PUT",
+    headers: { Authorization: `Bearer ${state.token}`, Accept: "application/vnd.github+json" },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) {
+    const err = new Error(`PUT ${file} ${res.status}`);
+    err.status = res.status;
+    throw err;
+  }
+  return (await res.json()).content.sha;
+}
+
+// ---------- sync ----------
+
+function setSync(status) {
+  state.sync = status;
+  const dot = document.getElementById("sync-dot");
+  if (dot) {
+    dot.className = "sync-dot " + status;
+    dot.title = { idle: "synced", syncing: "syncing", offline: "offline", error: "not saving" }[status];
   }
 }
 
-function save() {
-  localStorage.setItem(LS_KEY, JSON.stringify(state.prog));
+const newer = (a, b) => {
+  if (!a) return b;
+  if (!b) return a;
+  return (b.updatedAt || "") > (a.updatedAt || "") ? b : a;
+};
+
+/* Two devices reviewing the same day must not clobber each other: cards merge per id by
+   updatedAt, gaps and sessions concatenate and dedupe. */
+function mergeProgress(a, b) {
+  const out = emptyProgress();
+  const keys = new Set([...Object.keys(a.cards || {}), ...Object.keys(b.cards || {})]);
+  for (const k of keys) out.cards[k] = newer((a.cards || {})[k], (b.cards || {})[k]);
+
+  const dedupe = (arr, keyf) => {
+    const seen = new Set();
+    return arr.filter((x) => {
+      const k = keyf(x);
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
+  };
+  out.gaps = dedupe(
+    [...(a.gaps || []), ...(b.gaps || [])].sort((x, y) => (y.at || "").localeCompare(x.at || "")),
+    (x) => x.id + x.at
+  ).slice(0, 200);
+  out.sessions = dedupe(
+    [...(a.sessions || []), ...(b.sessions || [])].sort((x, y) =>
+      (y.at || "").localeCompare(x.at || "")
+    ),
+    (x) => x.at
+  ).slice(0, 200);
+  return out;
+}
+
+async function refreshRemote() {
+  if (LOCAL || !state.token) return;
+  setSync("syncing");
+  try {
+    const pr = await ghGet("progress.json");
+    if (state.prog && state.prog.dirty) {
+      state.prog = { data: mergeProgress(state.prog.data, pr.data), sha: pr.sha, dirty: true };
+      saveProgLocal();
+      schedulePush(0);
+    } else {
+      state.prog = { data: pr.data, sha: pr.sha, dirty: false };
+      saveProgLocal();
+      setSync("idle");
+    }
+    render();
+  } catch (e) {
+    if (e.status === 401 || e.status === 403) {
+      setSync("error");
+      state.token = "";
+      localStorage.removeItem(LS.token);
+      render("that key was not accepted. try again.");
+    } else if (e.status === 404) {
+      /* A fine-grained token returns 404, not 403, for a repo it cannot see. So this is either
+         "progress.json does not exist yet" or "this key cannot see learn-french-data" and the
+         app cannot tell them apart. Create it on first write and let a failed PUT say which. */
+      state.prog = state.prog || { data: emptyProgress(), sha: null, dirty: true };
+      state.prog.sha = null;
+      state.prog.dirty = true;
+      saveProgLocal();
+      schedulePush(0);
+      render();
+    } else {
+      setSync("offline");
+    }
+  }
+}
+
+let pushTimer = null;
+function schedulePush(ms = PUSH_DEBOUNCE_MS) {
+  clearTimeout(pushTimer);
+  pushTimer = setTimeout(pushProgress, ms);
+}
+
+async function pushProgress() {
+  if (LOCAL || !state.token || !state.prog || !state.prog.dirty) return;
+  setSync("syncing");
+  try {
+    state.prog.data.updatedAt = stamp();
+    const sha = await ghPut("progress.json", state.prog.data, state.prog.sha, `progress · ${stamp()}`);
+    state.prog.sha = sha;
+    state.prog.dirty = false;
+    saveProgLocal();
+    setSync("idle");
+    if (state.writeError) {
+      state.writeError = null;
+      render();
+    }
+  } catch (e) {
+    if (e.status === 409 || e.status === 422) {
+      try {
+        const remote = await ghGet("progress.json");
+        state.prog.data = mergeProgress(state.prog.data, remote.data);
+        state.prog.sha = remote.sha;
+        state.prog.sha = await ghPut(
+          "progress.json",
+          state.prog.data,
+          state.prog.sha,
+          `progress merge · ${stamp()}`
+        );
+        state.prog.dirty = false;
+        saveProgLocal();
+        setSync("idle");
+        render();
+      } catch (e2) {
+        setSync("error");
+        failWrite(e2);
+      }
+    } else if (e.status === 401 || e.status === 403 || e.status === 404) {
+      /* Never treat this as offline. Offline retries forever, looks fine, and silently keeps
+         every review in this one browser. */
+      setSync("error");
+      failWrite(e);
+    } else {
+      setSync("offline");
+      setTimeout(schedulePush, 20000);
+    }
+  }
+}
+
+function failWrite(e) {
+  state.writeError =
+    e.status === 401 || e.status === 403 || e.status === 404
+      ? "This key cannot write to learn-french-data. It needs that repo added to it with Contents: Read and write. Nothing is being saved beyond this browser until that is fixed."
+      : "Could not save to the repo. Your work is still in this browser.";
+  render();
 }
 
 // ---------- cards ----------
@@ -450,6 +646,19 @@ function viewReview() {
   </div>`;
 }
 
+function viewGate(msg) {
+  return `<div class="page gate">
+    <h1 class="page-title">français</h1>
+    <p class="lede">Vocabulary on a spaced ladder. This device needs the key to reach your progress.</p>
+    ${msg ? `<p class="gate-msg">${esc(msg)}</p>` : ""}
+    <label class="meta" for="gate-token">key</label>
+    <input type="password" id="gate-token" placeholder="github_pat_…" autocomplete="off" />
+    <button class="start" id="gate-go">Unlock</button>
+    <p class="hint">A fine-grained GitHub token with <code>Contents: Read and write</code> on
+    <code>learn-french-data</code>. It is stored in this browser only.</p>
+  </div>`;
+}
+
 function viewGaps() {
   const gaps = P().gaps;
   return `<div class="page">
@@ -493,13 +702,40 @@ function viewWords() {
   </div>`;
 }
 
-function render() {
+function render(gateMsg) {
   const main = document.getElementById("main");
+  const nav = document.querySelector(".tabs");
+  const warn = document.getElementById("write-warning");
+
+  if (!LOCAL && !state.token) {
+    nav.hidden = true;
+    warn.hidden = true;
+    main.innerHTML = viewGate(gateMsg);
+    const go = () => {
+      const t = document.getElementById("gate-token").value.trim();
+      if (!t) return;
+      state.token = t;
+      localStorage.setItem(LS.token, t);
+      render();
+      refreshRemote();
+    };
+    document.getElementById("gate-go").onclick = go;
+    document.getElementById("gate-token").onkeydown = (e) => {
+      if (e.key === "Enter") go();
+    };
+    return;
+  }
+
+  nav.hidden = false;
+  warn.hidden = !state.writeError;
+  warn.textContent = state.writeError || "";
+
   const views = { today: viewToday, review: viewReview, gaps: viewGaps, words: viewWords };
   main.innerHTML = (views[state.view] || viewToday)();
   document.querySelectorAll(".tabs button").forEach((b) => {
     b.classList.toggle("on", b.dataset.go === state.view || (state.view === "review" && b.dataset.go === "today"));
   });
+  setSync(state.sync);
 }
 
 // ---------- tooltip ----------
@@ -565,13 +801,23 @@ document.addEventListener("keydown", (e) => {
 // ---------- boot ----------
 
 (async function boot() {
-  loadProgress();
+  const local = loadProgLocal();
+  state.prog = local && local.data ? local : { data: local || emptyProgress(), sha: null, dirty: false };
+
   try {
-    const res = await fetch("vocab.json?t=" + Date.now());
-    const data = await res.json();
-    state.words = data.words || [];
+    const res = await fetch("vocab.json?t=" + Date.now(), { cache: "no-store" });
+    state.words = (await res.json()).words || [];
   } catch (e) {
     state.words = [];
   }
   render();
+  refreshRemote();
+
+  // another device may have reviewed since this tab was opened
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden && !state.session) refreshRemote();
+  });
+  window.addEventListener("beforeunload", () => {
+    if (state.prog && state.prog.dirty) pushProgress();
+  });
 })();

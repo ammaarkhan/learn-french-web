@@ -622,3 +622,59 @@ a:focus-visible {
   text-transform: uppercase;
   color: var(--ink-soft);
 }
+
+/* ---------- sync ---------- */
+
+.sync-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  align-self: center;
+  background: var(--r3);
+  transition: background 200ms ease;
+}
+
+.sync-dot.syncing { background: var(--r1); }
+.sync-dot.offline { background: var(--rule); }
+.sync-dot.error   { background: var(--gap); }
+
+.write-warning {
+  margin: 0;
+  padding: 0.7rem 1.6rem;
+  background: var(--gap);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+/* ---------- gate ---------- */
+
+.gate { max-width: 26rem; }
+
+.gate input {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0 1.4rem;
+  padding: 0.75rem 0.85rem;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+}
+
+.gate input:focus {
+  outline: none;
+  border-color: var(--r4);
+}
+
+.gate .start { margin-top: 0; }
+
+.gate-msg {
+  color: var(--gap);
+  font-size: 0.98rem;
+  margin: 0 0 1.2rem;
+}
