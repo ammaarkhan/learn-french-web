@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "words": [
+    {
+      "id": "w001",
+      "fr": "bonjour",
+      "pos": "interj.",
+      "en": "hello, good morning",
+      "note": "",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w002",
+      "fr": "salut",
+      "pos": "interj.",
+      "en": "hi, bye",
+      "note": "informal, both greeting and farewell",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w003",
+      "fr": "bonsoir",
+      "pos": "interj.",
+      "en": "good evening",
+      "note": "",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w004",
+      "fr": "au revoir",
+      "pos": "interj.",
+      "en": "goodbye",
+      "note": "",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w005",
+      "fr": "merci",
+      "pos": "interj.",
+      "en": "thank you",
+      "note": "",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w006",
+      "fr": "s'il vous plaît",
+      "pos": "loc.",
+      "en": "please",
+      "note": "formal; s'il te plaît is informal",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w007",
+      "fr": "je m'appelle",
+      "pos": "loc. v.",
+      "en": "my name is",
+      "note": "literally 'I call myself'",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w008",
+      "fr": "enchanté",
+      "pos": "adj.",
+      "en": "nice to meet you",
+      "note": "enchantée if you are female",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w009",
+      "fr": "comment allez-vous",
+      "pos": "loc.",
+      "en": "how are you",
+      "note": "formal",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w010",
+      "fr": "ça va",
+      "pos": "loc.",
+      "en": "I'm fine, how's it going",
+      "note": "question and answer both",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w011",
+      "fr": "oui",
+      "pos": "adv.",
+      "en": "yes",
+      "note": "",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w012",
+      "fr": "non",
+      "pos": "adv.",
+      "en": "no",
+      "note": "",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w013",
+      "fr": "et toi",
+      "pos": "loc.",
+      "en": "and you",
+      "note": "informal; et vous is formal",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w014",
+      "fr": "madame",
+      "pos": "n.f.",
+      "en": "madam, Mrs",
+      "note": "",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w015",
+      "fr": "monsieur",
+      "pos": "n.m.",
+      "en": "sir, Mr",
+      "note": "",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w016",
+      "fr": "à bientôt",
+      "pos": "loc.",
+      "en": "see you soon",
+      "note": "",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w017",
+      "fr": "tu viens d'où",
+      "pos": "loc.",
+      "en": "where are you from",
+      "note": "Duolingo's phrasing; d'où viens-tu is the more formal inversion",
+      "added": "2026-08-20"
+    },
+    {
+      "id": "w018",
+      "fr": "je viens de",
+      "pos": "loc. v.",
+      "en": "I come from",
+      "note": "je viens du/de la/des depending on the place",
+      "added": "2026-08-20"
+    }
+  ]
+}
