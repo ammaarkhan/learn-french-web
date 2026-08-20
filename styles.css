@@ -30,6 +30,9 @@
 
 * { box-sizing: border-box; }
 
+/* an explicit display rule beats the hidden attribute, so make hidden win */
+[hidden] { display: none !important; }
+
 html, body {
   margin: 0;
   padding: 0;
