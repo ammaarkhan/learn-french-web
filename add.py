@@ -7,14 +7,38 @@
 
 Fields are french | pos | english | note. The short form (french = english) fills
 pos and note as blank. Duplicates on the french side are skipped.
+
+Every add commits and pushes vocab.json, so the words reach the phone without a
+separate deploy step. Only vocab.json is staged, so work in progress on the rest
+of the app stays local. Pass --no-push to skip it.
 """
 import json
 import re
+import subprocess
 import sys
 from datetime import date
 from pathlib import Path
 
-VOCAB = Path(__file__).parent / "vocab.json"
+HERE = Path(__file__).parent
+VOCAB = HERE / "vocab.json"
+
+
+def push(added):
+    """Commit vocab.json alone and push. Returns True if the words are live."""
+    names = ", ".join(e["fr"] for e in added)
+    if len(names) > 60:
+        names = names[:57] + "..."
+    message = f"Add {len(added)} word{'s' if len(added) > 1 else ''}: {names}"
+    for cmd in (["git", "add", "--", VOCAB.name],
+                ["git", "commit", "-q", "-m", message],
+                ["git", "push", "-q"]):
+        r = subprocess.run(cmd, cwd=HERE, capture_output=True, text=True)
+        if r.returncode != 0:
+            print(f"  ! push failed at `{' '.join(cmd)}`: {(r.stderr or r.stdout).strip()}")
+            print("  ! the words are saved locally but are NOT on the phone yet")
+            return False
+    print(f"  ↑ pushed: {message}")
+    return True
 
 
 def parse(raw):
@@ -38,6 +62,8 @@ def next_id(words):
 
 
 def main(argv):
+    wanted_push = "--no-push" not in argv
+    argv = [a for a in argv if a != "--no-push"]
     if not argv:
         print(__doc__)
         return 1
@@ -66,6 +92,9 @@ def main(argv):
     for fr in skipped:
         print(f"  · already there, skipped: {fr}")
     print(f"{len(added)} added, {len(words)} words total")
+
+    if added and wanted_push and not push(added):
+        return 1
     return 0
 
 

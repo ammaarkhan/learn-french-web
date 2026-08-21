@@ -312,6 +312,14 @@
       "en": "see you later today",
       "note": "same day only, unlike à bientôt",
       "added": "2026-08-21"
+    },
+    {
+      "id": "w040",
+      "fr": "bien sûr",
+      "pos": "adv.",
+      "en": "of course, certainly",
+      "note": "sûr with the circumflex means sure; sur without means on",
+      "added": "2026-08-21"
     }
   ]
 }
