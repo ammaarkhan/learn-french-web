@@ -144,6 +144,174 @@
       "en": "I come from",
       "note": "je viens du/de la/des depending on the place",
       "added": "2026-08-20"
+    },
+    {
+      "id": "w019",
+      "fr": "je suis indien",
+      "pos": "phrase",
+      "en": "I am Indian",
+      "note": "masculine; a woman says 'je suis indienne'",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w020",
+      "fr": "indien",
+      "pos": "adj.",
+      "en": "Indian",
+      "note": "fem. indienne; lowercase as an adjective, capitalised as a noun (un Indien)",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w021",
+      "fr": "je parle anglais et hindi",
+      "pos": "phrase",
+      "en": "I speak English and Hindi",
+      "note": "no article after parler; languages are lowercase",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w022",
+      "fr": "parler",
+      "pos": "v.",
+      "en": "to speak, to talk",
+      "note": "je parle, tu parles, il parle, nous parlons, vous parlez, ils parlent",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w023",
+      "fr": "bienvenue",
+      "pos": "interj.",
+      "en": "welcome",
+      "note": "",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w024",
+      "fr": "mon nom est",
+      "pos": "phrase",
+      "en": "my name is",
+      "note": "literal; je m'appelle is what people actually say",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w025",
+      "fr": "comment ça va",
+      "pos": "phrase",
+      "en": "how are you",
+      "note": "informal",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w026",
+      "fr": "comment vas-tu",
+      "pos": "phrase",
+      "en": "how are you",
+      "note": "informal, tu form",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w027",
+      "fr": "ça va bien",
+      "pos": "phrase",
+      "en": "I'm doing well",
+      "note": "",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w028",
+      "fr": "ça va mal",
+      "pos": "phrase",
+      "en": "I'm doing badly",
+      "note": "",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w029",
+      "fr": "ça va pas mal",
+      "pos": "phrase",
+      "en": "I'm not bad",
+      "note": "full form ça ne va pas mal; the ne drops in speech",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w030",
+      "fr": "comme ci, comme ça",
+      "pos": "phrase",
+      "en": "so-so",
+      "note": "answer to ça va",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w031",
+      "fr": "je viens d'Inde",
+      "pos": "phrase",
+      "en": "I'm from India",
+      "note": "de + Inde elides to d'Inde",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w032",
+      "fr": "s'il te plaît",
+      "pos": "phrase",
+      "en": "please",
+      "note": "informal, tu form",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w033",
+      "fr": "de rien",
+      "pos": "phrase",
+      "en": "you're welcome, it's nothing",
+      "note": "the reply to merci",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w034",
+      "fr": "excusez-moi",
+      "pos": "phrase",
+      "en": "excuse me",
+      "note": "vous form; excuse-moi to someone you tutoie",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w035",
+      "fr": "pardonnez-moi",
+      "pos": "phrase",
+      "en": "pardon me",
+      "note": "vous form, more formal than excusez-moi",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w036",
+      "fr": "bonne nuit",
+      "pos": "phrase",
+      "en": "good night",
+      "note": "only when someone is going to bed, never a greeting",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w037",
+      "fr": "bonne journée",
+      "pos": "phrase",
+      "en": "have a nice day",
+      "note": "said on leaving",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w038",
+      "fr": "bonne soirée",
+      "pos": "phrase",
+      "en": "have a nice evening",
+      "note": "said on leaving",
+      "added": "2026-08-21"
+    },
+    {
+      "id": "w039",
+      "fr": "à tout à l'heure",
+      "pos": "phrase",
+      "en": "see you later today",
+      "note": "same day only, unlike à bientôt",
+      "added": "2026-08-21"
     }
   ]
 }
