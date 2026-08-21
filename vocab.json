@@ -320,6 +320,14 @@
       "en": "of course, certainly",
       "note": "sûr with the circumflex means sure; sur without means on",
       "added": "2026-08-21"
+    },
+    {
+      "id": "w041",
+      "fr": "ce n'est pas grave",
+      "pos": "phrase",
+      "en": "it's okay, no worries",
+      "note": "what your notes glossed de rien as; shortens to c'est pas grave in speech",
+      "added": "2026-08-21"
     }
   ]
 }
