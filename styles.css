@@ -180,6 +180,14 @@ body {
 .start:hover { opacity: 0.82; }
 .start[disabled] { opacity: 0.3; cursor: default; }
 
+/* the secondary way out, when carrying on is the primary one */
+.start.ghost {
+  margin-top: 1.1rem;
+  background: transparent;
+  color: var(--ink-soft);
+  box-shadow: inset 0 0 0 1px var(--rule);
+}
+
 .hint {
   margin-top: 1.5rem;
   font-family: var(--mono);

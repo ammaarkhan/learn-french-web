@@ -42,12 +42,16 @@ Fields are `french | pos | english | note`. Duplicates are skipped.
 ## The frequency intake
 
 `frequency-3000.json` holds the 3,000 most frequent French lemmas, each with an English gloss and an
-IPA pronunciation. Twenty enter the ladder per calendar day. Promotion is computed from the date
+IPA pronunciation. Forty enter the ladder per calendar day. Promotion is computed from the date
 rather than stored as a counter, so every device agrees without anything to merge, and re-ranking the
 list later cannot detach a card from its history — card ids are keyed on the word (`f-chien`).
 
-The intake is capped where it matters: a session takes every due *review*, but at most twenty cards
+The intake is capped where it matters: a session takes every due *review*, but at most forty cards
 you have never seen. Falling behind therefore lengthens the queue rather than the day.
+
+That cap is per sitting rather than per day. Close a session with words still waiting and it offers
+the next batch, so the daily pace is a floor rather than a ceiling — on a good day you can keep going
+until the list runs out.
 
 Words already in `vocab.json` are skipped, so anything added by hand is never duplicated.
 

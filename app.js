@@ -19,10 +19,12 @@ const MATURE_RUNG = 3;
    computes the same answer and there is nothing to merge or drift. The session cap
    below, not the promotion, is what keeps a day's work finite. */
 const INTAKE_START = "2026-08-25";
-const INTAKE_PER_DAY = 20;
+const INTAKE_PER_DAY = 40;
 
-// a session takes every due review, but only this many cards never seen before
-const NEW_PER_SESSION = 20;
+/* A session takes every due review, but only this many cards never seen before.
+   It is a cap per sitting, not per day: finish a session with words still waiting
+   and the closing screen offers the next batch. The pace is a floor, not a ceiling. */
+const NEW_PER_SESSION = 40;
 
 const DATA_REPO = "ammaarkhan/learn-french-data";
 const API = `https://api.github.com/repos/${DATA_REPO}/contents`;
@@ -605,7 +607,12 @@ function viewToday() {
       due
         ? `About ${Math.max(1, Math.round((due * 12) / 60))} min. ${total} cards in rotation across ${state.words.length} words.`
         : `Nothing due. ${total} cards in rotation across ${state.words.length} words.`
-    }${waiting ? ` ${waiting} more waiting behind today's ${NEW_PER_SESSION} new.` : ""}</p>
+    }${
+      waiting
+        ? ` ${waiting} more waiting: this sitting caps new words at ${NEW_PER_SESSION}, and you can
+           start another as soon as it closes.`
+        : ""
+    }</p>
     ${
       live
         ? `<button class="start" data-go="review">Resume review</button>
@@ -640,6 +647,7 @@ function viewReview() {
   if (!s) return viewToday();
 
   if (s.finished) {
+    const more = todaysQueue().length;
     return `<div class="page">
       <h1 class="page-title">Session closed</h1>
       <div class="summary-block">
@@ -655,7 +663,13 @@ function viewReview() {
           ? "Every gap came back before the session closed. They are logged under gaps."
           : "Nothing missed. Those cards moved up the ladder."
       }</p>
-      <button class="start" data-go="today">Back to today</button>
+      ${
+        more
+          ? `<button class="start" data-start>Another ${more} ${more === 1 ? "card" : "cards"}</button>
+             <p class="hint">The daily pace is a floor. Keep going as long as you want to.</p>
+             <button class="start ghost" data-go="today">Back to today</button>`
+          : `<button class="start" data-go="today">Back to today</button>`
+      }
     </div>`;
   }
 
