@@ -12,6 +12,7 @@ Every add commits and pushes vocab.json, so the words reach the phone without a
 separate deploy step. Only vocab.json is staged, so work in progress on the rest
 of the app stays local. Pass --no-push to skip it.
 """
+import gzip
 import json
 import re
 import subprocess
@@ -21,6 +22,29 @@ from pathlib import Path
 
 HERE = Path(__file__).parent
 VOCAB = HERE / "vocab.json"
+IPA = HERE / "ipa.json.gz"
+
+_ipa_cache = None
+
+
+def lookup(fr):
+    """Pronunciation and part of speech for a single word, from Lexique 3.83.
+
+    Single words only: composing a phrase's IPA from its parts would ignore liaison
+    and elision, and a wrong pronunciation is worse than none.
+    """
+    global _ipa_cache
+    if not IPA.exists():
+        return "", ""
+    # "le chien" is the documented way to add a noun, so look past the article
+    bare = re.sub(r"^(le|la|les|un|une|du|de la|l'|de l')\s*", "", fr.strip(), flags=re.I)
+    if " " in bare:
+        return "", ""
+    if _ipa_cache is None:
+        with gzip.open(IPA, "rt", encoding="utf-8") as f:
+            _ipa_cache = json.load(f)
+    ipa, pos = _ipa_cache.get(bare.lower(), ["", ""])
+    return ipa, pos
 
 
 def push(added):
@@ -79,16 +103,22 @@ def main(argv):
         if entry["fr"].lower() in existing:
             skipped.append(entry["fr"])
             continue
+        ipa, pos = lookup(entry["fr"])
+        entry["ipa"] = ipa
+        entry["pos"] = entry["pos"] or pos
         entry["id"] = next_id(words)
         entry["added"] = today
-        words.append({k: entry[k] for k in ("id", "fr", "pos", "en", "note", "added")})
+        words.append({k: entry[k] for k in ("id", "fr", "pos", "en", "note", "ipa", "added")})
         existing.add(entry["fr"].lower())
         added.append(entry)
 
     VOCAB.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
 
     for e in added:
-        print(f"  + {e['id']}  {e['fr']}  =  {e['en']}")
+        shown = f"  + {e['id']}  {e['fr']}"
+        if e["ipa"]:
+            shown += f"  {e['ipa']}"
+        print(f"{shown}  =  {e['en']}")
     for fr in skipped:
         print(f"  · already there, skipped: {fr}")
     print(f"{len(added)} added, {len(words)} words total")

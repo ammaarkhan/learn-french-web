@@ -39,6 +39,11 @@ useful for development but means those reviews do not reach any other device.
 
 Fields are `french | pos | english | note`. Duplicates are skipped.
 
+Part of speech and IPA are filled in automatically from `ipa.json.gz`, a 125,000-form lookup built
+from Lexique 3.83, so neither has to be typed. A leading article is looked past, which means
+`"le chien = the dog"` still finds `chien`. Phrases get no IPA on purpose: composing one from the
+individual words would ignore liaison and elision, and a wrong pronunciation is worse than none.
+
 ## The frequency intake
 
 `frequency-3000.json` holds the 3,000 most frequent French lemmas, each with an English gloss and an

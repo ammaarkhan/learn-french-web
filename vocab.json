@@ -320,6 +320,1296 @@
       "en": "of course, certainly",
       "note": "sûr with the circumflex means sure; sur without means on",
       "added": "2026-08-21"
+    },
+    {
+      "id": "w041",
+      "fr": "pour",
+      "pos": "prep.",
+      "en": "for",
+      "note": "",
+      "ipa": "/puʁ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w042",
+      "fr": "chat",
+      "pos": "n.m.",
+      "en": "cat",
+      "note": "",
+      "ipa": "/ʃa/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w043",
+      "fr": "chien",
+      "pos": "n.m.",
+      "en": "dog",
+      "note": "",
+      "ipa": "/ʃjɛ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w044",
+      "fr": "il y a",
+      "pos": "",
+      "en": "there is",
+      "note": "there is, there are",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w045",
+      "fr": "j'adore",
+      "pos": "",
+      "en": "I love, I really like",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w046",
+      "fr": "chaise",
+      "pos": "n.f.",
+      "en": "chair",
+      "note": "",
+      "ipa": "/ʃɛz/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w047",
+      "fr": "plante",
+      "pos": "n.f.",
+      "en": "plant",
+      "note": "",
+      "ipa": "/plɑ̃t/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w048",
+      "fr": "ta",
+      "pos": "adj.",
+      "en": "your (f., informal)",
+      "note": "",
+      "ipa": "/ta/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w049",
+      "fr": "parce qu'elle",
+      "pos": "",
+      "en": "because she",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w050",
+      "fr": "cuisine",
+      "pos": "n.f.",
+      "en": "kitchen",
+      "note": "",
+      "ipa": "/kɥizin/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w051",
+      "fr": "table",
+      "pos": "n.f.",
+      "en": "table",
+      "note": "",
+      "ipa": "/tabl/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w052",
+      "fr": "adore",
+      "pos": "v.",
+      "en": "love, loves (adorer)",
+      "note": "",
+      "ipa": "/adɔʁ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w053",
+      "fr": "ton",
+      "pos": "adj.",
+      "en": "your (m., informal)",
+      "note": "",
+      "ipa": "/tɔ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w054",
+      "fr": "parce qu'il",
+      "pos": "",
+      "en": "because he, because it, since he",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w055",
+      "fr": "salon",
+      "pos": "n.m.",
+      "en": "living room",
+      "note": "",
+      "ipa": "/salɔ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w056",
+      "fr": "canapé",
+      "pos": "n.m.",
+      "en": "couch",
+      "note": "",
+      "ipa": "/kanape/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w057",
+      "fr": "joli",
+      "pos": "adj.",
+      "en": "pretty",
+      "note": "",
+      "ipa": "/ʒoli/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w058",
+      "fr": "petit",
+      "pos": "adj.",
+      "en": "small",
+      "note": "",
+      "ipa": "/pəti/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w059",
+      "fr": "parce que",
+      "pos": "",
+      "en": "because",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w060",
+      "fr": "jardin",
+      "pos": "n.m.",
+      "en": "yard",
+      "note": "",
+      "ipa": "/ʒaʁdɛ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w061",
+      "fr": "maison",
+      "pos": "n.",
+      "en": "house",
+      "note": "",
+      "ipa": "/mɛzɔ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w062",
+      "fr": "grand",
+      "pos": "adj.",
+      "en": "big",
+      "note": "",
+      "ipa": "/ɡʁɑ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w063",
+      "fr": "content",
+      "pos": "adj.",
+      "en": "happy, pleased",
+      "note": "",
+      "ipa": "/kɔ̃tɑ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w064",
+      "fr": "vite",
+      "pos": "adv.",
+      "en": "quickly, fast",
+      "note": "",
+      "ipa": "/vit/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w065",
+      "fr": "suis",
+      "pos": "v.",
+      "en": "am (je suis)",
+      "note": "",
+      "ipa": "/sɥi/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w066",
+      "fr": "on y va",
+      "pos": "",
+      "en": "let's go",
+      "note": "literally 'we go there'",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w067",
+      "fr": "voiture",
+      "pos": "n.",
+      "en": "car",
+      "note": "",
+      "ipa": "/vwatyʁ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w068",
+      "fr": "taxi",
+      "pos": "n.m.",
+      "en": "taxi",
+      "note": "",
+      "ipa": "/taksi/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w069",
+      "fr": "en retard",
+      "pos": "",
+      "en": "late",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w070",
+      "fr": "un peu",
+      "pos": "",
+      "en": "a little",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w071",
+      "fr": "es",
+      "pos": "v.",
+      "en": "are (tu es)",
+      "note": "",
+      "ipa": "/ɛ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w072",
+      "fr": "tu",
+      "pos": "pron.",
+      "en": "you",
+      "note": "",
+      "ipa": "/ty/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w073",
+      "fr": "prêt",
+      "pos": "adj.",
+      "en": "ready",
+      "note": "",
+      "ipa": "/pʁɛ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w074",
+      "fr": "rapide",
+      "pos": "adj.",
+      "en": "fast, quick",
+      "note": "",
+      "ipa": "/ʁapid/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w075",
+      "fr": "attention",
+      "pos": "interj.",
+      "en": "careful; attention",
+      "note": "",
+      "ipa": "/atɑ̃sjɔ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w076",
+      "fr": "ah",
+      "pos": "interj.",
+      "en": "ah, oh",
+      "note": "",
+      "ipa": "/a/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w077",
+      "fr": "portefeuille",
+      "pos": "n.m.",
+      "en": "wallet",
+      "note": "",
+      "ipa": "/pɔʁtəfœj/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w078",
+      "fr": "valise",
+      "pos": "n.f.",
+      "en": "suitcase",
+      "note": "",
+      "ipa": "/valiz/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w079",
+      "fr": "chargeur",
+      "pos": "n.m.",
+      "en": "charger",
+      "note": "",
+      "ipa": "/ʃaʁʒœʁ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w080",
+      "fr": "lourd",
+      "pos": "adj.",
+      "en": "heavy",
+      "note": "",
+      "ipa": "/luʁ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w081",
+      "fr": "excuse-moi",
+      "pos": "",
+      "en": "Excuse me",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w082",
+      "fr": "ici",
+      "pos": "adv.",
+      "en": "here",
+      "note": "",
+      "ipa": "/isi/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w083",
+      "fr": "clé",
+      "pos": "n.f.",
+      "en": "key",
+      "note": "",
+      "ipa": "/kle/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w084",
+      "fr": "poche",
+      "pos": "n.",
+      "en": "pocket",
+      "note": "",
+      "ipa": "/pɔʃ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w085",
+      "fr": "où",
+      "pos": "pron.",
+      "en": "where",
+      "note": "",
+      "ipa": "/u/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w086",
+      "fr": "dans",
+      "pos": "prep.",
+      "en": "in",
+      "note": "",
+      "ipa": "/dɑ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w087",
+      "fr": "portable",
+      "pos": "adj.",
+      "en": "mobile phone",
+      "note": "",
+      "ipa": "/pɔʁtabl/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w088",
+      "fr": "sac",
+      "pos": "n.m.",
+      "en": "bag",
+      "note": "",
+      "ipa": "/sak/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w089",
+      "fr": "avec moi",
+      "pos": "",
+      "en": "with me",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w090",
+      "fr": "japonais",
+      "pos": "n.m.",
+      "en": "Japanese",
+      "note": "",
+      "ipa": "/ʒaponɛ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w091",
+      "fr": "tu parles",
+      "pos": "",
+      "en": "Yeah, right",
+      "note": "idiomatic: 'yeah, right' / 'you don't say'",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w092",
+      "fr": "intelligent",
+      "pos": "adj.",
+      "en": "intelligent, smart",
+      "note": "",
+      "ipa": "/ɛ̃teliʒɑ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w093",
+      "fr": "espagnol",
+      "pos": "adj.",
+      "en": "Spanish",
+      "note": "",
+      "ipa": "/ɛspaɲɔl/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w094",
+      "fr": "mari",
+      "pos": "n.m.",
+      "en": "husband",
+      "note": "",
+      "ipa": "/maʁi/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w095",
+      "fr": "parle",
+      "pos": "v.",
+      "en": "speak, speaks (parler)",
+      "note": "",
+      "ipa": "/paʁl/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w096",
+      "fr": "français",
+      "pos": "adj.",
+      "en": "French",
+      "note": "",
+      "ipa": "/fʁɑ̃sɛ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w097",
+      "fr": "anglais",
+      "pos": "n.m.",
+      "en": "English",
+      "note": "",
+      "ipa": "/ɑ̃ɡlɛ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w098",
+      "fr": "femme",
+      "pos": "n.f.",
+      "en": "woman; wife",
+      "note": "",
+      "ipa": "/fam/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w099",
+      "fr": "mon",
+      "pos": "adj.",
+      "en": "my (m.)",
+      "note": "",
+      "ipa": "/mɔ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w100",
+      "fr": "allemand",
+      "pos": "n.m.",
+      "en": "German",
+      "note": "",
+      "ipa": "/aləmɑ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w101",
+      "fr": "père",
+      "pos": "n.m.",
+      "en": "father",
+      "note": "",
+      "ipa": "/pɛʁ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w102",
+      "fr": "ma",
+      "pos": "adj.",
+      "en": "my (f.)",
+      "note": "",
+      "ipa": "/ma/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w103",
+      "fr": "mère",
+      "pos": "n.f.",
+      "en": "mother",
+      "note": "",
+      "ipa": "/mɛʁ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w104",
+      "fr": "américain",
+      "pos": "adj.",
+      "en": "American",
+      "note": "",
+      "ipa": "/ameʁikɛ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w105",
+      "fr": "mexicain",
+      "pos": "n.m.",
+      "en": "Mexican",
+      "note": "",
+      "ipa": "/mɛksikɛ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w106",
+      "fr": "super",
+      "pos": "adj.",
+      "en": "great",
+      "note": "",
+      "ipa": "/sypɛʁ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w107",
+      "fr": "ceinture",
+      "pos": "n.f.",
+      "en": "belt",
+      "note": "",
+      "ipa": "/sɛ̃tyʁ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w108",
+      "fr": "noir",
+      "pos": "adj.",
+      "en": "black",
+      "note": "",
+      "ipa": "/nwaʁ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w109",
+      "fr": "bleu",
+      "pos": "adj.",
+      "en": "blue",
+      "note": "",
+      "ipa": "/blø/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w110",
+      "fr": "avec",
+      "pos": "prep.",
+      "en": "with",
+      "note": "",
+      "ipa": "/avɛk/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w111",
+      "fr": "cravate",
+      "pos": "n.f.",
+      "en": "tie",
+      "note": "",
+      "ipa": "/kʁavat/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w112",
+      "fr": "pull",
+      "pos": "n.m.",
+      "en": "sweater, jumper",
+      "note": "",
+      "ipa": "/pyl/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w113",
+      "fr": "vert",
+      "pos": "adj.",
+      "en": "green",
+      "note": "",
+      "ipa": "/vɛʁ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w114",
+      "fr": "vous cherchez",
+      "pos": "",
+      "en": "you are looking for",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w115",
+      "fr": "d'accord",
+      "pos": "",
+      "en": "okay",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w116",
+      "fr": "robe",
+      "pos": "n.f.",
+      "en": "dress",
+      "note": "",
+      "ipa": "/ʁɔb/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w117",
+      "fr": "chemise",
+      "pos": "n.f.",
+      "en": "shirt",
+      "note": "",
+      "ipa": "/ʃəmiz/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w118",
+      "fr": "je cherche",
+      "pos": "",
+      "en": "I am looking for",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w119",
+      "fr": "chapeau",
+      "pos": "n.m.",
+      "en": "hat",
+      "note": "",
+      "ipa": "/ʃapo/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w120",
+      "fr": "manteau",
+      "pos": "n.m.",
+      "en": "coat",
+      "note": "",
+      "ipa": "/mɑ̃to/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w121",
+      "fr": "pas du tout",
+      "pos": "",
+      "en": "not at all",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w122",
+      "fr": "mais",
+      "pos": "conj.",
+      "en": "but",
+      "note": "",
+      "ipa": "/mɛ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w123",
+      "fr": "mon frère",
+      "pos": "",
+      "en": "my brother",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w124",
+      "fr": "mon fils",
+      "pos": "",
+      "en": "my son",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w125",
+      "fr": "ma tante",
+      "pos": "",
+      "en": "my aunt",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w126",
+      "fr": "toujours",
+      "pos": "adv.",
+      "en": "always",
+      "note": "",
+      "ipa": "/tuʒuʁ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w127",
+      "fr": "intéressant",
+      "pos": "adj.",
+      "en": "interesting",
+      "note": "",
+      "ipa": "/ɛ̃teʁɛsɑ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w128",
+      "fr": "très",
+      "pos": "adv.",
+      "en": "very",
+      "note": "",
+      "ipa": "/tʁɛ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w129",
+      "fr": "ma nièce",
+      "pos": "",
+      "en": "my niece",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w130",
+      "fr": "ma sœur",
+      "pos": "",
+      "en": "my sister",
+      "note": "also written ma soeur",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w131",
+      "fr": "elle",
+      "pos": "pron.",
+      "en": "she",
+      "note": "",
+      "ipa": "/ɛl/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w132",
+      "fr": "est",
+      "pos": "n.m.",
+      "en": "is (il/elle est)",
+      "note": "",
+      "ipa": "/ɛst/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w133",
+      "fr": "il",
+      "pos": "pron.",
+      "en": "he",
+      "note": "",
+      "ipa": "/il/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w134",
+      "fr": "méchant",
+      "pos": "adj.",
+      "en": "mean",
+      "note": "",
+      "ipa": "/meʃɑ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w135",
+      "fr": "amusant",
+      "pos": "adj.",
+      "en": "funny",
+      "note": "",
+      "ipa": "/amyzɑ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w136",
+      "fr": "il vient",
+      "pos": "",
+      "en": "he comes",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w137",
+      "fr": "il habite",
+      "pos": "",
+      "en": "he lives",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w138",
+      "fr": "neveu",
+      "pos": "n.m.",
+      "en": "nephew",
+      "note": "",
+      "ipa": "/nəvø/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w139",
+      "fr": "nièce",
+      "pos": "n.f.",
+      "en": "niece",
+      "note": "",
+      "ipa": "/njɛs/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w140",
+      "fr": "à",
+      "pos": "prep.",
+      "en": "to, at, in",
+      "note": "",
+      "ipa": "/a/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w141",
+      "fr": "elle habite",
+      "pos": "",
+      "en": "she lives",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w142",
+      "fr": "maintenant",
+      "pos": "adv.",
+      "en": "now",
+      "note": "",
+      "ipa": "/mɛ̃tənɑ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w143",
+      "fr": "oncle",
+      "pos": "n.m.",
+      "en": "uncle",
+      "note": "",
+      "ipa": "/ɔ̃kl/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w144",
+      "fr": "tante",
+      "pos": "n.f.",
+      "en": "aunt",
+      "note": "",
+      "ipa": "/tɑ̃t/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w145",
+      "fr": "de",
+      "pos": "prep.",
+      "en": "of, from",
+      "note": "",
+      "ipa": "/də/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w146",
+      "fr": "une",
+      "pos": "art.",
+      "en": "a, an (f.)",
+      "note": "",
+      "ipa": "/yn/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w147",
+      "fr": "elle vient",
+      "pos": "",
+      "en": "she comes",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w148",
+      "fr": "j'ai",
+      "pos": "",
+      "en": "I have",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w149",
+      "fr": "fille",
+      "pos": "n.f.",
+      "en": "daughter",
+      "note": "",
+      "ipa": "/fij/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w150",
+      "fr": "sœur",
+      "pos": "n.f.",
+      "en": "sister",
+      "note": "also written soeur",
+      "ipa": "/sœʁ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w151",
+      "fr": "fils",
+      "pos": "n.m.",
+      "en": "son",
+      "note": "",
+      "ipa": "/fis/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w152",
+      "fr": "tu as",
+      "pos": "",
+      "en": "you have",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w153",
+      "fr": "oh",
+      "pos": "interj.",
+      "en": "oh",
+      "note": "",
+      "ipa": "/o/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w154",
+      "fr": "frère",
+      "pos": "n.m.",
+      "en": "brother",
+      "note": "",
+      "ipa": "/fʁɛʁ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w155",
+      "fr": "tu viens de",
+      "pos": "",
+      "en": "you come from",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w156",
+      "fr": "viens de",
+      "pos": "",
+      "en": "come from; have just",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w157",
+      "fr": "moi aussi",
+      "pos": "",
+      "en": "me too",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w158",
+      "fr": "je",
+      "pos": "pron.",
+      "en": "I",
+      "note": "",
+      "ipa": "/ʒə/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w159",
+      "fr": "bien",
+      "pos": "adv.",
+      "en": "good",
+      "note": "",
+      "ipa": "/bjɛ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w160",
+      "fr": "parfait",
+      "pos": "adj.",
+      "en": "perfect",
+      "note": "",
+      "ipa": "/paʁfɛ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w161",
+      "fr": "ou",
+      "pos": "conj.",
+      "en": "or",
+      "note": "",
+      "ipa": "/u/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w162",
+      "fr": "sandwich",
+      "pos": "n.m.",
+      "en": "sandwich",
+      "note": "",
+      "ipa": "/sɑ̃dwitʃ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w163",
+      "fr": "et",
+      "pos": "conj.",
+      "en": "and",
+      "note": "",
+      "ipa": "/e/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w164",
+      "fr": "je voudrais",
+      "pos": "",
+      "en": "I'd like",
+      "note": "",
+      "ipa": "",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w165",
+      "fr": "éclair",
+      "pos": "n.m.",
+      "en": "éclair",
+      "note": "",
+      "ipa": "/eklɛʁ/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w166",
+      "fr": "croissant",
+      "pos": "n.m.",
+      "en": "croissant",
+      "note": "",
+      "ipa": "/kʁwasɑ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w167",
+      "fr": "un",
+      "pos": "art.",
+      "en": "a, an (m.)",
+      "note": "",
+      "ipa": "/œ̃/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w168",
+      "fr": "café",
+      "pos": "n.m.",
+      "en": "coffee",
+      "note": "",
+      "ipa": "/kafe/",
+      "added": "2026-08-25",
+      "source": "duolingo"
+    },
+    {
+      "id": "w169",
+      "fr": "thé",
+      "pos": "n.m.",
+      "en": "tea",
+      "note": "",
+      "ipa": "/te/",
+      "added": "2026-08-25",
+      "source": "duolingo"
     }
   ]
 }
