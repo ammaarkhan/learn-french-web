@@ -11,6 +11,19 @@ const MAX_RUNG = RUNGS.length;
 // a word's production card unlocks once its recognition card reaches this rung
 const MATURE_RUNG = 3;
 
+/* Frequency intake. frequency-3000.json holds the 3,000 most frequent French lemmas
+   (Lexique 3.83 + Wiktionary, see build_pool.py). Words enter the ladder on a drip:
+   INTAKE_PER_DAY of them per calendar day since INTAKE_START.
+
+   Promotion is a pure function of the date, not a stored counter, so every device
+   computes the same answer and there is nothing to merge or drift. The session cap
+   below, not the promotion, is what keeps a day's work finite. */
+const INTAKE_START = "2026-08-25";
+const INTAKE_PER_DAY = 20;
+
+// a session takes every due review, but only this many cards never seen before
+const NEW_PER_SESSION = 20;
+
 const DATA_REPO = "ammaarkhan/learn-french-data";
 const API = `https://api.github.com/repos/${DATA_REPO}/contents`;
 const LS = { token: "lf.token", prog: "lf.progress.v1" };
@@ -32,7 +45,10 @@ const GRADES = [
 // ---------- state ----------
 
 const state = {
-  words: [],
+  words: [], // vocab.json words, then whatever the intake has promoted
+  own: 0, // how many of state.words came from vocab.json
+  pool: 0, // how many frequency words are promoted so far
+  poolTotal: 0,
   token: localStorage.getItem(LS.token) || "",
   prog: null, // { data, sha, dirty }
   sync: "idle",
@@ -281,6 +297,31 @@ function failWrite(e) {
   render();
 }
 
+// ---------- intake ----------
+
+/* How many frequency words are in play today. Pure function of the date: no counter,
+   so two devices never disagree and a rebuilt pool cannot shift what you have seen. */
+function intakeCount() {
+  const days = -daysUntil(INTAKE_START); // days since the start, 0 on the first day
+  if (days < 0) return 0;
+  return (days + 1) * INTAKE_PER_DAY;
+}
+
+/* ids are keyed on the word itself ("f-chien"), not on rank, so re-ranking the pool
+   later cannot detach a card from its history. */
+function intake(pool) {
+  state.poolTotal = pool.length;
+  const mine = new Set(state.words.map((w) => w.fr.toLowerCase()));
+  const taken = [];
+  for (const p of pool) {
+    if (taken.length >= intakeCount()) break;
+    if (mine.has(p.fr.toLowerCase())) continue; // already collected by hand
+    taken.push({ id: "f-" + p.fr, fr: p.fr, pos: p.pos, en: p.en, ipa: p.ipa, note: p.note || "" });
+  }
+  state.pool = taken.length;
+  return taken;
+}
+
 // ---------- cards ----------
 // id shape: "r:w001" recognition (fr -> en), "p:w001" production (en -> fr)
 
@@ -359,11 +400,27 @@ function shuffle(a) {
   return x;
 }
 
+const isFresh = (id) => card(id).reps === 0;
+
+/* Reviews are never capped: a card that is due is due, and letting them pile up is
+   how a ladder rots. New cards are capped, so the day's work stays finite no matter
+   how far the intake has run ahead. Hand-collected words enter before pool words. */
+function todaysQueue() {
+  const due = dueIds();
+  const fresh = due.filter(isFresh).slice(0, NEW_PER_SESSION);
+  return due.filter((id) => !isFresh(id)).concat(fresh);
+}
+
 /* Early stage keeps a fixed order and one card type; once any word has matured the
    queue mixes order and type. Volume, order, type: the three SIR variables. */
 function buildQueue() {
-  const ids = dueIds();
+  const ids = todaysQueue();
   return anyMature() ? shuffle(ids) : ids;
+}
+
+/* Promoted but not yet reached, because of the new-card cap. */
+function waitingCount() {
+  return Math.max(0, dueIds().filter(isFresh).length - NEW_PER_SESSION);
 }
 
 function startSession() {
@@ -518,8 +575,9 @@ function chartActivity() {
 }
 
 function viewToday() {
-  const due = dueIds().length;
+  const due = todaysQueue().length;
   const total = activeIds().length;
+  const waiting = waitingCount();
   const openGaps = P().gaps.length;
   const live = state.session && !state.session.finished;
 
@@ -547,7 +605,7 @@ function viewToday() {
       due
         ? `About ${Math.max(1, Math.round((due * 12) / 60))} min. ${total} cards in rotation across ${state.words.length} words.`
         : `Nothing due. ${total} cards in rotation across ${state.words.length} words.`
-    }</p>
+    }${waiting ? ` ${waiting} more waiting behind today's ${NEW_PER_SESSION} new.` : ""}</p>
     ${
       live
         ? `<button class="start" data-go="review">Resume review</button>
@@ -567,7 +625,7 @@ function viewToday() {
       </div>
       <div>
         <div class="stat-n">${state.words.length}</div>
-        <div class="stat-l meta">words collected</div>
+        <div class="stat-l meta">words in play</div>
       </div>
       <div>
         <div class="stat-n${openGaps ? " is-gap" : ""}">${openGaps}</div>
@@ -611,8 +669,13 @@ function viewReview() {
   const answer = dir === "r" ? w.en : w.fr;
   const label = dir === "r" ? "recognise · french to english" : "produce · english to french";
 
+  /* Recognition shows the pronunciation with the french prompt: it is a cue for saying
+     the word, not the answer. Production hides it until reveal, where it belongs to
+     the french the card was asking for. */
+  const ipaLine = w.ipa ? `<p class="ipa">${esc(w.ipa)}</p>` : "";
+
   const slot = state.reveal
-    ? `<p class="definition">${esc(answer)}</p>`
+    ? `<div><p class="definition">${esc(answer)}</p>${dir === "p" ? ipaLine : ""}</div>`
     : `<span class="slot-rule"></span>`;
 
   const controls = state.reveal
@@ -638,7 +701,7 @@ function viewReview() {
     <div class="entry">
       <p class="direction">${label}</p>
       <h1 class="headword">${esc(prompt)}</h1>
-      ${dir === "r" && w.pos ? `<p class="pos">${esc(w.pos)}</p>` : ""}
+      ${dir === "r" ? `${w.pos ? `<p class="pos">${esc(w.pos)}</p>` : ""}${ipaLine}` : ""}
       <div class="slot">${slot}</div>
       ${state.reveal && w.note ? `<p class="note">${esc(w.note)}</p>` : ""}
     </div>
@@ -685,7 +748,9 @@ function viewWords() {
       const r = card("r:" + w.id);
       const mature = wordIsMature(w.id);
       return `<div class="row">
-      <span class="row-main"><span class="row-fr">${esc(w.fr)}</span> <span class="row-en">${esc(w.en)}</span></span>
+      <span class="row-main"><span class="row-fr">${esc(w.fr)}</span>${
+        w.ipa ? ` <span class="row-ipa">${esc(w.ipa)}</span>` : ""
+      } <span class="row-en">${esc(w.en)}</span></span>
       <span class="row-side">
         ${ladderHTML(r.rung, true)}
         <div class="meta dim" style="margin-top:5px">${esc(whenText(r.due))}${mature ? " · both ways" : ""}</div>
@@ -694,11 +759,21 @@ function viewWords() {
     })
     .join("");
 
+  const left = state.poolTotal - state.pool;
   return `<div class="page">
     <h1 class="page-title">Words</h1>
-    <p class="lede">${state.words.length} words. A word gains its english to french card once it reaches rung ${MATURE_RUNG}.</p>
+    <p class="lede">${state.words.length} words: ${state.own} collected by hand, ${state.pool} from
+    the frequency list. A word gains its english to french card once it reaches rung ${MATURE_RUNG}.</p>
+    ${
+      left > 0
+        ? `<p class="hint">${INTAKE_PER_DAY} more arrive each day. ${left} left in the list of
+           ${state.poolTotal}, so the last one lands ${esc(
+             iso(addDays(new Date(), Math.ceil(left / INTAKE_PER_DAY)))
+           )}.</p>`
+        : ""
+    }
     ${rows || `<p class="empty">No words yet.</p>`}
-    <p class="hint" style="margin-top:2rem">Add more: <code>python3 tool/add.py "le chien = the dog"</code></p>
+    <p class="hint" style="margin-top:2rem">Add more by hand: <code>python3 web/add.py "le chien = the dog"</code></p>
   </div>`;
 }
 
@@ -809,6 +884,14 @@ document.addEventListener("keydown", (e) => {
     state.words = (await res.json()).words || [];
   } catch (e) {
     state.words = [];
+  }
+  state.own = state.words.length;
+
+  try {
+    const res = await fetch("frequency-3000.json?t=" + Date.now(), { cache: "no-store" });
+    state.words = state.words.concat(intake((await res.json()).words || []));
+  } catch (e) {
+    /* the app still works on vocab.json alone */
   }
   render();
   refreshRemote();

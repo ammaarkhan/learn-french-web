@@ -38,3 +38,30 @@ useful for development but means those reviews do not reach any other device.
     python3 add.py "la maison | n.f. | the house | note about usage"
 
 Fields are `french | pos | english | note`. Duplicates are skipped.
+
+## The frequency intake
+
+`frequency-3000.json` holds the 3,000 most frequent French lemmas, each with an English gloss and an
+IPA pronunciation. Twenty enter the ladder per calendar day. Promotion is computed from the date
+rather than stored as a counter, so every device agrees without anything to merge, and re-ranking the
+list later cannot detach a card from its history — card ids are keyed on the word (`f-chien`).
+
+The intake is capped where it matters: a session takes every due *review*, but at most twenty cards
+you have never seen. Falling behind therefore lengthens the queue rather than the day.
+
+Words already in `vocab.json` are skipped, so anything added by hand is never duplicated.
+
+Rebuild the list with:
+
+    python3 build_pool.py Lexique383.tsv kaikki-fr.jsonl frequency-3000.json
+
+### Sources and licence
+
+Frequency, lemma, part of speech, gender and phonetics come from **Lexique 3.83**
+(New, Pallier, Brysbaert & Ferrand — <http://www.lexique.org>), ranked by the geometric mean of its
+film-subtitle and book frequencies so the list favours words common in both spoken and written
+French. English glosses come from **English Wiktionary**, via the machine-readable extraction at
+<https://kaikki.org/dictionary/French/>.
+
+Both are share-alike licensed (Lexique CC BY-SA, Wiktionary CC BY-SA 3.0), and `frequency-3000.json`
+is a derivative of both. It is redistributed here under the same terms, with attribution as above.

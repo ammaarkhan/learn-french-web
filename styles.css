@@ -248,6 +248,18 @@ body {
   margin: 0.55rem 0 0;
 }
 
+/* pronunciation. Mono, so it reads as notation rather than as more of the entry. */
+.ipa {
+  font-family: var(--mono);
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin: 0.45rem 0 0;
+}
+
+.definition + .ipa {
+  margin-top: 0.7rem;
+}
+
 /* the slot: an incomplete entry. Reserved height so nothing shifts on reveal. */
 .slot {
   margin-top: 2.1rem;
@@ -412,6 +424,13 @@ body {
 }
 
 .row-fr { font-weight: 400; }
+
+.row-ipa {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  opacity: 0.72;
+}
 
 .row-en {
   color: var(--ink-soft);
