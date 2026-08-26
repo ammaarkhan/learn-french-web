@@ -362,16 +362,6 @@
       "source": "duolingo"
     },
     {
-      "id": "w045",
-      "fr": "j'adore",
-      "pos": "",
-      "en": "I love, I really like",
-      "note": "",
-      "ipa": "",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
       "id": "w046",
       "fr": "chaise",
       "pos": "n.f.",
@@ -428,16 +418,6 @@
       "en": "table",
       "note": "",
       "ipa": "/tabl/",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
-      "id": "w052",
-      "fr": "adore",
-      "pos": "v.",
-      "en": "love, loves (adorer)",
-      "note": "",
-      "ipa": "/adɔʁ/",
       "added": "2026-08-25",
       "source": "duolingo"
     },
@@ -562,16 +542,6 @@
       "source": "duolingo"
     },
     {
-      "id": "w065",
-      "fr": "suis",
-      "pos": "v.",
-      "en": "am (je suis)",
-      "note": "",
-      "ipa": "/sɥi/",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
       "id": "w066",
       "fr": "on y va",
       "pos": "",
@@ -618,16 +588,6 @@
       "en": "a little",
       "note": "",
       "ipa": "",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
-      "id": "w071",
-      "fr": "es",
-      "pos": "v.",
-      "en": "are (tu es)",
-      "note": "",
-      "ipa": "/ɛ/",
       "added": "2026-08-25",
       "source": "duolingo"
     },
@@ -822,16 +782,6 @@
       "source": "duolingo"
     },
     {
-      "id": "w091",
-      "fr": "tu parles",
-      "pos": "",
-      "en": "Yeah, right",
-      "note": "idiomatic: 'yeah, right' / 'you don't say'",
-      "ipa": "",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
       "id": "w092",
       "fr": "intelligent",
       "pos": "adj.",
@@ -858,16 +808,6 @@
       "en": "husband",
       "note": "",
       "ipa": "/maʁi/",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
-      "id": "w095",
-      "fr": "parle",
-      "pos": "v.",
-      "en": "speak, speaks (parler)",
-      "note": "",
-      "ipa": "/paʁl/",
       "added": "2026-08-25",
       "source": "duolingo"
     },
@@ -1052,16 +992,6 @@
       "source": "duolingo"
     },
     {
-      "id": "w114",
-      "fr": "vous cherchez",
-      "pos": "",
-      "en": "you are looking for",
-      "note": "",
-      "ipa": "",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
       "id": "w115",
       "fr": "d'accord",
       "pos": "",
@@ -1088,16 +1018,6 @@
       "en": "shirt",
       "note": "",
       "ipa": "/ʃəmiz/",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
-      "id": "w118",
-      "fr": "je cherche",
-      "pos": "",
-      "en": "I am looking for",
-      "note": "",
-      "ipa": "",
       "added": "2026-08-25",
       "source": "duolingo"
     },
@@ -1232,16 +1152,6 @@
       "source": "duolingo"
     },
     {
-      "id": "w132",
-      "fr": "est",
-      "pos": "n.m.",
-      "en": "is (il/elle est)",
-      "note": "",
-      "ipa": "/ɛst/",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
       "id": "w133",
       "fr": "il",
       "pos": "pron.",
@@ -1272,26 +1182,6 @@
       "source": "duolingo"
     },
     {
-      "id": "w136",
-      "fr": "il vient",
-      "pos": "",
-      "en": "he comes",
-      "note": "",
-      "ipa": "",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
-      "id": "w137",
-      "fr": "il habite",
-      "pos": "",
-      "en": "he lives",
-      "note": "",
-      "ipa": "",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
       "id": "w138",
       "fr": "neveu",
       "pos": "n.m.",
@@ -1318,16 +1208,6 @@
       "en": "to, at, in",
       "note": "",
       "ipa": "/a/",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
-      "id": "w141",
-      "fr": "elle habite",
-      "pos": "",
-      "en": "she lives",
-      "note": "",
-      "ipa": "",
       "added": "2026-08-25",
       "source": "duolingo"
     },
@@ -1382,26 +1262,6 @@
       "source": "duolingo"
     },
     {
-      "id": "w147",
-      "fr": "elle vient",
-      "pos": "",
-      "en": "she comes",
-      "note": "",
-      "ipa": "",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
-      "id": "w148",
-      "fr": "j'ai",
-      "pos": "",
-      "en": "I have",
-      "note": "",
-      "ipa": "",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
       "id": "w149",
       "fr": "fille",
       "pos": "n.f.",
@@ -1432,16 +1292,6 @@
       "source": "duolingo"
     },
     {
-      "id": "w152",
-      "fr": "tu as",
-      "pos": "",
-      "en": "you have",
-      "note": "",
-      "ipa": "",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
       "id": "w153",
       "fr": "oh",
       "pos": "interj.",
@@ -1458,26 +1308,6 @@
       "en": "brother",
       "note": "",
       "ipa": "/fʁɛʁ/",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
-      "id": "w155",
-      "fr": "tu viens de",
-      "pos": "",
-      "en": "you come from",
-      "note": "",
-      "ipa": "",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
-      "id": "w156",
-      "fr": "viens de",
-      "pos": "",
-      "en": "come from; have just",
-      "note": "",
-      "ipa": "",
       "added": "2026-08-25",
       "source": "duolingo"
     },
