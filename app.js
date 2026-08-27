@@ -11,9 +11,10 @@ const MAX_RUNG = RUNGS.length;
 // a word's output card unlocks once its input card reaches this rung
 const MATURE_RUNG = 3;
 
-/* Frequency intake. frequency-3000.json holds the 3,000 most frequent French lemmas
-   (Lexique 3.83 + Wiktionary, see build_pool.py). Words enter the ladder on a drip:
-   INTAKE_PER_DAY of them per calendar day since INTAKE_START.
+/* Word intake. frequency-3000.json holds the 3,000 most frequent French lemmas
+   (Lexique 3.83 + Wiktionary, see build_pool.py), ordered for teaching rather than by
+   rank (see build_order.py). Words enter the ladder on a drip: INTAKE_PER_DAY of them
+   per calendar day since INTAKE_START.
 
    Promotion is a pure function of the date, not a stored counter, so every device
    computes the same answer and there is nothing to merge or drift. The session cap

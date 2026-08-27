@@ -52,10 +52,10 @@ from Lexique 3.83, so neither has to be typed. A leading article is looked past,
 `"le chien = the dog"` still finds `chien`. Phrases get no IPA on purpose: composing one from the
 individual words would ignore liaison and elision, and a wrong pronunciation is worse than none.
 
-## The frequency intake
+## The word pool
 
-`frequency-3000.json` holds the 3,000 most frequent French lemmas, each with an English gloss and an
-IPA pronunciation. Forty enter the ladder per calendar day. Promotion is computed from the date
+`frequency-3000.json` holds the 3,000 most frequent French lemmas, each with an English gloss, an
+IPA pronunciation and an example sentence. Forty enter the ladder per calendar day. Promotion is computed from the date
 rather than stored as a counter, so every device agrees without anything to merge, and re-ranking the
 list later cannot detach a card from its history — card ids are keyed on the word (`f-chien`).
 
@@ -87,6 +87,9 @@ have shown them three times, so the card lands after the word has been met rathe
     python3 build_order.py               # write
 
 `fra.txt` is not checked in; re-download it when rebuilding.
+
+Words added later with `add.py` get no sentence — attaching one needs the Tatoeba file, which is not
+kept in the repo. They fall back to the plain word-and-gloss card until the next `build_order.py` run.
 
 ### Sources and licence
 
