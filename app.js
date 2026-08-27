@@ -197,7 +197,7 @@ function mergeProgress(a, b) {
     [...(a.sessions || []), ...(b.sessions || [])].sort((x, y) =>
       (y.at || "").localeCompare(x.at || "")
     ),
-    (x) => x.at
+    (x) => x.id || x.at
   ).slice(0, 200);
   return out;
 }
@@ -435,6 +435,7 @@ function startSession() {
     done: 0,
     gaps: 0,
     started: todayISO(),
+    sid: stamp() + ":" + Math.random().toString(36).slice(2, 8),
   };
   state.reveal = false;
   go("review");
@@ -459,10 +460,12 @@ function answered(g) {
   if (!id) return;
   grade(id, g);
   s.done += 1;
+  const missed = g === "blank" || g === "struggled";
+  if (missed) s.gaps += 1;
+  logSession();
 
   // gap-filling loop: a miss comes back before the session closes
-  if (g === "blank" || g === "struggled") {
-    s.gaps += 1;
+  if (missed) {
     if (!s.requeue.includes(id)) s.requeue.push(id);
     if (s.queue.length) {
       s.queue.shift();
@@ -476,11 +479,24 @@ function answered(g) {
   render();
 }
 
+/* Upsert keyed on the session's own id, called after every card: a sitting abandoned
+   halfway still counts, and rewriting the entry in place is what stops it counting twice.
+   Two devices on one day keep separate ids, so the day's chart sums them. */
+function logSession() {
+  const s = state.session;
+  if (!s) return;
+  const rec = { id: s.sid, date: s.started, reps: s.done, gaps: s.gaps, at: stamp() };
+  const list = P().sessions;
+  const i = list.findIndex((x) => x.id === s.sid);
+  if (i >= 0) list[i] = rec;
+  else list.unshift(rec);
+  P().sessions = list.slice(0, 200);
+  save();
+}
+
 function endSession() {
   const s = state.session;
-  P().sessions.unshift({ date: s.started, reps: s.done, gaps: s.gaps, at: stamp() });
-  P().sessions = P().sessions.slice(0, 200);
-  save();
+  logSession();
   state.session = { ...s, finished: true };
   render();
 }
