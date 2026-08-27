@@ -268,6 +268,63 @@ body {
   margin-top: 0.7rem;
 }
 
+/* The sentence as prompt. Smaller than a headword because it is a line of French,
+   not an entry title, but it is still the thing being read. */
+.phrase {
+  font-weight: 300;
+  font-size: clamp(1.7rem, 4.8vw, 2.65rem);
+  line-height: 1.24;
+  letter-spacing: -0.014em;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+/* The word the card is actually about. A mark, not coloured text: in this interface
+   colour on text would read as a rung. So it gets the pale end of the ramp as a
+   wash and keeps its ink, the way a highlighter works on a page. */
+.target {
+  font-weight: 400;
+  background: linear-gradient(var(--r1), var(--r1)) no-repeat;
+  background-size: 100% 0.60em;
+  background-position: 0 76%;
+  border-radius: 1px;
+  padding: 0 0.06em;
+}
+
+.phrase-en {
+  font-weight: 400;
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  line-height: 1.36;
+  margin: 0;
+  animation: set-type 190ms ease-out;
+}
+
+/* on the output card the english sentence is context, not the answer */
+.phrase-en.cue {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  margin: 0.85rem 0 0;
+  animation: none;
+}
+
+/* the dictionary line, after the sentence has done its work */
+.gloss {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.65rem;
+  margin: 0.95rem 0 0;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--rule);
+}
+
+.gloss-fr { font-weight: 400; font-size: 1.12rem; }
+.gloss-pos { font-style: italic; font-size: 0.94rem; color: var(--ink-soft); }
+.gloss-en { font-size: 1.06rem; color: var(--ink-soft); }
+
+.slot .phrase { font-size: clamp(1.4rem, 3.8vw, 2.05rem); animation: set-type 190ms ease-out; }
+.phrase + .ipa, .slot .phrase + .ipa { margin-top: 0.7rem; }
+
 /* the slot: an incomplete entry. Reserved height so nothing shifts on reveal. */
 .slot {
   margin-top: 2.1rem;
@@ -516,6 +573,14 @@ a:focus-visible {
   margin: 0;
 }
 
+.chart-note {
+  margin: -0.35rem 0 1.15rem;
+  max-width: 46ch;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
 /* rung distribution */
 
 .rungs {
@@ -609,7 +674,7 @@ a:focus-visible {
   background: var(--r6);
   color: #fff;
   font-family: var(--mono);
-  font-size: 0.66rem;
+  font-size: 0.78rem;
   letter-spacing: 0.04em;
   border-radius: 3px;
   opacity: 0;

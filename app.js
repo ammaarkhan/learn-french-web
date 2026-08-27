@@ -216,6 +216,13 @@ async function refreshRemote() {
       saveProgLocal();
       setSync("idle");
     }
+    /* Remote progress can name words this device had not promoted yet. Re-run
+       promotion against the merged cards before painting, or they stay invisible
+       until the next reload. */
+    if (state.rawPool) {
+      state.words = state.words.slice(0, state.own);   // must land before intake reads it
+      state.words = state.words.concat(intake(state.rawPool));
+    }
     render();
   } catch (e) {
     if (e.status === 401 || e.status === 403) {
@@ -314,11 +321,19 @@ function intakeCount() {
 function intake(pool) {
   state.poolTotal = pool.length;
   const mine = new Set(state.words.map((w) => w.fr.toLowerCase()));
+  const cards = P().cards;
   const taken = [];
+  let promoted = 0;
   for (const p of pool) {
-    if (taken.length >= intakeCount()) break;
     if (mine.has(p.fr.toLowerCase())) continue; // already collected by hand
-    taken.push({ id: "f-" + p.fr, fr: p.fr, pos: p.pos, en: p.en, ipa: p.ipa, note: p.note || "" });
+    const id = "f-" + p.fr;
+    /* Under the promotion count, or already started. The second clause matters
+       whenever the pool is re-ordered: a word he has reviewed must never drop out
+       of rotation because the rebuild pushed its rank past today's intake. */
+    const started = cards["r:" + id] || cards["p:" + id];
+    if (promoted >= intakeCount() && !started) continue;
+    if (promoted < intakeCount()) promoted += 1;
+    taken.push({ id, fr: p.fr, pos: p.pos, en: p.en, ipa: p.ipa, note: p.note || "", ex: p.ex });
   }
   state.pool = taken.length;
   return taken;
@@ -555,6 +570,8 @@ function chartRungs() {
       <h2 class="chart-title">Where your words sit</h2>
       <span class="meta">colour tracks the interval</span>
     </div>
+    <p class="chart-note">How long each word rests before you see it again. Getting one right moves
+      it a step to the right, so the pile drifting rightward is you needing them less often.</p>
     <div class="rungs">${cols}</div>
     <div class="rung-axis">${labels.map((l) => `<span class="rung-lbl">${l}</span>`).join("")}</div>
   </div>`;
@@ -696,18 +713,43 @@ function viewReview() {
   const c = card(id);
   const left = s.queue.length + s.requeue.length;
 
-  const prompt = dir === "r" ? w.fr : w.en;
-  const answer = dir === "r" ? w.en : w.fr;
   const label = dir === "r" ? "input · french to english" : "output · english to french";
+  const ex = w.ex;
 
   /* Input shows the pronunciation with the french prompt: it is a cue for saying
      the word, not the answer. Output hides it until reveal, where it belongs to
      the french the card was asking for. */
   const ipaLine = w.ipa ? `<p class="ipa">${esc(w.ipa)}</p>` : "";
+  const glossLine = `<p class="gloss"><span class="gloss-fr">${esc(w.fr)}</span>${
+    w.pos ? `<span class="gloss-pos">${esc(w.pos)}</span>` : ""
+  }<span class="gloss-en">${esc(w.en)}</span></p>`;
 
-  const slot = state.reveal
-    ? `<div><p class="definition">${esc(answer)}</p>${dir === "p" ? ipaLine : ""}</div>`
-    : `<span class="slot-rule"></span>`;
+  /* The card is the sentence, not the word. A bare gloss is unlearnable for the
+     words that dominate the early list — "de", "ça", "y" have no stable English
+     translation to memorise, only a use. The target is marked rather than blanked
+     so the sentence still reads as French while the eye knows where to land. */
+  const marked = ex
+    ? esc(ex.fr.slice(0, ex.hl[0])) +
+      `<b class="target">${esc(ex.fr.slice(ex.hl[0], ex.hl[1]))}</b>` +
+      esc(ex.fr.slice(ex.hl[1]))
+    : "";
+
+  let prompt, sub, slot;
+  if (dir === "r") {
+    prompt = ex ? `<h1 class="phrase">${marked}</h1>` : `<h1 class="headword">${esc(w.fr)}</h1>`;
+    sub = `${w.pos && !ex ? `<p class="pos">${esc(w.pos)}</p>` : ""}${ipaLine}`;
+    slot = state.reveal
+      ? ex
+        ? `<div><p class="phrase-en">${esc(ex.en)}</p>${glossLine}</div>`
+        : `<div><p class="definition">${esc(w.en)}</p></div>`
+      : `<span class="slot-rule"></span>`;
+  } else {
+    prompt = `<h1 class="headword">${esc(w.en)}</h1>`;
+    sub = ex ? `<p class="phrase-en cue">${esc(ex.en)}</p>` : "";
+    slot = state.reveal
+      ? `<div>${ex ? `<p class="phrase">${marked}</p>` : `<p class="definition">${esc(w.fr)}</p>`}${ipaLine}</div>`
+      : `<span class="slot-rule"></span>`;
+  }
 
   const controls = state.reveal
     ? `<div class="grades">${GRADES.map((g) => {
@@ -731,8 +773,8 @@ function viewReview() {
     </div>
     <div class="entry">
       <p class="direction">${label}</p>
-      <h1 class="headword">${esc(prompt)}</h1>
-      ${dir === "r" ? `${w.pos ? `<p class="pos">${esc(w.pos)}</p>` : ""}${ipaLine}` : ""}
+      ${prompt}
+      ${sub}
       <div class="slot">${slot}</div>
       ${state.reveal && w.note ? `<p class="note">${esc(w.note)}</p>` : ""}
     </div>
@@ -920,7 +962,8 @@ document.addEventListener("keydown", (e) => {
 
   try {
     const res = await fetch("frequency-3000.json?t=" + Date.now(), { cache: "no-store" });
-    state.words = state.words.concat(intake((await res.json()).words || []));
+    state.rawPool = (await res.json()).words || [];
+    state.words = state.words.concat(intake(state.rawPool));
   } catch (e) {
     /* the app still works on vocab.json alone */
   }

@@ -2,6 +2,10 @@
 
 A French vocabulary trainer on a fixed spaced-repetition ladder: 1, 3, 8, 18, 40, 90 days.
 
+Every card is a sentence with one word marked, not a bare word and its gloss. The words that
+dominate the start of any frequency list — `de`, `ça`, `y`, `en` — have no stable English
+translation to memorise, only a use, so a gloss card cannot teach them. The sentence can.
+
 Cards start as input (french to english). A word earns its output card (english to french)
 once it reaches rung 3, which is also when the review queue starts shuffling order and mixing card
 types. Grades are blank / struggled / got / fluent. Anything you blank or struggle on is requeued
@@ -64,6 +68,22 @@ Rebuild the list with:
 
     python3 build_pool.py Lexique383.tsv kaikki-fr.jsonl frequency-3000.json
 
+### Teaching order and example sentences
+
+The pool is not taught in frequency order. `curriculum.py` holds 34 situations — the unit titles
+of Duolingo's French course, sequenced by what Ammaar actually says in a day — and `build_order.py`
+pulls each situation's words forward, then orders everything else so that each new word arrives in
+a sentence whose other words are already known.
+
+Function words are held back and re-inserted at the point where the sentences already scheduled
+have shown them three times, so the card lands after the word has been met rather than before.
+
+    curl -O https://www.manythings.org/anki/fra-eng.zip && unzip fra-eng.zip
+    python3 build_order.py --dry-run     # inspect
+    python3 build_order.py               # write
+
+`fra.txt` is not checked in; re-download it when rebuilding.
+
 ### Sources and licence
 
 Frequency, lemma, part of speech, gender and phonetics come from **Lexique 3.83**
@@ -72,5 +92,9 @@ film-subtitle and book frequencies so the list favours words common in both spok
 French. English glosses come from **English Wiktionary**, via the machine-readable extraction at
 <https://kaikki.org/dictionary/French/>.
 
-Both are share-alike licensed (Lexique CC BY-SA, Wiktionary CC BY-SA 3.0), and `frequency-3000.json`
+Example sentences come from **Tatoeba** (<https://tatoeba.org>), used under **CC BY 2.0 FR**.
+Each sentence in `frequency-3000.json` and `vocab.json` is an unmodified Tatoeba sentence pair;
+the project and its contributors are the authors.
+
+Both Lexique and Wiktionary are share-alike licensed (Lexique CC BY-SA, Wiktionary CC BY-SA 3.0), and `frequency-3000.json`
 is a derivative of both. It is redistributed here under the same terms, with attribution as above.
