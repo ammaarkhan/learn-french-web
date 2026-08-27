@@ -2,7 +2,7 @@
 
 A French vocabulary trainer on a fixed spaced-repetition ladder: 1, 3, 8, 18, 40, 90 days.
 
-Cards start as recognition (french to english). A word earns its production card (english to french)
+Cards start as input (french to english). A word earns its output card (english to french)
 once it reaches rung 3, which is also when the review queue starts shuffling order and mixing card
 types. Grades are blank / struggled / got / fluent. Anything you blank or struggle on is requeued
 inside the same session, so a session does not close until you have come back to it.

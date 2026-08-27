@@ -8,7 +8,7 @@
 const RUNGS = [1, 3, 8, 18, 40, 90];
 const MAX_RUNG = RUNGS.length;
 
-// a word's production card unlocks once its recognition card reaches this rung
+// a word's output card unlocks once its input card reaches this rung
 const MATURE_RUNG = 3;
 
 /* Frequency intake. frequency-3000.json holds the 3,000 most frequent French lemmas
@@ -325,7 +325,7 @@ function intake(pool) {
 }
 
 // ---------- cards ----------
-// id shape: "r:w001" recognition (fr -> en), "p:w001" production (en -> fr)
+// id shape: "r:w001" input (fr -> en), "p:w001" output (en -> fr)
 
 const parseId = (id) => ({ dir: id.slice(0, 1), wid: id.slice(2) });
 const wordOf = (id) => state.words.find((w) => w.id === parseId(id).wid);
@@ -338,7 +338,7 @@ function wordIsMature(wid) {
   return card("r:" + wid).rung >= MATURE_RUNG;
 }
 
-/* Early stage: recognition only. Production unlocks at the maturity flip, which is
+/* Early stage: input only. Output unlocks at the maturity flip, which is
    what turns "one card type, fixed order" into "mixed types, shuffled". */
 function activeIds() {
   const out = [];
@@ -565,13 +565,14 @@ function chartActivity() {
   const byDay = {};
   for (const ses of P().sessions) byDay[ses.date] = (byDay[ses.date] || 0) + ses.reps;
 
-  const today = new Date(todayISO() + "T00:00:00");
+  /* Day keys are UTC throughout (iso/todayISO are UTC), so step back in UTC too.
+     Parsing "T00:00:00" as local and re-serialising shifted every cell a day west. */
+  const todayMs = Date.parse(todayISO() + "T00:00:00Z");
   const max = Math.max(...Object.values(byDay), 1);
 
   let cells = "";
   for (let i = 55; i >= 0; i--) {
-    const day = addDays(today, -i);
-    const key = iso(day);
+    const key = iso(new Date(todayMs - i * 86400000));
     const n = byDay[key] || 0;
     const step = n ? Math.min(MAX_RUNG, Math.max(1, Math.ceil((n / max) * MAX_RUNG))) : 0;
     const h = n ? Math.max(18, Math.round((n / max) * 100)) : 12;
@@ -697,10 +698,10 @@ function viewReview() {
 
   const prompt = dir === "r" ? w.fr : w.en;
   const answer = dir === "r" ? w.en : w.fr;
-  const label = dir === "r" ? "recognise · french to english" : "produce · english to french";
+  const label = dir === "r" ? "input · french to english" : "output · english to french";
 
-  /* Recognition shows the pronunciation with the french prompt: it is a cue for saying
-     the word, not the answer. Production hides it until reveal, where it belongs to
+  /* Input shows the pronunciation with the french prompt: it is a cue for saying
+     the word, not the answer. Output hides it until reveal, where it belongs to
      the french the card was asking for. */
   const ipaLine = w.ipa ? `<p class="ipa">${esc(w.ipa)}</p>` : "";
 
