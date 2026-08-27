@@ -6,6 +6,10 @@ Every card is a sentence with one word marked, not a bare word and its gloss. Th
 dominate the start of any frequency list — `de`, `ça`, `y`, `en` — have no stable English
 translation to memorise, only a use, so a gloss card cannot teach them. The sentence can.
 
+Cards speak on reveal, using the browser's built-in French voice — no audio files, no network. The
+speaker button replays; the masthead toggle turns auto-play off. This sits where the IPA line used
+to: IPA is only useful to someone who reads it.
+
 Cards start as input (french to english). A word earns its output card (english to french)
 once it reaches rung 3, which is also when the review queue starts shuffling order and mixing card
 types. Grades are blank / struggled / got / fluent. Anything you blank or struggle on is requeued

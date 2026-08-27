@@ -537,6 +537,67 @@ function ladderHTML(rung, big) {
   ).join("")}</span>`;
 }
 
+// ---------- speech ----------
+
+/* Every browser ships a French voice, so hearing a card costs no files and no
+   network. This replaced the IPA line on the card: it was notation Ammaar could
+   not read (his call, 2026-08-27), sitting exactly where the audio belongs.
+   Synthetic, so liaison and rhythm are flatter than a real speaker. */
+
+const MUTE = "lf.mute";
+let frVoice = null;
+
+function pickVoice() {
+  if (!("speechSynthesis" in window)) return null;
+  const vs = speechSynthesis.getVoices();
+  if (!vs.length) return null;      // Chrome populates these asynchronously
+  /* macOS ships a pile of character voices — Eddy, Grandma, Rocko — and they all
+     render as "Eddy (French (France))". The real system voices (Thomas, Jacques,
+     Amélie) carry no bracket, so that is the whole test. Local beats network:
+     it is instant and works on a plane. */
+  const plain = (v) => !v.name.includes("(");
+  const fr = vs.filter((v) => v.lang === "fr-FR");
+  frVoice =
+    fr.find((v) => plain(v) && v.localService) ||
+    fr.find(plain) ||
+    fr.find((v) => v.localService) ||
+    fr[0] ||
+    vs.find((v) => (v.lang || "").toLowerCase().startsWith("fr")) ||
+    null;
+  return frVoice;
+}
+
+if ("speechSynthesis" in window) {
+  pickVoice();
+  speechSynthesis.addEventListener("voiceschanged", pickVoice);
+}
+
+const canSpeak = () => "speechSynthesis" in window;
+const muted = () => localStorage.getItem(MUTE) === "1";
+
+function speak(text) {
+  if (!text || !canSpeak()) return;
+  try {
+    speechSynthesis.cancel();       // a fast grader must not stack utterances
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = "fr-FR";
+    if (frVoice || pickVoice()) u.voice = frVoice;
+    u.rate = 0.92;                  // just under natural: this is a model to copy
+    speechSynthesis.speak(u);
+  } catch (e) {
+    /* speech is a nicety. It must never take a review down with it. */
+  }
+}
+
+// the sentence if the card has one, else the bare word
+const sayable = (w) => (w && w.ex ? w.ex.fr : w && w.fr) || "";
+
+const SPEAKER = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.6L12 5.6v12.8L7.6 14.5H4z"/>` +
+  `<path d="M15.4 9.1a4 4 0 0 1 0 5.8M18 6.6a7.5 7.5 0 0 1 0 10.8" fill="none"/></svg>`;
+
+const sayButton = (extra) =>
+  canSpeak() ? `<button class="say${extra || ""}" data-say aria-label="hear it">${SPEAKER}</button>` : "";
+
 // ---------- charts ----------
 
 const TARGET = "2026-12-15";
@@ -719,7 +780,6 @@ function viewReview() {
   /* Input shows the pronunciation with the french prompt: it is a cue for saying
      the word, not the answer. Output hides it until reveal, where it belongs to
      the french the card was asking for. */
-  const ipaLine = w.ipa ? `<p class="ipa">${esc(w.ipa)}</p>` : "";
   const glossLine = `<p class="gloss"><span class="gloss-fr">${esc(w.fr)}</span>${
     w.pos ? `<span class="gloss-pos">${esc(w.pos)}</span>` : ""
   }<span class="gloss-en">${esc(w.en)}</span></p>`;
@@ -737,7 +797,7 @@ function viewReview() {
   let prompt, sub, slot;
   if (dir === "r") {
     prompt = ex ? `<h1 class="phrase">${marked}</h1>` : `<h1 class="headword">${esc(w.fr)}</h1>`;
-    sub = `${w.pos && !ex ? `<p class="pos">${esc(w.pos)}</p>` : ""}${ipaLine}`;
+    sub = `${w.pos && !ex ? `<p class="pos">${esc(w.pos)}</p>` : ""}${sayButton()}`;
     slot = state.reveal
       ? ex
         ? `<div><p class="phrase-en">${esc(ex.en)}</p>${glossLine}</div>`
@@ -747,7 +807,7 @@ function viewReview() {
     prompt = `<h1 class="headword">${esc(w.en)}</h1>`;
     sub = ex ? `<p class="phrase-en cue">${esc(ex.en)}</p>` : "";
     slot = state.reveal
-      ? `<div>${ex ? `<p class="phrase">${marked}</p>` : `<p class="definition">${esc(w.fr)}</p>`}${ipaLine}</div>`
+      ? `<div>${ex ? `<p class="phrase">${marked}</p>` : `<p class="definition">${esc(w.fr)}</p>`}${sayButton()}</div>`
       : `<span class="slot-rule"></span>`;
   }
 
@@ -855,6 +915,15 @@ function render(gateMsg) {
   const nav = document.querySelector(".tabs");
   const warn = document.getElementById("write-warning");
 
+  const mute = document.getElementById("mute-btn");
+  if (mute) {
+    mute.hidden = !canSpeak();
+    mute.classList.toggle("off", muted());
+    mute.innerHTML = SPEAKER;
+    // the button governs auto-play only: tapping the speaker on a card always speaks
+    mute.title = muted() ? "speaks on reveal: off" : "speaks on reveal: on";
+  }
+
   if (!LOCAL && !state.token) {
     nav.hidden = true;
     warn.hidden = true;
@@ -915,18 +984,30 @@ document.addEventListener("mouseout", (e) => {
   }
 });
 
+/* Reveal is the moment the french is settled, so it is the moment to hear it.
+   It always runs off a tap or a keypress, which is what iOS requires before it
+   will let a page speak at all. */
+function reveal() {
+  state.reveal = true;
+  render();
+  if (!muted()) speak(sayable(wordOf(currentId())));
+}
+
 // ---------- events ----------
 
 document.addEventListener("click", (e) => {
-  const t = e.target.closest("[data-go], [data-start], [data-reveal], [data-grade]");
+  const t = e.target.closest("[data-go], [data-start], [data-reveal], [data-grade], [data-say], [data-mute]");
   if (!t) return;
   e.preventDefault();
-  if (t.dataset.go) return go(t.dataset.go);
-  if (t.dataset.start !== undefined) return startSession();
-  if (t.dataset.reveal !== undefined) {
-    state.reveal = true;
+  if (t.dataset.say !== undefined) return speak(sayable(wordOf(currentId())));
+  if (t.dataset.mute !== undefined) {
+    localStorage.setItem(MUTE, muted() ? "0" : "1");
+    if (muted()) speechSynthesis.cancel();
     return render();
   }
+  if (t.dataset.go) return go(t.dataset.go);
+  if (t.dataset.start !== undefined) return startSession();
+  if (t.dataset.reveal !== undefined) return reveal();
   if (t.dataset.grade) return answered(t.dataset.grade);
 });
 
@@ -934,10 +1015,7 @@ document.addEventListener("keydown", (e) => {
   if (state.view !== "review" || !state.session || state.session.finished) return;
   if (e.key === " " || e.key === "Enter") {
     e.preventDefault();
-    if (!state.reveal) {
-      state.reveal = true;
-      render();
-    }
+    if (!state.reveal) reveal();
     return;
   }
   if (state.reveal && ["1", "2", "3", "4"].includes(e.key)) {

@@ -307,6 +307,62 @@ body {
   animation: none;
 }
 
+/* Hear it. Sits where the IPA line used to, because it does that line's job for
+   someone who does not read IPA. */
+.say {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background: var(--paper-lift);
+  color: var(--r5);
+  cursor: pointer;
+  transition: background 140ms ease, border-color 140ms ease;
+}
+
+.say:hover { background: #fff; border-color: var(--r2); }
+.say:active { transform: scale(0.94); }
+.say svg { width: 1.15rem; height: 1.15rem; }
+.say svg path { fill: currentColor; }
+.say svg path[fill="none"] { stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; }
+
+/* masthead toggle: same glyph, struck through when off */
+.mute {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.15rem;
+  border: 0;
+  background: none;
+  color: var(--ink-soft);
+  cursor: pointer;
+  position: relative;
+}
+
+.mute svg { width: 0.95rem; height: 0.95rem; }
+.mute svg path { fill: currentColor; }
+.mute svg path[fill="none"] { stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+.mute:hover { color: var(--ink); }
+.mute:focus { outline: none; }
+.mute:focus-visible, .say:focus-visible { outline: 2px solid var(--r3); outline-offset: 2px; }
+.say:focus { outline: none; }
+/* off still has to be readable — it is a control, not decoration */
+.mute.off { color: var(--ink-soft); opacity: 0.6; }
+.mute.off::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 50%;
+  height: 1px;
+  background: var(--ink-soft);
+  transform: rotate(-32deg);
+}
+
 /* the dictionary line, after the sentence has done its work */
 .gloss {
   display: flex;
@@ -323,7 +379,7 @@ body {
 .gloss-en { font-size: 1.06rem; color: var(--ink-soft); }
 
 .slot .phrase { font-size: clamp(1.4rem, 3.8vw, 2.05rem); animation: set-type 190ms ease-out; }
-.phrase + .ipa, .slot .phrase + .ipa { margin-top: 0.7rem; }
+.slot .say { margin-top: 1rem; }
 
 /* the slot: an incomplete entry. Reserved height so nothing shifts on reveal. */
 .slot {
