@@ -56,7 +56,7 @@ body {
 
 .meta {
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.92rem;
   font-weight: 400;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -100,7 +100,7 @@ body {
   padding: 0;
   cursor: pointer;
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.92rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -171,7 +171,7 @@ body {
   border: 0;
   cursor: pointer;
   font-family: var(--mono);
-  font-size: 0.74rem;
+  font-size: 0.94rem;
   letter-spacing: 0.11em;
   text-transform: uppercase;
   transition: opacity 140ms ease;
@@ -191,7 +191,7 @@ body {
 .hint {
   margin-top: 1.5rem;
   font-family: var(--mono);
-  font-size: 0.74rem;
+  font-size: 0.94rem;
   line-height: 1.7;
   color: var(--ink-soft);
 }
@@ -232,7 +232,7 @@ body {
 
 .direction {
   font-family: var(--mono);
-  font-size: 0.66rem;
+  font-size: 0.9rem;
   letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -437,7 +437,7 @@ body {
   color: var(--ink);
   cursor: pointer;
   font-family: var(--mono);
-  font-size: 0.74rem;
+  font-size: 0.94rem;
   letter-spacing: 0.11em;
   text-transform: uppercase;
   transition: background 140ms ease, color 140ms ease;
@@ -485,7 +485,7 @@ body {
 
 .grade-ivl {
   font-family: var(--mono);
-  font-size: 0.66rem;
+  font-size: 0.9rem;
   letter-spacing: 0.06em;
   color: var(--ink-soft);
 }
@@ -548,7 +548,7 @@ body {
 
 .row-ipa {
   font-family: var(--mono);
-  font-size: 0.8rem;
+  font-size: 0.97rem;
   color: var(--ink-soft);
   opacity: 0.72;
 }
@@ -632,7 +632,7 @@ a:focus-visible {
 .chart-note {
   margin: -0.35rem 0 1.15rem;
   max-width: 46ch;
-  font-size: 0.86rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: var(--ink-soft);
 }
@@ -659,7 +659,7 @@ a:focus-visible {
 
 .rung-n {
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.92rem;
   text-align: center;
   color: var(--ink-soft);
   line-height: 1;
@@ -690,7 +690,7 @@ a:focus-visible {
 
 .rung-lbl {
   font-family: var(--mono);
-  font-size: 0.62rem;
+  font-size: 0.88rem;
   letter-spacing: 0.05em;
   text-align: center;
   color: var(--ink-soft);
@@ -730,7 +730,7 @@ a:focus-visible {
   background: var(--r6);
   color: #fff;
   font-family: var(--mono);
-  font-size: 0.78rem;
+  font-size: 0.96rem;
   letter-spacing: 0.04em;
   border-radius: 3px;
   opacity: 0;
@@ -768,7 +768,7 @@ a:focus-visible {
 
 .deadline {
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.92rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -781,12 +781,15 @@ a:focus-visible {
   height: 7px;
   border-radius: 50%;
   align-self: center;
-  background: var(--r3);
+  /* Idle is the resting state, so it must not read as an alert. Neutral grey, off the
+     rung ramp on purpose: a sync state is not a depth of knowledge (see design.md).
+     Only error earns a saturated colour. */
+  background: var(--r0);
   transition: background 200ms ease;
 }
 
 .sync-dot.syncing { background: var(--r1); }
-.sync-dot.offline { background: var(--rule); }
+.sync-dot.offline { background: transparent; box-shadow: inset 0 0 0 1.5px var(--r0); }
 .sync-dot.error   { background: var(--gap); }
 
 .write-warning {
@@ -795,7 +798,7 @@ a:focus-visible {
   background: var(--gap);
   color: #fff;
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.92rem;
   line-height: 1.5;
   letter-spacing: 0.03em;
 }
@@ -810,7 +813,7 @@ a:focus-visible {
   margin: 0.5rem 0 1.4rem;
   padding: 0.75rem 0.85rem;
   font-family: var(--mono);
-  font-size: 0.82rem;
+  font-size: 0.98rem;
   color: var(--ink);
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid var(--rule);

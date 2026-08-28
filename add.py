@@ -26,6 +26,16 @@ IPA = HERE / "ipa.json.gz"
 
 _ipa_cache = None
 
+ARTICLE = re.compile(r"^(le|la|les|mon|ma|mes|ton|ta|tes|son|sa|ses)\s+", re.I)
+
+
+def dedupe_key(fr):
+    """Two entries are the same word when they differ only by the oe ligature or a
+    leading definite/possessive article. Indefinite articles are left alone: "un peu"
+    is its own word, not a determiner in front of "peu"."""
+    return ARTICLE.sub("", fr.strip().lower().replace("\u0153", "oe").replace("\u00e6", "ae"))
+
+
 
 def lookup(fr):
     """Pronunciation and part of speech for a single word, from Lexique 3.83.
@@ -94,13 +104,13 @@ def main(argv):
 
     data = json.loads(VOCAB.read_text()) if VOCAB.exists() else {"version": 1, "words": []}
     words = data["words"]
-    existing = {w["fr"].lower() for w in words}
+    existing = {dedupe_key(w["fr"]) for w in words}
     today = date.today().isoformat()
 
     added, skipped = [], []
     for raw in argv:
         entry = parse(raw)
-        if entry["fr"].lower() in existing:
+        if dedupe_key(entry["fr"]) in existing:
             skipped.append(entry["fr"])
             continue
         ipa, pos = lookup(entry["fr"])
@@ -109,7 +119,7 @@ def main(argv):
         entry["id"] = next_id(words)
         entry["added"] = today
         words.append({k: entry[k] for k in ("id", "fr", "pos", "en", "note", "ipa", "added")})
-        existing.add(entry["fr"].lower())
+        existing.add(dedupe_key(entry["fr"]))
         added.append(entry)
 
     VOCAB.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")

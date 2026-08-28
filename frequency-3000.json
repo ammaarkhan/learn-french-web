@@ -1324,10 +1324,11 @@
    "rank": 79,
    "fr": "soeur",
    "pos": "n.f.",
-   "en": "nonstandard spelling of sœur",
+   "en": "sister",
    "ipa": "/sœʁ/",
    "note": "",
-   "situation": "family"
+   "situation": "family",
+   "en_src": "hand"
   },
   {
    "rank": 80,
@@ -28602,23 +28603,6 @@
    }
   },
   {
-   "rank": 1688,
-   "fr": "clef",
-   "pos": "n.f.",
-   "en": "alternative spelling of clé; clef",
-   "ipa": "/kle/",
-   "note": "",
-   "situation": null,
-   "ex": {
-    "fr": "Je dois trouver ma clef.",
-    "en": "I must find my key.",
-    "hl": [
-     19,
-     23
-    ]
-   }
-  },
-  {
    "rank": 1689,
    "fr": "canon",
    "pos": "n.m.",
@@ -40600,10 +40584,11 @@
    "rank": 2395,
    "fr": "voeu",
    "pos": "n.m.",
-   "en": "nonstandard spelling of vœu",
+   "en": "wish; vow",
    "ipa": "/vø/",
    "note": "",
-   "situation": null
+   "situation": null,
+   "en_src": "hand"
   },
   {
    "rank": 2396,
@@ -43159,10 +43144,11 @@
    "rank": 2546,
    "fr": "noeud",
    "pos": "n.m.",
-   "en": "nonstandard spelling of nœud",
+   "en": "knot",
    "ipa": "/nø/",
    "note": "",
-   "situation": null
+   "situation": null,
+   "en_src": "hand"
   },
   {
    "rank": 2547,
@@ -49152,7 +49138,7 @@
    "rank": 2979,
    "fr": "l'une",
    "pos": "pron.",
-   "en": "la + une",
+   "en": "one (of them), f.",
    "ipa": "/lyn/",
    "note": "",
    "situation": "function",
@@ -49163,7 +49149,8 @@
      6,
      11
     ]
-   }
+   },
+   "en_src": "hand"
   },
   {
    "rank": 2980,

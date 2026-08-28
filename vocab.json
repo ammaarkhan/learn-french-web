@@ -1773,36 +1773,6 @@
       }
     },
     {
-      "id": "w123",
-      "fr": "mon frère",
-      "pos": "",
-      "en": "my brother",
-      "note": "",
-      "ipa": "",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
-      "id": "w124",
-      "fr": "mon fils",
-      "pos": "",
-      "en": "my son",
-      "note": "",
-      "ipa": "",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
-      "id": "w125",
-      "fr": "ma tante",
-      "pos": "",
-      "en": "my aunt",
-      "note": "",
-      "ipa": "",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
       "id": "w126",
       "fr": "toujours",
       "pos": "adv.",
@@ -1858,26 +1828,6 @@
         ],
         "src": "tatoeba"
       }
-    },
-    {
-      "id": "w129",
-      "fr": "ma nièce",
-      "pos": "",
-      "en": "my niece",
-      "note": "",
-      "ipa": "",
-      "added": "2026-08-25",
-      "source": "duolingo"
-    },
-    {
-      "id": "w130",
-      "fr": "ma sœur",
-      "pos": "",
-      "en": "my sister",
-      "note": "also written ma soeur",
-      "ipa": "",
-      "added": "2026-08-25",
-      "source": "duolingo"
     },
     {
       "id": "w131",

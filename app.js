@@ -317,16 +317,27 @@ function intakeCount() {
   return (days + 1) * INTAKE_PER_DAY;
 }
 
+/* Two entries are the same word when they differ only by the oe ligature or a leading
+   definite/possessive article: "soeur" (pool) and "sœur" (hand-added), "ma sœur" and "sœur".
+   Indefinite articles are deliberately left alone — "un peu" is its own word, not a
+   determiner in front of "peu", and folding it would hide "peu" from the curriculum. */
+const dedupeKey = (s) =>
+  s
+    .toLowerCase()
+    .replace(/œ/g, "oe")
+    .replace(/æ/g, "ae")
+    .replace(/^(le|la|les|mon|ma|mes|ton|ta|tes|son|sa|ses)\s+/, "");
+
 /* ids are keyed on the word itself ("f-chien"), not on rank, so re-ranking the pool
    later cannot detach a card from its history. */
 function intake(pool) {
   state.poolTotal = pool.length;
-  const mine = new Set(state.words.map((w) => w.fr.toLowerCase()));
+  const mine = new Set(state.words.map((w) => dedupeKey(w.fr)));
   const cards = P().cards;
   const taken = [];
   let promoted = 0;
   for (const p of pool) {
-    if (mine.has(p.fr.toLowerCase())) continue; // already collected by hand
+    if (mine.has(dedupeKey(p.fr))) continue; // already collected by hand
     const id = "f-" + p.fr;
     /* Under the promotion count, or already started. The second clause matters
        whenever the pool is re-ordered: a word he has reviewed must never drop out
