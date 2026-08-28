@@ -54,8 +54,9 @@ individual words would ignore liaison and elision, and a wrong pronunciation is 
 
 ## The word pool
 
-`frequency-3000.json` holds the 3,000 most frequent French lemmas, each with an English gloss, an
-IPA pronunciation and an example sentence. Forty enter the ladder per calendar day. Promotion is computed from the date
+`frequency-3000.json` holds the most frequent French lemmas — 2,999 after `clef` was dropped as a
+duplicate spelling of `clé` — each with an English gloss, an IPA pronunciation and an example
+sentence. Forty enter the ladder per calendar day. Promotion is computed from the date
 rather than stored as a counter, so every device agrees without anything to merge, and re-ranking the
 list later cannot detach a card from its history — card ids are keyed on the word (`f-chien`).
 
@@ -66,7 +67,11 @@ That cap is per sitting rather than per day. Close a session with words still wa
 the next batch, so the daily pace is a floor rather than a ceiling — on a good day you can keep going
 until the list runs out.
 
-Words already in `vocab.json` are skipped, so anything added by hand is never duplicated.
+Words already in `vocab.json` are skipped, so anything added by hand is never duplicated. The
+comparison is `dedupeKey()`, which folds the `oe` ligature and strips a leading definite or
+possessive article — `soeur`, `sœur` and `ma sœur` are one word. Indefinite articles are left alone,
+because `un peu` is its own entry and folding it to `peu` would drop `peu` from the curriculum.
+`add.py` uses the same rule as `dedupe_key()`; the two must stay in step or a word enters twice.
 
 Rebuild the list with:
 
@@ -108,6 +113,12 @@ only asserted here. `"tatoeba"` is an unmodified pair, verified against `fra.txt
 the French side. `"hand"` is a sentence written for this project, used where the corpus has nothing
 usable for the sense being taught — `éclair` is the pastry to a learner and lightning to Tatoeba.
 Currently 109 tatoeba, 1 hand. A hand sentence must be tagged; an untagged one is a mistake.
+
+Glosses follow the same rule. Where the Wiktionary extraction returns a dictionary artifact instead
+of a meaning — `soeur` arrived as *"nonstandard spelling of sœur"* — the gloss is corrected by hand
+and marked `en_src: "hand"`. Four pool entries carry one: `soeur`, `voeu`, `noeud`, `l'une`. Note
+that the pool holds only the `oe` spellings, so deleting those entries would remove the words from
+the curriculum altogether rather than deduplicating them.
 
 Both Lexique and Wiktionary are share-alike licensed (Lexique CC BY-SA, Wiktionary CC BY-SA 3.0), and `frequency-3000.json`
 is a derivative of both. It is redistributed here under the same terms, with attribution as above.
