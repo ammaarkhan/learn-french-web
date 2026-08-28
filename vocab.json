@@ -2235,17 +2235,17 @@
       "id": "w165",
       "fr": "éclair",
       "pos": "n.m.",
-      "en": "lightning; flash (also: the pastry)",
-      "note": "",
+      "en": "éclair (pastry)",
+      "note": "Also means lightning or a flash: un éclair de génie = a stroke of genius.",
       "ipa": "/eklɛʁ/",
       "added": "2026-08-25",
       "source": "duolingo",
       "ex": {
-        "fr": "Ça a été un éclair de génie.",
-        "en": "It was a stroke of genius.",
+        "fr": "Je voudrais un éclair au chocolat.",
+        "en": "I would like a chocolate éclair.",
         "hl": [
-          12,
-          18
+          15,
+          21
         ]
       }
     },
