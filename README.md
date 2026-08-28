@@ -100,8 +100,14 @@ French. English glosses come from **English Wiktionary**, via the machine-readab
 <https://kaikki.org/dictionary/French/>.
 
 Example sentences come from **Tatoeba** (<https://tatoeba.org>), used under **CC BY 2.0 FR**.
-Each sentence in `frequency-3000.json` and `vocab.json` is an unmodified Tatoeba sentence pair;
-the project and its contributors are the authors.
+Every sentence in `frequency-3000.json` is an unmodified Tatoeba pair, attached by `build_order.py`
+straight from `fra.txt`; the project and its contributors are the authors.
+
+In `vocab.json` each sentence carries `ex.src`, so provenance is visible in the data rather than
+only asserted here. `"tatoeba"` is an unmodified pair, verified against `fra.txt` by exact match on
+the French side. `"hand"` is a sentence written for this project, used where the corpus has nothing
+usable for the sense being taught — `éclair` is the pastry to a learner and lightning to Tatoeba.
+Currently 109 tatoeba, 1 hand. A hand sentence must be tagged; an untagged one is a mistake.
 
 Both Lexique and Wiktionary are share-alike licensed (Lexique CC BY-SA, Wiktionary CC BY-SA 3.0), and `frequency-3000.json`
 is a derivative of both. It is redistributed here under the same terms, with attribution as above.
