@@ -2794,6 +2794,123 @@
       "note": "ils prennent; also builds apprendre and comprendre",
       "ipa": "/pʁɑ̃dʁ/",
       "added": "2026-08-31"
+    },
+    {
+      "id": "w216",
+      "fr": "le soleil",
+      "pos": "n.m.",
+      "en": "the sun",
+      "note": "prendre le soleil = to sunbathe; il fait soleil = it's sunny",
+      "ipa": "/solɛj/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w217",
+      "fr": "le musée",
+      "pos": "n.m.",
+      "en": "the museum",
+      "note": "masculine despite the -e, like le lycée",
+      "ipa": "/myze/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w218",
+      "fr": "la peinture",
+      "pos": "n.f.",
+      "en": "the painting, paint",
+      "note": "from peindre, to paint",
+      "ipa": "/pɛ̃tyʁ/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w219",
+      "fr": "la photo",
+      "pos": "n.f.",
+      "en": "the photo",
+      "note": "short for la photographie",
+      "ipa": "/foto/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w220",
+      "fr": "la sculpture",
+      "pos": "n.f.",
+      "en": "the sculpture",
+      "note": "",
+      "ipa": "/skyltyʁ/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w221",
+      "fr": "prochain",
+      "pos": "adj.",
+      "en": "next",
+      "note": "before the noun for a sequence, after it for time: la semaine prochaine",
+      "ipa": "/pʁoʃɛ̃/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w222",
+      "fr": "épisode",
+      "pos": "n.m.",
+      "en": "episode",
+      "note": "masculine despite the -e",
+      "ipa": "/epizɔd/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w223",
+      "fr": "parler de",
+      "pos": "loc.",
+      "en": "to talk about",
+      "note": "parler à = to talk to, parler avec = to talk with",
+      "ipa": "",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w224",
+      "fr": "comparer",
+      "pos": "v.",
+      "en": "to compare",
+      "note": "comparer A à B, or comparer A avec B",
+      "ipa": "/kɔ̃paʁe/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w225",
+      "fr": "la chose",
+      "pos": "n.f.",
+      "en": "the thing",
+      "note": "quelque chose = something, and it takes masculine agreement",
+      "ipa": "/ʃoz/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w226",
+      "fr": "qu'est-ce qui",
+      "pos": "loc.",
+      "en": "what (as the subject)",
+      "note": "qu'est-ce que when something else is the subject",
+      "ipa": "",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w227",
+      "fr": "le téléphone",
+      "pos": "n.m.",
+      "en": "the phone",
+      "note": "un portable is what people say for a mobile",
+      "ipa": "/telefɔn/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w228",
+      "fr": "de... à...",
+      "pos": "loc.",
+      "en": "from... to...",
+      "note": "du lundi au vendredi; de mes 4 ans à mes 21 ans",
+      "ipa": "",
+      "added": "2026-08-31"
     }
   ]
 }
