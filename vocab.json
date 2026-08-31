@@ -2659,6 +2659,141 @@
       "note": "also height, waist, and clothing size",
       "ipa": "/taj/",
       "added": "2026-08-31"
+    },
+    {
+      "id": "w201",
+      "fr": "premier",
+      "pos": "adj.",
+      "en": "first",
+      "note": "première (f.); the only ordinal that changes for gender",
+      "ipa": "/pʁømje/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w202",
+      "fr": "deuxième",
+      "pos": "adj.",
+      "en": "second",
+      "note": "every ordinal after premier just takes -ième",
+      "ipa": "/døzjɛm/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w203",
+      "fr": "plus... que",
+      "pos": "loc.",
+      "en": "more... than",
+      "note": "moins... que = less than, aussi... que = as... as",
+      "ipa": "",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w204",
+      "fr": "plus de",
+      "pos": "loc.",
+      "en": "more (of)",
+      "note": "plus de + noun; plus + adjective + que for comparisons",
+      "ipa": "",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w205",
+      "fr": "la personne",
+      "pos": "pron.",
+      "en": "the person",
+      "note": "always feminine, even for a man; personne with ne = nobody",
+      "ipa": "/pɛʁsɔn/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w206",
+      "fr": "la météo",
+      "pos": "n.f.",
+      "en": "the weather, the forecast",
+      "note": "short for la météorologie; le temps also means weather",
+      "ipa": "/meteo/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w207",
+      "fr": "la nourriture",
+      "pos": "n.f.",
+      "en": "food",
+      "note": "la cuisine for cooking, un plat for a dish, un repas for a meal",
+      "ipa": "/nuʁityʁ/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w208",
+      "fr": "la bouillabaisse",
+      "pos": "n.f.",
+      "en": "bouillabaisse",
+      "note": "Marseille fish stew",
+      "ipa": "/bujabɛs/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w209",
+      "fr": "de la",
+      "pos": "art.",
+      "en": "some",
+      "note": "partitive: du (m.), de la (f.), de l' (vowel), des (pl.)",
+      "ipa": "",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w210",
+      "fr": "la soupe",
+      "pos": "n.f.",
+      "en": "the soup",
+      "note": "un potage is the smoother kind",
+      "ipa": "/sup/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w211",
+      "fr": "le poisson",
+      "pos": "n.m.",
+      "en": "the fish",
+      "note": "not le poison, which is poison",
+      "ipa": "/pwasɔ̃/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w212",
+      "fr": "les fruits de mer",
+      "pos": "n.m.pl.",
+      "en": "seafood",
+      "note": "shellfish specifically; fish is not fruits de mer",
+      "ipa": "",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w213",
+      "fr": "nager",
+      "pos": "v.",
+      "en": "to swim",
+      "note": "la natation is swimming as a sport; spelled like manger",
+      "ipa": "/naʒe/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w214",
+      "fr": "le bateau",
+      "pos": "n.m.",
+      "en": "the boat",
+      "note": "plural les bateaux; faire du bateau = to go boating",
+      "ipa": "/bato/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w215",
+      "fr": "prendre",
+      "pos": "v.",
+      "en": "to take",
+      "note": "ils prennent; also builds apprendre and comprendre",
+      "ipa": "/pʁɑ̃dʁ/",
+      "added": "2026-08-31"
     }
   ]
 }
