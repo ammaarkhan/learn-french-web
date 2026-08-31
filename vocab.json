@@ -2524,6 +2524,141 @@
       "note": "overlaps with chez moi",
       "ipa": "",
       "added": "2026-08-31"
+    },
+    {
+      "id": "w186",
+      "fr": "manger",
+      "pos": "v.",
+      "en": "to eat",
+      "note": "nous mangeons keeps the e to hold the soft g",
+      "ipa": "/mɑ̃ʒe/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w187",
+      "fr": "le plat",
+      "pos": "n.",
+      "en": "the dish",
+      "note": "both the plate of food and the menu item; le plat principal = main course",
+      "ipa": "/pla/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w188",
+      "fr": "aujourd'hui",
+      "pos": "adv.",
+      "en": "today",
+      "note": "fossilised phrase, learn it whole",
+      "ipa": "/oʒuʁdɥi/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w189",
+      "fr": "quelques",
+      "pos": "dét.",
+      "en": "a few, some",
+      "note": "always plural; quelque chose = something, quelqu'un = someone",
+      "ipa": "/kɛlk/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w190",
+      "fr": "le mois",
+      "pos": "n.m.",
+      "en": "the month",
+      "note": "same spelling singular and plural, silent s",
+      "ipa": "/mwa/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w191",
+      "fr": "voilà",
+      "pos": "prep.",
+      "en": "there it is, that's it",
+      "note": "voici = here is, for what comes next",
+      "ipa": "/vwala/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w192",
+      "fr": "histoire",
+      "pos": "n.f.",
+      "en": "story, history",
+      "note": "mon histoire, not ma, because of the vowel",
+      "ipa": "/istwaʁ/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w193",
+      "fr": "naître",
+      "pos": "v.",
+      "en": "to be born",
+      "note": "je suis né(e); takes être, so it agrees with the subject",
+      "ipa": "/nɛtʁ/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w194",
+      "fr": "grandir",
+      "pos": "v.",
+      "en": "to grow up",
+      "note": "j'ai grandi; takes avoir, so no agreement",
+      "ipa": "/ɡʁɑ̃diʁ/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w195",
+      "fr": "la ville",
+      "pos": "n.f.",
+      "en": "the city, the town",
+      "note": "French does not split city from town; en ville = downtown",
+      "ipa": "/vil/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w196",
+      "fr": "le sud-est",
+      "pos": "n.m.",
+      "en": "the south-east",
+      "note": "also nord-est, sud-ouest, nord-ouest",
+      "ipa": "/sydɛst/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w197",
+      "fr": "la côte",
+      "pos": "n.f.",
+      "en": "the coast",
+      "note": "not le côté, which is the side; la Côte d'Azur",
+      "ipa": "/kot/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w198",
+      "fr": "la mer",
+      "pos": "n.f.",
+      "en": "the sea",
+      "note": "sounds identical to la mère (mother) and le maire (mayor)",
+      "ipa": "/mɛʁ/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w199",
+      "fr": "la Méditerranée",
+      "pos": "n.f.",
+      "en": "the Mediterranean",
+      "note": "la mer Méditerranée; the generic noun stays lowercase",
+      "ipa": "/meditɛʁane/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w200",
+      "fr": "la taille",
+      "pos": "n.f.",
+      "en": "the size",
+      "note": "also height, waist, and clothing size",
+      "ipa": "/taj/",
+      "added": "2026-08-31"
     }
   ]
 }
