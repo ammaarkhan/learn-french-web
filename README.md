@@ -94,7 +94,15 @@ have shown them three times, so the card lands after the word has been met rathe
 `fra.txt` is not checked in; re-download it when rebuilding.
 
 Words added later with `add.py` get no sentence — attaching one needs the Tatoeba file, which is not
-kept in the repo. They fall back to the plain word-and-gloss card until the next `build_order.py` run.
+kept in the repo. They fall back to the plain word-and-gloss card until one is attached:
+
+    python3 fill_sentences.py --dry-run     # inspect
+    python3 fill_sentences.py               # write
+
+`fill_sentences.py` does the sentence half of `build_order.py` alone. It reuses the same picker and
+scoring but writes only `vocab.json`, so the teaching order is left untouched — which is what you
+want after an `add.py` run. Phrases with no single token to index on come back on a list to be
+written by hand and tagged `ex.src = "hand"`.
 
 ### Sources and licence
 
@@ -112,7 +120,8 @@ In `vocab.json` each sentence carries `ex.src`, so provenance is visible in the 
 only asserted here. `"tatoeba"` is an unmodified pair, verified against `fra.txt` by exact match on
 the French side. `"hand"` is a sentence written for this project, used where the corpus has nothing
 usable for the sense being taught — `éclair` is the pastry to a learner and lightning to Tatoeba.
-Currently 109 tatoeba, 1 hand. A hand sentence must be tagged; an untagged one is a mistake.
+Every word in `vocab.json` has a sentence as of 2026-08-31: 143 tatoeba, 63 hand. A hand sentence
+must be tagged; an untagged one is a mistake.
 
 Glosses follow the same rule. Where the Wiktionary extraction returns a dictionary artifact instead
 of a meaning — `soeur` arrived as *"nonstandard spelling of sœur"* — the gloss is corrected by hand
