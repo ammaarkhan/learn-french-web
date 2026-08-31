@@ -2389,6 +2389,141 @@
       "note": "",
       "ipa": "/paʁaplɥi/",
       "added": "2026-08-28"
+    },
+    {
+      "id": "w171",
+      "fr": "cette",
+      "pos": "dét.",
+      "en": "this, that",
+      "note": "feminine singular; ce (m.), cet (m. before a vowel), ces (pl.)",
+      "ipa": "/sɛt/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w172",
+      "fr": "c'est parti",
+      "pos": "loc.",
+      "en": "here we go, let's go",
+      "note": "fixed phrase for kicking something off",
+      "ipa": "",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w173",
+      "fr": "le sud",
+      "pos": "n.m.",
+      "en": "the south",
+      "note": "dans le sud de la France = in southern France; au sud de = to the south of",
+      "ipa": "/syd/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w174",
+      "fr": "déménager",
+      "pos": "v.",
+      "en": "to move house",
+      "note": "emménager = to move in; bouger is to move your body",
+      "ipa": "/demenaʒe/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w175",
+      "fr": "algérien",
+      "pos": "adj.",
+      "en": "Algerian",
+      "note": "algérienne (f.)",
+      "ipa": "/alʒeʁjɛ̃/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w176",
+      "fr": "le pays",
+      "pos": "n.m.",
+      "en": "the country",
+      "note": "same spelling singular and plural, silent s",
+      "ipa": "/pei/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w177",
+      "fr": "l'Afrique",
+      "pos": "n.f.",
+      "en": "Africa",
+      "note": "en Afrique; continents are feminine",
+      "ipa": "",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w178",
+      "fr": "la maman",
+      "pos": "n.f.",
+      "en": "mum",
+      "note": "la mère is the neutral word",
+      "ipa": "/mamɑ̃/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w179",
+      "fr": "le papa",
+      "pos": "n.m.",
+      "en": "dad",
+      "note": "le père is the neutral word",
+      "ipa": "/papa/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w180",
+      "fr": "le Liban",
+      "pos": "n.m.",
+      "en": "Lebanon",
+      "note": "du Liban = from Lebanon, because Liban is masculine",
+      "ipa": "",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w181",
+      "fr": "donc",
+      "pos": "conj.",
+      "en": "so, therefore",
+      "note": "very common spoken connector",
+      "ipa": "/dɔ̃k/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w182",
+      "fr": "libanais",
+      "pos": "adj.",
+      "en": "Lebanese",
+      "note": "libanaise (f.)",
+      "ipa": "/libanɛ/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w183",
+      "fr": "la moitié",
+      "pos": "n.f.",
+      "en": "half",
+      "note": "moitié X, moitié Y for mixed heritage; demi- for measurements",
+      "ipa": "/mwatje/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w184",
+      "fr": "chez",
+      "pos": "prep.",
+      "en": "at someone's place",
+      "note": "chez moi, chez mes parents, chez le médecin",
+      "ipa": "/ʃe/",
+      "added": "2026-08-31"
+    },
+    {
+      "id": "w185",
+      "fr": "à la maison",
+      "pos": "loc.",
+      "en": "at home",
+      "note": "overlaps with chez moi",
+      "ipa": "",
+      "added": "2026-08-31"
     }
   ]
 }
