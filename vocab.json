@@ -3775,6 +3775,8047 @@
         ],
         "src": "hand"
       }
+    },
+    {
+      "id": "w229",
+      "fr": "comment tu t'appelles",
+      "pos": "",
+      "en": "what's your name",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Comment tu t'appelles, au fait ?",
+        "en": "What was your name again?",
+        "hl": [
+          0,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w230",
+      "fr": "copain",
+      "pos": "n.m.",
+      "en": "friend, chum, mate, pal, buddy",
+      "note": "",
+      "ipa": "/kopɛ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Tom est un copain à moi.",
+        "en": "Tom is a buddy of mine.",
+        "hl": [
+          11,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w231",
+      "fr": "travailler",
+      "pos": "v.",
+      "en": "to work; to study",
+      "note": "",
+      "ipa": "/tʁavaje/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis trop malade pour travailler.",
+        "en": "I'm too sick to work.",
+        "hl": [
+          25,
+          35
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w232",
+      "fr": "le portugais",
+      "pos": "n.m.",
+      "en": "Portuguese",
+      "note": "",
+      "ipa": "/pɔʁtyɡɛ/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je cherche quelqu'un pouvant parler portugais.",
+        "en": "I'm looking for someone who can speak Portuguese.",
+        "hl": [
+          36,
+          45
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w233",
+      "fr": "bureau",
+      "pos": "n.m.",
+      "en": "desk; office",
+      "note": "",
+      "ipa": "/byʁo/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis au bureau.",
+        "en": "I'm at the office.",
+        "hl": [
+          11,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w234",
+      "fr": "restaurant",
+      "pos": "n.m.",
+      "en": "restaurant",
+      "note": "",
+      "ipa": "/ʁɛstoʁɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis au restaurant.",
+        "en": "I'm at the restaurant.",
+        "hl": [
+          11,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w235",
+      "fr": "toi aussi",
+      "pos": "",
+      "en": "you too",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je peux venir avec toi aussi ?",
+        "en": "Can I come with you, too?",
+        "hl": [
+          19,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w236",
+      "fr": "marocain",
+      "pos": "adj.",
+      "en": "Moroccan",
+      "note": "",
+      "ipa": "/maʁokɛ̃/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Mon voisin est marocain.",
+        "en": "My neighbour is Moroccan.",
+        "hl": [
+          15,
+          23
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w237",
+      "fr": "voisin",
+      "pos": "n.m.",
+      "en": "neighbour, neighbor",
+      "note": "",
+      "ipa": "/vwazɛ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis votre voisin.",
+        "en": "I'm your neighbor.",
+        "hl": [
+          14,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w238",
+      "fr": "cool",
+      "pos": "adj.",
+      "en": "cool",
+      "note": "",
+      "ipa": "/kul/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Ta mère est cool.",
+        "en": "Your mom is cool.",
+        "hl": [
+          12,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w239",
+      "fr": "aussi",
+      "pos": "adv.",
+      "en": "too, also, as well; as",
+      "note": "",
+      "ipa": "/osi/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Moi aussi, je suis professeur.",
+        "en": "I am a teacher, too.",
+        "hl": [
+          4,
+          9
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w240",
+      "fr": "rue",
+      "pos": "n.f.",
+      "en": "street, road",
+      "note": "",
+      "ipa": "/ʁy/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "C'est une rue calme.",
+        "en": "This is a quiet street.",
+        "hl": [
+          10,
+          13
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w241",
+      "fr": "quartier",
+      "pos": "n.m.",
+      "en": "neighbourhood, district",
+      "note": "",
+      "ipa": "/kaʁtje/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Elle vit dans le quartier.",
+        "en": "She lives in this neighborhood.",
+        "hl": [
+          17,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w242",
+      "fr": "propre",
+      "pos": "adj.",
+      "en": "own; clean",
+      "note": "",
+      "ipa": "/pʁɔpʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis propre.",
+        "en": "I'm clean.",
+        "hl": [
+          8,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w243",
+      "fr": "c'est",
+      "pos": "",
+      "en": "it is; this is",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je sais que c'est un mensonge.",
+        "en": "I know it's a lie.",
+        "hl": [
+          12,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w244",
+      "fr": "calme",
+      "pos": "n.m.",
+      "en": "calmness, stillness; coolness",
+      "note": "",
+      "ipa": "/kalm/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Du calme.",
+        "en": "Calm down!",
+        "hl": [
+          3,
+          8
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w245",
+      "fr": "parc",
+      "pos": "n.m.",
+      "en": "park; playpen",
+      "note": "",
+      "ipa": "/paʁk/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je le vis dans le parc.",
+        "en": "I saw him in the park.",
+        "hl": [
+          18,
+          22
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w246",
+      "fr": "marcher",
+      "pos": "v.",
+      "en": "to walk; to travel; to move; to march",
+      "note": "",
+      "ipa": "/maʁʃe/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis trop fatigué pour marcher.",
+        "en": "I'm too tired to walk.",
+        "hl": [
+          26,
+          33
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w247",
+      "fr": "souvent",
+      "pos": "adv.",
+      "en": "often",
+      "note": "",
+      "ipa": "/suvɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je porte souvent un chapeau.",
+        "en": "I often wear a hat.",
+        "hl": [
+          9,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w248",
+      "fr": "banque",
+      "pos": "n.f.",
+      "en": "bank",
+      "note": "",
+      "ipa": "/bɑ̃k/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis à la banque.",
+        "en": "I'm at the bank.",
+        "hl": [
+          13,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w249",
+      "fr": "là-bas",
+      "pos": "adv.",
+      "en": "there, over there; down there",
+      "note": "",
+      "ipa": "/laba/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il fait vraiment chaud, là-bas.",
+        "en": "It's really hot there.",
+        "hl": [
+          24,
+          30
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w250",
+      "fr": "tous les jours",
+      "pos": "",
+      "en": "every day",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Elle joue du piano tous les jours.",
+        "en": "She plays the piano every day.",
+        "hl": [
+          19,
+          33
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w251",
+      "fr": "école",
+      "pos": "n.f.",
+      "en": "school",
+      "note": "",
+      "ipa": "/ekɔl/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis fier de mon école.",
+        "en": "I'm proud of my school.",
+        "hl": [
+          20,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w252",
+      "fr": "chinois",
+      "pos": "adj.",
+      "en": "of China; Chinese",
+      "note": "",
+      "ipa": "/ʃinwa/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il parle un peu chinois.",
+        "en": "He can speak Chinese a little.",
+        "hl": [
+          16,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w253",
+      "fr": "italien",
+      "pos": "adj.",
+      "en": "Italian",
+      "note": "",
+      "ipa": "/italjɛ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Sa mère parle en italien.",
+        "en": "His mother speaks Italian.",
+        "hl": [
+          17,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w254",
+      "fr": "arabe",
+      "pos": "n.",
+      "en": "Arabic",
+      "note": "",
+      "ipa": "/aʁab/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il parle en arabe.",
+        "en": "He speaks Arabic.",
+        "hl": [
+          12,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w255",
+      "fr": "livre",
+      "pos": "n.",
+      "en": "book",
+      "note": "",
+      "ipa": "/livʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Merci pour le livre.",
+        "en": "Thanks for the book.",
+        "hl": [
+          14,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w256",
+      "fr": "étudier",
+      "pos": "v.",
+      "en": "to study",
+      "note": "",
+      "ipa": "/etydje/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis trop fatigué pour étudier.",
+        "en": "I'm too tired to study.",
+        "hl": [
+          26,
+          33
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w257",
+      "fr": "le stylo",
+      "pos": "n.m.",
+      "en": "pen",
+      "note": "",
+      "ipa": "/stilo/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Ce stylo est à moi.",
+        "en": "This pen is mine.",
+        "hl": [
+          3,
+          8
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w258",
+      "fr": "université",
+      "pos": "n.f.",
+      "en": "university",
+      "note": "",
+      "ipa": "/ynivɛʁsite/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "C'est une bonne université.",
+        "en": "This is a good university.",
+        "hl": [
+          16,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w259",
+      "fr": "comment",
+      "pos": "adv.",
+      "en": "how",
+      "note": "",
+      "ipa": "/komɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Comment va le chien ?",
+        "en": "How's the dog?",
+        "hl": [
+          0,
+          7
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w260",
+      "fr": "étudiant",
+      "pos": "n.m.",
+      "en": "student",
+      "note": "",
+      "ipa": "/etydjɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis étudiant en droit.",
+        "en": "I'm a law student.",
+        "hl": [
+          8,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w261",
+      "fr": "professeur",
+      "pos": "n.",
+      "en": "teacher; professor",
+      "note": "",
+      "ipa": "/pʁofɛsœʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis un bon professeur.",
+        "en": "I'm a good teacher.",
+        "hl": [
+          15,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w262",
+      "fr": "à demain",
+      "pos": "",
+      "en": "see you tomorrow",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "D'accord, à demain !",
+        "en": "OK, see you tomorrow.",
+        "hl": [
+          10,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w263",
+      "fr": "chauffeur",
+      "pos": "n.m.",
+      "en": "stoker; fireman; driver",
+      "note": "",
+      "ipa": "/ʃofœʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis un bon chauffeur de taxi.",
+        "en": "I'm a good taxi driver.",
+        "hl": [
+          15,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w264",
+      "fr": "bus",
+      "pos": "n.m.",
+      "en": "bus",
+      "note": "",
+      "ipa": "/bys/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Le bus va bientôt arriver.",
+        "en": "The bus will come soon.",
+        "hl": [
+          3,
+          6
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w265",
+      "fr": "ouvert",
+      "pos": "adj.",
+      "en": "open; switched on",
+      "note": "",
+      "ipa": "/uvɛʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis ouvert à tout.",
+        "en": "I'm open to anything.",
+        "hl": [
+          8,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w266",
+      "fr": "la boulangerie",
+      "pos": "n.f.",
+      "en": "bakery",
+      "note": "",
+      "ipa": "/bulɑ̃ʒəʁi/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "La boulangerie du village a fermé.",
+        "en": "The bakery in the village has closed.",
+        "hl": [
+          3,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w267",
+      "fr": "près d'ici",
+      "pos": "",
+      "en": "near here",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Leur maison est près d'ici.",
+        "en": "Their house is near here.",
+        "hl": [
+          16,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w268",
+      "fr": "fermé",
+      "pos": "adj.",
+      "en": "closed; switched off",
+      "note": "",
+      "ipa": "/fɛʁme/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Le magasin est fermé, aujourd'hui.",
+        "en": "The shop is closed today.",
+        "hl": [
+          15,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w269",
+      "fr": "vendeur",
+      "pos": "n.m.",
+      "en": "salesman; seller, vendor",
+      "note": "",
+      "ipa": "/vɑ̃dœʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il est aussi un vendeur.",
+        "en": "He's a salesman too.",
+        "hl": [
+          16,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w270",
+      "fr": "magasin",
+      "pos": "n.m.",
+      "en": "shop, store; warehouse, storehouse",
+      "note": "",
+      "ipa": "/maɡazɛ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Va au magasin !",
+        "en": "Go to the store.",
+        "hl": [
+          6,
+          13
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w271",
+      "fr": "pressé",
+      "pos": "adj.",
+      "en": "quick, eager, impatient; pressing, urgent",
+      "note": "",
+      "ipa": "/pʁese/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis un peu pressé là.",
+        "en": "I'm kind of in a rush here.",
+        "hl": [
+          15,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w272",
+      "fr": "fatigué",
+      "pos": "adj.",
+      "en": "tired",
+      "note": "",
+      "ipa": "/fatiɡe/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis fatigué de danser.",
+        "en": "I'm tired of dancing.",
+        "hl": [
+          8,
+          15
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w273",
+      "fr": "appartement",
+      "pos": "n.m.",
+      "en": "apartment, flat",
+      "note": "",
+      "ipa": "/apaʁtəmɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis dans mon appartement.",
+        "en": "I'm in my apartment.",
+        "hl": [
+          17,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w274",
+      "fr": "loin",
+      "pos": "adv.",
+      "en": "far, distant",
+      "note": "",
+      "ipa": "/lwɛ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ça va trop loin !",
+        "en": "That's going too far.",
+        "hl": [
+          11,
+          15
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w275",
+      "fr": "la station de métro",
+      "pos": "",
+      "en": "subway station",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Où est la station de métro ?",
+        "en": "Where's the subway station?",
+        "hl": [
+          7,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w276",
+      "fr": "ouf",
+      "pos": "interj.",
+      "en": "phew",
+      "note": "",
+      "ipa": "/uf/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Ouf ! Il était grand temps !",
+        "en": "Phew! That was close!",
+        "hl": [
+          0,
+          3
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w277",
+      "fr": "cassé",
+      "pos": "adj.",
+      "en": "broken; broke",
+      "note": "",
+      "ipa": "/kase/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ce bureau est cassé.",
+        "en": "This desk is broken.",
+        "hl": [
+          14,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w278",
+      "fr": "devant",
+      "pos": "prep.",
+      "en": "confronted with, faced with; in front of, before",
+      "note": "",
+      "ipa": "/dəvɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il y a un grand arbre devant ma maison.",
+        "en": "There is a big tree in front of my house.",
+        "hl": [
+          22,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w279",
+      "fr": "pourquoi",
+      "pos": "adv.",
+      "en": "why",
+      "note": "",
+      "ipa": "/puʁkwa/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Pourquoi apprendre le français ?",
+        "en": "Why learn French?",
+        "hl": [
+          0,
+          8
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w280",
+      "fr": "gâteau",
+      "pos": "n.m.",
+      "en": "cake",
+      "note": "",
+      "ipa": "/ɡato/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Le gâteau est encore chaud.",
+        "en": "The cake is still warm.",
+        "hl": [
+          3,
+          9
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w281",
+      "fr": "apporter",
+      "pos": "v.",
+      "en": "to bring; to take",
+      "note": "",
+      "ipa": "/apɔʁte/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je voulais vous apporter ça.",
+        "en": "I wanted to bring you these.",
+        "hl": [
+          16,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w282",
+      "fr": "cadeau",
+      "pos": "n.m.",
+      "en": "present, gift",
+      "note": "",
+      "ipa": "/kado/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Merci beaucoup pour ton cadeau.",
+        "en": "Thank you very much for your gift.",
+        "hl": [
+          24,
+          30
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w283",
+      "fr": "fête",
+      "pos": "n.f.",
+      "en": "winter holidays; party",
+      "note": "",
+      "ipa": "/fɛt/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Elle donne une fête, ce soir.",
+        "en": "She is giving a party tonight.",
+        "hl": [
+          15,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w284",
+      "fr": "ami",
+      "pos": "n.m.",
+      "en": "friend",
+      "note": "",
+      "ipa": "/ami/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis ici en ami.",
+        "en": "I'm here as a friend.",
+        "hl": [
+          15,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w285",
+      "fr": "danser",
+      "pos": "v.",
+      "en": "to dance",
+      "note": "",
+      "ipa": "/dɑ̃se/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je voudrais danser avec toi.",
+        "en": "I'd like to dance with you.",
+        "hl": [
+          12,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w286",
+      "fr": "assiette",
+      "pos": "n.f.",
+      "en": "seat; trim, attitude, pitch attitude",
+      "note": "",
+      "ipa": "/asjɛt/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Vide ton assiette !",
+        "en": "Finish your food.",
+        "hl": [
+          9,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w287",
+      "fr": "joyeux anniversaire",
+      "pos": "",
+      "en": "happy birthday",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Joyeux anniversaire à toi !",
+        "en": "Happy birthday to you!",
+        "hl": [
+          0,
+          19
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w288",
+      "fr": "chanter",
+      "pos": "v.",
+      "en": "to sing; to crow",
+      "note": "",
+      "ipa": "/ʃɑ̃te/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Vas-tu chanter ici ?",
+        "en": "Are you going to sing here?",
+        "hl": [
+          7,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w289",
+      "fr": "trop",
+      "pos": "adv.",
+      "en": "too; too much",
+      "note": "",
+      "ipa": "/tʁo/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis peut-être trop vieux.",
+        "en": "I may be too old.",
+        "hl": [
+          18,
+          22
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w290",
+      "fr": "billet",
+      "pos": "n.m.",
+      "en": "note, a brief message; ticket",
+      "note": "",
+      "ipa": "/bijɛ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Prends un billet pour moi.",
+        "en": "Get a ticket for me.",
+        "hl": [
+          10,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w291",
+      "fr": "chercher",
+      "pos": "v.",
+      "en": "to look for, to seek; to look",
+      "note": "",
+      "ipa": "/ʃɛʁʃe/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Va le chercher !",
+        "en": "Go look for it.",
+        "hl": [
+          6,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w292",
+      "fr": "passeport",
+      "pos": "n.m.",
+      "en": "passport",
+      "note": "",
+      "ipa": "/paspɔʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Passeport, s'il vous plaît.",
+        "en": "Show me your passport, please.",
+        "hl": [
+          0,
+          9
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w293",
+      "fr": "déjà",
+      "pos": "adv.",
+      "en": "already, before",
+      "note": "",
+      "ipa": "/deʒa/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis déjà au courant.",
+        "en": "I know that already.",
+        "hl": [
+          8,
+          12
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w294",
+      "fr": "aéroport",
+      "pos": "n.m.",
+      "en": "airport",
+      "note": "",
+      "ipa": "/aeʁopɔʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "De quel aéroport est-ce que je pars ?",
+        "en": "Which airport do I leave from?",
+        "hl": [
+          8,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w295",
+      "fr": "voyager",
+      "pos": "v.",
+      "en": "to travel, to voyage",
+      "note": "",
+      "ipa": "/vwajaʒe/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je veux voyager avec toi.",
+        "en": "I want to travel with you.",
+        "hl": [
+          8,
+          15
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w296",
+      "fr": "seul",
+      "pos": "adj.",
+      "en": "lonely; alone",
+      "note": "",
+      "ipa": "/sœl/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Tu viens seul ?",
+        "en": "Are you coming alone?",
+        "hl": [
+          9,
+          13
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w297",
+      "fr": "avion",
+      "pos": "n.m.",
+      "en": "aeroplane",
+      "note": "",
+      "ipa": "/avjɔ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Vous partez en avion ou en train ?",
+        "en": "Are you going by plane or by train?",
+        "hl": [
+          15,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w298",
+      "fr": "arriver",
+      "pos": "v.",
+      "en": "to arrive; to happen",
+      "note": "",
+      "ipa": "/aʁive/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ça ne va jamais arriver.",
+        "en": "It's never going to happen.",
+        "hl": [
+          16,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w299",
+      "fr": "votre",
+      "pos": "adj.",
+      "en": "your, belonging to you",
+      "note": "",
+      "ipa": "/vɔtʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis allée à votre école.",
+        "en": "I went to your school.",
+        "hl": [
+          16,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w300",
+      "fr": "à l'heure",
+      "pos": "",
+      "en": "on time",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Le train est parti à l'heure.",
+        "en": "The train departed on time.",
+        "hl": [
+          19,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w301",
+      "fr": "payer",
+      "pos": "v.",
+      "en": "to pay; to buy",
+      "note": "",
+      "ipa": "/peje/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Comment vas-tu payer pour ça ?",
+        "en": "How are you going to pay for that?",
+        "hl": [
+          15,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w302",
+      "fr": "par carte",
+      "pos": "",
+      "en": "by card",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je veux payer par carte de crédit.",
+        "en": "I want to pay by credit card.",
+        "hl": [
+          14,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w303",
+      "fr": "merci beaucoup",
+      "pos": "",
+      "en": "thank you very much",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Merci beaucoup. Je vous en sais gré.",
+        "en": "Thanks a lot. I appreciate that.",
+        "hl": [
+          0,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w304",
+      "fr": "bon voyage",
+      "pos": "",
+      "en": "have a good trip",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Comment vas-tu ? As-tu fait un bon voyage ?",
+        "en": "How are you? Did you have a good trip?",
+        "hl": [
+          31,
+          41
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w305",
+      "fr": "déjeuner",
+      "pos": "n.m.",
+      "en": "lunch, luncheon; breakfast",
+      "note": "",
+      "ipa": "/deʒœne/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je viens de déjeuner.",
+        "en": "I've just had lunch.",
+        "hl": [
+          12,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w306",
+      "fr": "collègue",
+      "pos": "n.",
+      "en": "colleague",
+      "note": "",
+      "ipa": "/kolɛɡ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il est mon collègue.",
+        "en": "He is my colleague.",
+        "hl": [
+          11,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w307",
+      "fr": "préparer",
+      "pos": "v.",
+      "en": "to prepare; to prepare for",
+      "note": "",
+      "ipa": "/pʁepaʁe/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Tu dois te préparer au pire.",
+        "en": "You must prepare for the worst.",
+        "hl": [
+          11,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w308",
+      "fr": "repas",
+      "pos": "n.m.",
+      "en": "meal, repast",
+      "note": "",
+      "ipa": "/ʁəpa/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Merci pour ce délicieux repas.",
+        "en": "Thanks for the delicious meal.",
+        "hl": [
+          24,
+          29
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w309",
+      "fr": "en général",
+      "pos": "",
+      "en": "in general",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "En général, les Japonais travaillent dur.",
+        "en": "Generally speaking, Japanese are hard workers.",
+        "hl": [
+          0,
+          10
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w310",
+      "fr": "salade",
+      "pos": "n.f.",
+      "en": "salad",
+      "note": "",
+      "ipa": "/salad/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Voudriez-vous encore un peu de salade ?",
+        "en": "Would you like some more salad?",
+        "hl": [
+          31,
+          37
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w311",
+      "fr": "pause",
+      "pos": "n.f.",
+      "en": "pause, break; rest",
+      "note": "",
+      "ipa": "/poz/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis en pause déjeuner.",
+        "en": "I'm on my lunch break.",
+        "hl": [
+          11,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w312",
+      "fr": "pendant",
+      "pos": "prep.",
+      "en": "during, throughout, for the duration of",
+      "note": "",
+      "ipa": "/pɑ̃dɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il a été malade pendant le voyage.",
+        "en": "He got sick during the trip.",
+        "hl": [
+          16,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w313",
+      "fr": "ensemble",
+      "pos": "adv.",
+      "en": "together",
+      "note": "",
+      "ipa": "/ɑ̃sɑ̃bl/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "On le fait ensemble.",
+        "en": "We're doing it together.",
+        "hl": [
+          11,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w314",
+      "fr": "bon",
+      "pos": "adj.",
+      "en": "good; right, correct, appropriate",
+      "note": "",
+      "ipa": "/bɔ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Elle parle un bon anglais.",
+        "en": "She speaks good English.",
+        "hl": [
+          14,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w315",
+      "fr": "rester",
+      "pos": "v.",
+      "en": "to stay; to remain, be left over",
+      "note": "",
+      "ipa": "/ʁɛste/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je te demande de rester.",
+        "en": "I'm asking you to stay.",
+        "hl": [
+          17,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w316",
+      "fr": "la pizza",
+      "pos": "n.f.",
+      "en": "pizza",
+      "note": "",
+      "ipa": "/pidza/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Pour qui est la pizza ?",
+        "en": "Who's the pizza for?",
+        "hl": [
+          16,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w317",
+      "fr": "la cafétéria",
+      "pos": "n.f.",
+      "en": "cafeteria",
+      "note": "",
+      "ipa": "/kafeteʁja/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Il y a une cafétéria à l'université.",
+        "en": "There is a cafeteria in the university.",
+        "hl": [
+          11,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w318",
+      "fr": "végétarien",
+      "pos": "adj.",
+      "en": "vegetarian",
+      "note": "",
+      "ipa": "/veʒetaʁjɛ̃/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je ne suis pas végétarien.",
+        "en": "I'm not a vegetarian.",
+        "hl": [
+          15,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w319",
+      "fr": "chef",
+      "pos": "n.",
+      "en": "head; article, principal point",
+      "note": "",
+      "ipa": "/ʃɛf/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis votre chef.",
+        "en": "I'm your boss.",
+        "hl": [
+          14,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w320",
+      "fr": "discuter",
+      "pos": "v.",
+      "en": "to argue, to debate; to discuss",
+      "note": "",
+      "ipa": "/diskyte/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Pas le temps de discuter.",
+        "en": "There's no time to argue.",
+        "hl": [
+          16,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w321",
+      "fr": "brésilien",
+      "pos": "adj.",
+      "en": "Brazilian",
+      "note": "",
+      "ipa": "/bʁeziljɛ̃/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "L'auteur est brésilien.",
+        "en": "The author is Brazilian.",
+        "hl": [
+          13,
+          22
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w322",
+      "fr": "parfois",
+      "pos": "adv.",
+      "en": "sometimes",
+      "note": "",
+      "ipa": "/paʁfwa/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je parle parfois français.",
+        "en": "I speak French sometimes.",
+        "hl": [
+          9,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w323",
+      "fr": "important",
+      "pos": "adj.",
+      "en": "important; large, considerable, significant",
+      "note": "",
+      "ipa": "/ɛ̃pɔʁtɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis important.",
+        "en": "I'm important.",
+        "hl": [
+          8,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w324",
+      "fr": "réunion",
+      "pos": "n.f.",
+      "en": "meeting; set union",
+      "note": "",
+      "ipa": "/ʁeynjɔ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis ici pour une réunion.",
+        "en": "I'm here for a meeting.",
+        "hl": [
+          21,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w325",
+      "fr": "la baguette",
+      "pos": "n.f.",
+      "en": "baguette",
+      "note": "",
+      "ipa": "/baɡɛt/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "C'est une baguette magique.",
+        "en": "This is a magic wand.",
+        "hl": [
+          10,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w326",
+      "fr": "deux",
+      "pos": "num.",
+      "en": "two",
+      "note": "",
+      "ipa": "/dø/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis prêt dans deux minutes.",
+        "en": "I'll be ready in two minutes.",
+        "hl": [
+          18,
+          22
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w327",
+      "fr": "le macaron",
+      "pos": "n.m.",
+      "en": "macaron",
+      "note": "",
+      "ipa": "/makaʁɔ̃/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je voudrais un macaron au chocolat.",
+        "en": "I would like a chocolate macaron.",
+        "hl": [
+          15,
+          22
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w328",
+      "fr": "la crêpe",
+      "pos": "n.f.",
+      "en": "crepe",
+      "note": "",
+      "ipa": "/kʁɛp/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "C'est plat comme une crêpe.",
+        "en": "It's flat as a pancake.",
+        "hl": [
+          21,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w329",
+      "fr": "la brioche",
+      "pos": "n.f.",
+      "en": "brioche",
+      "note": "",
+      "ipa": "/bʁijɔʃ/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "On mange de la brioche au petit déjeuner.",
+        "en": "We eat brioche for breakfast.",
+        "hl": [
+          15,
+          22
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w330",
+      "fr": "trois",
+      "pos": "num.",
+      "en": "three",
+      "note": "",
+      "ipa": "/tʁwa/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Donnez-moi en trois, s'il vous plaît.",
+        "en": "Please give me three of these.",
+        "hl": [
+          14,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w331",
+      "fr": "au chocolat",
+      "pos": "",
+      "en": "chocolate",
+      "note": "au chocolat = chocolate-flavoured",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Tu aimes la glace au chocolat ?",
+        "en": "Do you like chocolate ice cream?",
+        "hl": [
+          18,
+          29
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w332",
+      "fr": "euro",
+      "pos": "n.m.",
+      "en": "euro",
+      "note": "",
+      "ipa": "/øʁo/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Le billet coûte un euro.",
+        "en": "The ticket costs one euro.",
+        "hl": [
+          19,
+          23
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w333",
+      "fr": "combien ça coûte",
+      "pos": "",
+      "en": "how much does it cost",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Combien ça coûte ?",
+        "en": "How much is it?",
+        "hl": [
+          0,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w334",
+      "fr": "cinq",
+      "pos": "num.",
+      "en": "five",
+      "note": "",
+      "ipa": "/sɛ̃k/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Donne-moi cinq jetons, s'il te plaît.",
+        "en": "Give me five tokens, please.",
+        "hl": [
+          10,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w335",
+      "fr": "quatre",
+      "pos": "num.",
+      "en": "four",
+      "note": "",
+      "ipa": "/katʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Une table pour quatre s'il vous plaît.",
+        "en": "A table for four, please.",
+        "hl": [
+          15,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w336",
+      "fr": "en espèces",
+      "pos": "",
+      "en": "in cash",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "En espèces ou par carte ?",
+        "en": "Cash or charge?",
+        "hl": [
+          0,
+          10
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w337",
+      "fr": "six",
+      "pos": "num.",
+      "en": "six",
+      "note": "",
+      "ipa": "/sis/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Six et quatre font dix.",
+        "en": "Six plus four equals ten.",
+        "hl": [
+          0,
+          3
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w338",
+      "fr": "adorer",
+      "pos": "v.",
+      "en": "to love, to adore; to worship",
+      "note": "",
+      "ipa": "/adoʁe/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il va adorer ça.",
+        "en": "He's going to love this.",
+        "hl": [
+          6,
+          12
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w339",
+      "fr": "européen",
+      "pos": "adj.",
+      "en": "European",
+      "note": "",
+      "ipa": "/øʁopeɛ̃/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Tom est européen.",
+        "en": "Tom is European.",
+        "hl": [
+          8,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w340",
+      "fr": "capitale",
+      "pos": "n.f.",
+      "en": "capital, capital city; capital letter",
+      "note": "",
+      "ipa": "/kapital/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Le plus grand secret est d'importance capitale.",
+        "en": "Absolute secrecy is paramount.",
+        "hl": [
+          38,
+          46
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w341",
+      "fr": "mes",
+      "pos": "adj.",
+      "en": "my",
+      "note": "",
+      "ipa": "/me/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je ne sens pas mes jambes.",
+        "en": "I can't feel my legs.",
+        "hl": [
+          15,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w342",
+      "fr": "elles",
+      "pos": "pron.",
+      "en": "they",
+      "note": "",
+      "ipa": "/ɛl/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je me sens mal pour elles.",
+        "en": "I feel bad for them.",
+        "hl": [
+          20,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w343",
+      "fr": "près de",
+      "pos": "",
+      "en": "near",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Ma maison est près de la gare.",
+        "en": "My house is near the station.",
+        "hl": [
+          14,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w344",
+      "fr": "lac",
+      "pos": "n.m.",
+      "en": "lake",
+      "note": "",
+      "ipa": "/lak/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Le lac gèle en hiver.",
+        "en": "The lake freezes in winter.",
+        "hl": [
+          3,
+          6
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w345",
+      "fr": "sucre",
+      "pos": "n.m.",
+      "en": "sugar",
+      "note": "",
+      "ipa": "/sykʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Un sucre, s'il vous plaît.",
+        "en": "One lump of sugar, please.",
+        "hl": [
+          3,
+          8
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w346",
+      "fr": "couteau",
+      "pos": "n.m.",
+      "en": "knife; razor clam; any bivalve in the genus Solen",
+      "note": "",
+      "ipa": "/kuto/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je porte toujours un couteau.",
+        "en": "I always carry a knife.",
+        "hl": [
+          21,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w347",
+      "fr": "la farine",
+      "pos": "n.f.",
+      "en": "flour",
+      "note": "",
+      "ipa": "/faʁin/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "C'est de la farine.",
+        "en": "It's flour.",
+        "hl": [
+          12,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w348",
+      "fr": "placard",
+      "pos": "n.m.",
+      "en": "cupboard, closet",
+      "note": "",
+      "ipa": "/plakaʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Le placard est plein.",
+        "en": "The cupboard is full.",
+        "hl": [
+          3,
+          10
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w349",
+      "fr": "verre",
+      "pos": "n.m.",
+      "en": "glass; symbol of fragility",
+      "note": "",
+      "ipa": "/vɛʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Un verre d'eau, s'il vous plaît !",
+        "en": "A glass of water, please.",
+        "hl": [
+          3,
+          8
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w350",
+      "fr": "sale",
+      "pos": "adj.",
+      "en": "dirty; bad, unpleasant",
+      "note": "",
+      "ipa": "/sal/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis sale.",
+        "en": "I'm dirty.",
+        "hl": [
+          8,
+          12
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w351",
+      "fr": "laver",
+      "pos": "v.",
+      "en": "to wash; to wash oneself",
+      "note": "",
+      "ipa": "/lave/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je viens de laver la voiture.",
+        "en": "I've just washed the car.",
+        "hl": [
+          12,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w352",
+      "fr": "fragile",
+      "pos": "adj.",
+      "en": "fragile, breakable, brittle, delicate; frail",
+      "note": "",
+      "ipa": "/fʁaʒil/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ce vase est très fragile.",
+        "en": "This vase is very fragile.",
+        "hl": [
+          17,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w353",
+      "fr": "tasse",
+      "pos": "n.f.",
+      "en": "cup; cupful",
+      "note": "",
+      "ipa": "/tas/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Une tasse de café, s'il vous plaît.",
+        "en": "A cup of coffee, please.",
+        "hl": [
+          4,
+          9
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w354",
+      "fr": "invité",
+      "pos": "n.m.",
+      "en": "guest",
+      "note": "",
+      "ipa": "/ɛ̃vite/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Notre invité nous attend en bas.",
+        "en": "Our guest is waiting for us downstairs.",
+        "hl": [
+          6,
+          12
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w355",
+      "fr": "chaud",
+      "pos": "adj.",
+      "en": "warm, hot; on heat",
+      "note": "",
+      "ipa": "/ʃo/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Aujourd'hui, il fait beau et chaud.",
+        "en": "It is nice and warm today.",
+        "hl": [
+          29,
+          34
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w356",
+      "fr": "la fourchette",
+      "pos": "n.f.",
+      "en": "fork",
+      "note": "",
+      "ipa": "/fuʁʃɛt/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "La fourchette est sale.",
+        "en": "The fork is dirty.",
+        "hl": [
+          3,
+          13
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w357",
+      "fr": "serviette",
+      "pos": "n.f.",
+      "en": "towel; napkin",
+      "note": "",
+      "ipa": "/sɛʁvjɛt/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je vais vous trouver une serviette.",
+        "en": "I'll get you a towel.",
+        "hl": [
+          25,
+          34
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w358",
+      "fr": "excellent",
+      "pos": "adj.",
+      "en": "excellent; splendid",
+      "note": "",
+      "ipa": "/eksɛlɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ton français est excellent.",
+        "en": "Your French is excellent.",
+        "hl": [
+          17,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w359",
+      "fr": "le dessert",
+      "pos": "n.m.",
+      "en": "dessert",
+      "note": "",
+      "ipa": "/desɛʁ/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Quel est ton dessert préféré ?",
+        "en": "What's your favorite dessert?",
+        "hl": [
+          13,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w360",
+      "fr": "bon appétit",
+      "pos": "",
+      "en": "enjoy your meal",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Bon appétit !",
+        "en": "Enjoy your food.",
+        "hl": [
+          0,
+          11
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w361",
+      "fr": "miam",
+      "pos": "interj.",
+      "en": "yum",
+      "note": "",
+      "ipa": "/mjam/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Miam, ce gâteau est délicieux !",
+        "en": "Yum, this cake is delicious!",
+        "hl": [
+          0,
+          4
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w362",
+      "fr": "idée",
+      "pos": "n.f.",
+      "en": "idea",
+      "note": "",
+      "ipa": "/ide/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis d'accord avec son idée.",
+        "en": "I agree with his idea.",
+        "hl": [
+          26,
+          30
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w363",
+      "fr": "anniversaire",
+      "pos": "n.m.",
+      "en": "birthday; anniversary",
+      "note": "",
+      "ipa": "/anivɛʁsɛʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Demain a lieu son anniversaire.",
+        "en": "Tomorrow is her birthday.",
+        "hl": [
+          18,
+          30
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w364",
+      "fr": "quoi",
+      "pos": "pron.",
+      "en": "what; what, which",
+      "note": "",
+      "ipa": "/kwa/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Et maintenant, on fait quoi ?",
+        "en": "Now what do we do?",
+        "hl": [
+          23,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w365",
+      "fr": "nouveau",
+      "pos": "n.m.",
+      "en": "new person, new thing",
+      "note": "",
+      "ipa": "/nuvo/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Salut ! Je suis nouveau, ici.",
+        "en": "Hi! I'm new here.",
+        "hl": [
+          16,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w366",
+      "fr": "vélo",
+      "pos": "n.m.",
+      "en": "bike, bicycle, cycle; cycling",
+      "note": "informal",
+      "ipa": "/velo/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Quel beau vélo !",
+        "en": "What a nice bike!",
+        "hl": [
+          10,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w367",
+      "fr": "juste",
+      "pos": "adj.",
+      "en": "fair, just; reasonable, appropriate, grounded",
+      "note": "",
+      "ipa": "/ʒyst/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je viens juste de le voir.",
+        "en": "I saw him just now.",
+        "hl": [
+          9,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w368",
+      "fr": "nouvelle",
+      "pos": "adj.",
+      "en": "new; piece of news",
+      "note": "feminine of nouveau",
+      "ipa": "/nuvɛl/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je suis une nouvelle élève.",
+        "en": "I'm a new student.",
+        "hl": [
+          12,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w369",
+      "fr": "surprise",
+      "pos": "n.f.",
+      "en": "surprise",
+      "note": "",
+      "ipa": "/syʁpʁiz/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis surprise de te revoir.",
+        "en": "I'm surprised to see you again.",
+        "hl": [
+          8,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w370",
+      "fr": "belle",
+      "pos": "adj.",
+      "en": "beautiful",
+      "note": "feminine of beau",
+      "ipa": "/bɛl/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Aujourd'hui est une belle journée.",
+        "en": "Today is a beautiful day.",
+        "hl": [
+          20,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w371",
+      "fr": "part",
+      "pos": "n.",
+      "en": "share; portion, part, slice",
+      "note": "",
+      "ipa": "/paʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ce fut une erreur de ma part.",
+        "en": "That was an error on my part.",
+        "hl": [
+          24,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w372",
+      "fr": "la limonade",
+      "pos": "n.f.",
+      "en": "lemonade",
+      "note": "fizzy, not lemon juice",
+      "ipa": "/limonad/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je vais prendre de la limonade.",
+        "en": "I'll have some lemonade.",
+        "hl": [
+          22,
+          30
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w373",
+      "fr": "eau",
+      "pos": "n.f.",
+      "en": "water",
+      "note": "",
+      "ipa": "/o/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "On ne peut vivre sans eau.",
+        "en": "One can't live without water.",
+        "hl": [
+          22,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w374",
+      "fr": "merci pour",
+      "pos": "",
+      "en": "thanks for",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Merci pour ton invitation à la fête.",
+        "en": "Thanks for your invitation to the party.",
+        "hl": [
+          0,
+          10
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w375",
+      "fr": "gare",
+      "pos": "n.f.",
+      "en": "railway station",
+      "note": "",
+      "ipa": "/ɡaʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Viens avec moi à la gare.",
+        "en": "Come with me to the station.",
+        "hl": [
+          20,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w376",
+      "fr": "regarder",
+      "pos": "v.",
+      "en": "to look at; to watch",
+      "note": "",
+      "ipa": "/ʁəɡaʁde/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis en train de regarder un film.",
+        "en": "I'm watching a movie right now.",
+        "hl": [
+          20,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w377",
+      "fr": "plan",
+      "pos": "n.m.",
+      "en": "map; plane",
+      "note": "",
+      "ipa": "/plɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis d'accord avec ton plan.",
+        "en": "I agree to your plan.",
+        "hl": [
+          26,
+          30
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w378",
+      "fr": "je ne sais pas",
+      "pos": "",
+      "en": "I don't know",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je ne sais pas qui je suis.",
+        "en": "I don't know who I am.",
+        "hl": [
+          0,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w379",
+      "fr": "minute",
+      "pos": "n.f.",
+      "en": "minute",
+      "note": "",
+      "ipa": "/minyt/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis à toi dans une minute.",
+        "en": "I'll be with you in a minute.",
+        "hl": [
+          23,
+          29
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w380",
+      "fr": "heure",
+      "pos": "n.f.",
+      "en": "hour, time; o'clock",
+      "note": "",
+      "ipa": "/œʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je te verrai dans une heure.",
+        "en": "I'll see you in an hour.",
+        "hl": [
+          22,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w381",
+      "fr": "dix",
+      "pos": "num.",
+      "en": "ten",
+      "note": "",
+      "ipa": "/dis/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Compte de un à dix.",
+        "en": "Count from one to ten.",
+        "hl": [
+          15,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w382",
+      "fr": "quand",
+      "pos": "conj.",
+      "en": "when; whenever",
+      "note": "",
+      "ipa": "/kɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Si pas maintenant, alors quand ?",
+        "en": "If not now, then when?",
+        "hl": [
+          25,
+          30
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w383",
+      "fr": "perdu",
+      "pos": "adj.",
+      "en": "lost",
+      "note": "",
+      "ipa": "/pɛʁdy/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il a perdu un livre.",
+        "en": "He lost a book.",
+        "hl": [
+          5,
+          10
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w384",
+      "fr": "loin de",
+      "pos": "",
+      "en": "far from",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Leur maison est loin de la gare.",
+        "en": "Their house is far from the station.",
+        "hl": [
+          16,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w385",
+      "fr": "enfin",
+      "pos": "adv.",
+      "en": "finally; in the end; at last, finally",
+      "note": "",
+      "ipa": "/ɑ̃fɛ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Maintenant je suis enfin libre.",
+        "en": "I'm finally free now.",
+        "hl": [
+          19,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w386",
+      "fr": "glace",
+      "pos": "n.f.",
+      "en": "ice; ice cream",
+      "note": "",
+      "ipa": "/ɡlas/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je ne veux pas de glace.",
+        "en": "I don't want any ice cream.",
+        "hl": [
+          18,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w387",
+      "fr": "autre",
+      "pos": "adj.",
+      "en": "other; another",
+      "note": "",
+      "ipa": "/otʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Un autre homme est mort.",
+        "en": "Another man has died.",
+        "hl": [
+          3,
+          8
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w388",
+      "fr": "canadien",
+      "pos": "adj.",
+      "en": "Canadian",
+      "note": "",
+      "ipa": "/kanadjɛ̃/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Mon ami est canadien.",
+        "en": "My friend is Canadian.",
+        "hl": [
+          12,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w389",
+      "fr": "entreprise",
+      "pos": "n.f.",
+      "en": "company, business; enterprise, project",
+      "note": "",
+      "ipa": "/ɑ̃tʁəpʁiz/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je travaille dans cette entreprise.",
+        "en": "I work at this company.",
+        "hl": [
+          24,
+          34
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w390",
+      "fr": "notre",
+      "pos": "adj.",
+      "en": "our",
+      "note": "",
+      "ipa": "/nɔtʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "On fait de notre mieux.",
+        "en": "We do our best.",
+        "hl": [
+          11,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w391",
+      "fr": "métier",
+      "pos": "n.m.",
+      "en": "job, profession, trade; skill, craft",
+      "note": "",
+      "ipa": "/metje/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je ne voulais pas ce métier.",
+        "en": "I didn't want that job.",
+        "hl": [
+          21,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w392",
+      "fr": "avocat",
+      "pos": "n.m.",
+      "en": "lawyer, attorney",
+      "note": "",
+      "ipa": "/avoka/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je ne suis pas avocat.",
+        "en": "I'm not a lawyer.",
+        "hl": [
+          15,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w393",
+      "fr": "hôpital",
+      "pos": "n.m.",
+      "en": "hospital",
+      "note": "",
+      "ipa": "/opital/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je veux travailler dans un hôpital.",
+        "en": "I want to work at a hospital.",
+        "hl": [
+          27,
+          34
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w394",
+      "fr": "docteur",
+      "pos": "n.m.",
+      "en": "a doctor; a doctor, especially a male doctor",
+      "note": "",
+      "ipa": "/dɔktœʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je ne suis pas docteur.",
+        "en": "I'm not a doctor.",
+        "hl": [
+          15,
+          22
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w395",
+      "fr": "ingénieur",
+      "pos": "n.m.",
+      "en": "engineer; conductor",
+      "note": "",
+      "ipa": "/ɛ̃ʒenjœʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis ingénieur.",
+        "en": "I'm an engineer.",
+        "hl": [
+          8,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w396",
+      "fr": "quelqu'un",
+      "pos": "pron.",
+      "en": "someone, somebody, anyone, anybody; somebody",
+      "note": "",
+      "ipa": "/kɛlkœ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il y a quelqu'un là-dedans ?",
+        "en": "Is someone in there?",
+        "hl": [
+          7,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w397",
+      "fr": "le petit déjeuner",
+      "pos": "",
+      "en": "breakfast",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "On a pris le petit déjeuner.",
+        "en": "We had breakfast.",
+        "hl": [
+          10,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w398",
+      "fr": "froid",
+      "pos": "adj.",
+      "en": "cold; distant, unfriendly",
+      "note": "",
+      "ipa": "/fʁwa/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je ne voudrais rien boire de froid.",
+        "en": "I don't want to drink anything cold.",
+        "hl": [
+          29,
+          34
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w399",
+      "fr": "travail",
+      "pos": "n.m.",
+      "en": "work; labor; job",
+      "note": "",
+      "ipa": "/tʁavaj/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis encore au travail.",
+        "en": "I'm still at work.",
+        "hl": [
+          18,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w400",
+      "fr": "à plus tard",
+      "pos": "",
+      "en": "see you later",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "À plus tard, les gars !",
+        "en": "See you guys later.",
+        "hl": [
+          0,
+          11
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w401",
+      "fr": "piscine",
+      "pos": "n.f.",
+      "en": "swimming pool; piscina",
+      "note": "",
+      "ipa": "/pisin/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Tom a une maison avec piscine.",
+        "en": "Tom has a house with a pool.",
+        "hl": [
+          22,
+          29
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w402",
+      "fr": "avec qui",
+      "pos": "",
+      "en": "with whom",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je parle avec qui ?",
+        "en": "Who am I talking with?",
+        "hl": [
+          9,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w403",
+      "fr": "légume",
+      "pos": "n.m.",
+      "en": "vegetable",
+      "note": "",
+      "ipa": "/leɡym/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Comment appelle-t-on ce légume en anglais ?",
+        "en": "What do you call this vegetable in English?",
+        "hl": [
+          24,
+          30
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w404",
+      "fr": "le supermarché",
+      "pos": "n.m.",
+      "en": "supermarket",
+      "note": "",
+      "ipa": "/sypɛʁmaʁʃe/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je suis allée au supermarché.",
+        "en": "I went to the supermarket.",
+        "hl": [
+          17,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w405",
+      "fr": "cuisiner",
+      "pos": "v.",
+      "en": "to cook",
+      "note": "",
+      "ipa": "/kɥizine/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je ne sais pas cuisiner.",
+        "en": "I don't know how to cook.",
+        "hl": [
+          15,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w406",
+      "fr": "dîner",
+      "pos": "n.m.",
+      "en": "dinner, evening meal; lunch, midday meal",
+      "note": "",
+      "ipa": "/dine/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il va être l'heure de dîner.",
+        "en": "It's about time for dinner.",
+        "hl": [
+          22,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w407",
+      "fr": "ce soir",
+      "pos": "",
+      "en": "tonight",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Elle passe à la télé ce soir.",
+        "en": "She is appearing on TV tonight.",
+        "hl": [
+          21,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w408",
+      "fr": "plusieurs",
+      "pos": "adj.",
+      "en": "several, many, a lot",
+      "note": "",
+      "ipa": "/plyzjœʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il y a plusieurs options.",
+        "en": "There are several options.",
+        "hl": [
+          7,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w409",
+      "fr": "d'où",
+      "pos": "",
+      "en": "from where",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je ne sais pas où.",
+        "en": "I don't know where.",
+        "hl": [
+          15,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w410",
+      "fr": "génial",
+      "pos": "adj.",
+      "en": "ingenious, characteristic of a genius",
+      "note": "",
+      "ipa": "/ʒenjal/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ce livre est génial.",
+        "en": "This book is amazing.",
+        "hl": [
+          13,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w411",
+      "fr": "passer",
+      "pos": "v.",
+      "en": "to go past; to cross",
+      "note": "",
+      "ipa": "/pase/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "On va essayer de passer.",
+        "en": "We'll try to stop by.",
+        "hl": [
+          17,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w412",
+      "fr": "les vacances",
+      "pos": "n.f.",
+      "en": "holiday; vacation",
+      "note": "always plural",
+      "ipa": "/vakɑ̃s/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Il est parti en vacances.",
+        "en": "He is away on holiday.",
+        "hl": [
+          16,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w413",
+      "fr": "le cahier",
+      "pos": "n.m.",
+      "en": "notebook",
+      "note": "",
+      "ipa": "/kaje/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "À qui est ce cahier ?",
+        "en": "Whose is that notebook?",
+        "hl": [
+          13,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w414",
+      "fr": "huit",
+      "pos": "num.",
+      "en": "eight",
+      "note": "",
+      "ipa": "/ɥit/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Cinq et trois donnent huit.",
+        "en": "Five plus three is eight.",
+        "hl": [
+          22,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w415",
+      "fr": "à quelle heure",
+      "pos": "",
+      "en": "at what time",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "À quelle heure part le dernier train ?",
+        "en": "What time is the last train?",
+        "hl": [
+          0,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w416",
+      "fr": "les maths",
+      "pos": "n.f.",
+      "en": "math",
+      "note": "always plural",
+      "ipa": "/mat/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Il est vraiment nul en maths.",
+        "en": "He is terrible at math.",
+        "hl": [
+          23,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w417",
+      "fr": "leçon",
+      "pos": "n.f.",
+      "en": "lesson",
+      "note": "",
+      "ipa": "/ləsɔ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Merci pour la leçon.",
+        "en": "Thank you for the lesson.",
+        "hl": [
+          14,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w418",
+      "fr": "neuf",
+      "pos": "adj.",
+      "en": "brand new, very new",
+      "note": "",
+      "ipa": "/nœf/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Rien de neuf.",
+        "en": "That's nothing new.",
+        "hl": [
+          8,
+          12
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w419",
+      "fr": "difficile",
+      "pos": "adj.",
+      "en": "difficult; choosy, fussy, picky",
+      "note": "",
+      "ipa": "/difisil/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis difficile à table.",
+        "en": "I'm a fussy eater.",
+        "hl": [
+          8,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w420",
+      "fr": "la géographie",
+      "pos": "n.f.",
+      "en": "geography",
+      "note": "",
+      "ipa": "/ʒeoɡʁafi/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Une carte nous aide à étudier la géographie.",
+        "en": "A map helps us study geography.",
+        "hl": [
+          33,
+          43
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w421",
+      "fr": "sept",
+      "pos": "num.",
+      "en": "seven",
+      "note": "",
+      "ipa": "/sɛt/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Appelle-moi à sept heures du matin.",
+        "en": "Call me up at seven in the morning.",
+        "hl": [
+          14,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w422",
+      "fr": "prof",
+      "pos": "n.",
+      "en": "teacher, professor",
+      "note": "",
+      "ipa": "/pʁɔf/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Tom est un bon prof, non ?",
+        "en": "Tom is a good teacher, isn't he?",
+        "hl": [
+          15,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w423",
+      "fr": "sympa",
+      "pos": "adj.",
+      "en": "nice; likeable; appealing, attractive",
+      "note": "informal",
+      "ipa": "/sɛ̃pa/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Elle est sympa avec moi.",
+        "en": "She's nice to me.",
+        "hl": [
+          9,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w424",
+      "fr": "match",
+      "pos": "n.m.",
+      "en": "match, game",
+      "note": "",
+      "ipa": "/matʃ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "On a un gros match demain.",
+        "en": "We have a big game tomorrow.",
+        "hl": [
+          13,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w425",
+      "fr": "aimer",
+      "pos": "v.",
+      "en": "to love; to like",
+      "note": "",
+      "ipa": "/eme/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis sûr que tu vas aimer ça.",
+        "en": "I'm sure you're going to like this.",
+        "hl": [
+          23,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w426",
+      "fr": "le rugby",
+      "pos": "n.m.",
+      "en": "rugby",
+      "note": "",
+      "ipa": "/ʁyɡbi/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Il est fort au rugby.",
+        "en": "He is good at rugby.",
+        "hl": [
+          15,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w427",
+      "fr": "à la télé",
+      "pos": "",
+      "en": "on TV",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je suis passé à la télé récemment.",
+        "en": "I was on TV recently.",
+        "hl": [
+          14,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w428",
+      "fr": "populaire",
+      "pos": "adj.",
+      "en": "people's; of the people; working-class",
+      "note": "",
+      "ipa": "/popylɛʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Le blanc est une couleur de voiture populaire.",
+        "en": "White is a popular car color.",
+        "hl": [
+          36,
+          45
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w429",
+      "fr": "préférer",
+      "pos": "v.",
+      "en": "to prefer",
+      "note": "",
+      "ipa": "/pʁefeʁe/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Elle va préférer le café au thé.",
+        "en": "She is going to prefer coffee to tea.",
+        "hl": [
+          8,
+          16
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w430",
+      "fr": "sport",
+      "pos": "n.m.",
+      "en": "sport",
+      "note": "",
+      "ipa": "/spɔʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis mauvais en sport.",
+        "en": "I'm bad at sports.",
+        "hl": [
+          19,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w431",
+      "fr": "le foot",
+      "pos": "n.m.",
+      "en": "soccer; football",
+      "note": "",
+      "ipa": "/fut/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Le foot est un sport.",
+        "en": "Football is a sport.",
+        "hl": [
+          3,
+          7
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w432",
+      "fr": "le stade",
+      "pos": "n.m.",
+      "en": "stadium",
+      "note": "",
+      "ipa": "/stad/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Comment puis-je me rendre au stade ?",
+        "en": "How can I get to the stadium?",
+        "hl": [
+          29,
+          34
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w433",
+      "fr": "acheter",
+      "pos": "v.",
+      "en": "to purchase; buy",
+      "note": "",
+      "ipa": "/aʃəte/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je vais aller acheter du pain.",
+        "en": "I'll go buy some bread.",
+        "hl": [
+          14,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w434",
+      "fr": "cher",
+      "pos": "adj.",
+      "en": "dear, beloved; expensive, costly",
+      "note": "",
+      "ipa": "/ʃɛʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "C'est trop cher pour moi.",
+        "en": "That's too expensive for me.",
+        "hl": [
+          11,
+          15
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w435",
+      "fr": "jouer",
+      "pos": "v.",
+      "en": "to play; to bid, gamble",
+      "note": "",
+      "ipa": "/ʒwe/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Que vas-tu jouer ?",
+        "en": "What are you going to play?",
+        "hl": [
+          11,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w436",
+      "fr": "équipe",
+      "pos": "n.f.",
+      "en": "team",
+      "note": "",
+      "ipa": "/ekip/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Vous deux allez travailler en équipe.",
+        "en": "You two will work as a team.",
+        "hl": [
+          30,
+          36
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w437",
+      "fr": "bière",
+      "pos": "n.f.",
+      "en": "beer",
+      "note": "",
+      "ipa": "/bjɛʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Une bière, s'il vous plaît !",
+        "en": "A beer, please.",
+        "hl": [
+          4,
+          9
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w438",
+      "fr": "joueur",
+      "pos": "n.m.",
+      "en": "player",
+      "note": "",
+      "ipa": "/ʒwœʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis un joueur de foot.",
+        "en": "I am a football player.",
+        "hl": [
+          11,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w439",
+      "fr": "ballon",
+      "pos": "n.m.",
+      "en": "ball; beachball",
+      "note": "",
+      "ipa": "/balɔ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il tapa dans le ballon.",
+        "en": "He kicked the ball.",
+        "hl": [
+          16,
+          22
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w440",
+      "fr": "week-end",
+      "pos": "n.m.",
+      "en": "weekend; synonym of fin de semaine",
+      "note": "",
+      "ipa": "/wikɛnd/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Le week-end est passé trop vite.",
+        "en": "The weekend went by too fast.",
+        "hl": [
+          3,
+          11
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w441",
+      "fr": "série",
+      "pos": "n.f.",
+      "en": "series; serial, television program in installments",
+      "note": "",
+      "ipa": "/seʁi/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Tom regarda sa série préférée.",
+        "en": "Tom watched his favorite television show.",
+        "hl": [
+          15,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w442",
+      "fr": "nul",
+      "pos": "adj.",
+      "en": "of poor quality, lousy, rubbish; lame",
+      "note": "",
+      "ipa": "/nyl/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis nul en cuisine.",
+        "en": "I'm a lousy cook.",
+        "hl": [
+          8,
+          11
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w443",
+      "fr": "détester",
+      "pos": "v.",
+      "en": "to hate, to detest",
+      "note": "",
+      "ipa": "/detɛste/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je commence à la détester.",
+        "en": "I'm beginning to hate her.",
+        "hl": [
+          17,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w444",
+      "fr": "télé",
+      "pos": "n.f.",
+      "en": "TV, telly",
+      "note": "",
+      "ipa": "/tele/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "J'ai une télé dans ma chambre.",
+        "en": "I have a TV in my bedroom.",
+        "hl": [
+          9,
+          13
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w445",
+      "fr": "sportif",
+      "pos": "adj.",
+      "en": "sporty; athletic",
+      "note": "",
+      "ipa": "/spɔʁtif/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Thomas est un grand sportif.",
+        "en": "Tom is a great sportsman.",
+        "hl": [
+          20,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w446",
+      "fr": "le yoga",
+      "pos": "n.m.",
+      "en": "yoga",
+      "note": "",
+      "ipa": "/joɡa/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Tom fait du yoga.",
+        "en": "Tom does yoga.",
+        "hl": [
+          12,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w447",
+      "fr": "concert",
+      "pos": "n.m.",
+      "en": "concert",
+      "note": "",
+      "ipa": "/kɔ̃sɛʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Le concert va bientôt commencer.",
+        "en": "The concert is about to begin.",
+        "hl": [
+          3,
+          10
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w448",
+      "fr": "cinéma",
+      "pos": "n.m.",
+      "en": "cinema, filmmaking; cinema",
+      "note": "",
+      "ipa": "/sinema/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "On va au cinéma ce soir.",
+        "en": "We're going to the movies tonight.",
+        "hl": [
+          9,
+          15
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w449",
+      "fr": "film",
+      "pos": "n.m.",
+      "en": "movie, film",
+      "note": "",
+      "ipa": "/film/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "De quoi parle le film ?",
+        "en": "What's the movie about?",
+        "hl": [
+          17,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w450",
+      "fr": "occupé",
+      "pos": "adj.",
+      "en": "busy; taken",
+      "note": "",
+      "ipa": "/okype/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je suis un peu occupé.",
+        "en": "I'm a bit busy.",
+        "hl": [
+          15,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w451",
+      "fr": "dommage",
+      "pos": "n.m.",
+      "en": "damage; injury",
+      "note": "",
+      "ipa": "/domaʒ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je ne vois aucun dommage.",
+        "en": "I don't see any damage.",
+        "hl": [
+          17,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w452",
+      "fr": "la climatisation",
+      "pos": "n.f.",
+      "en": "air conditioning",
+      "note": "",
+      "ipa": "/klimatizasjɔ̃/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "La climatisation est hors service.",
+        "en": "The air conditioner is out of order.",
+        "hl": [
+          3,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w453",
+      "fr": "vol",
+      "pos": "n.m.",
+      "en": "flight; stealing, theft, robbery",
+      "note": "",
+      "ipa": "/vɔl/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Combien de temps va durer le vol ?",
+        "en": "How long will the flight last?",
+        "hl": [
+          29,
+          32
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w454",
+      "fr": "sans",
+      "pos": "prep.",
+      "en": "without",
+      "note": "",
+      "ipa": "/sɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis triste sans vous.",
+        "en": "I'm sad without you.",
+        "hl": [
+          15,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w455",
+      "fr": "hôtesse",
+      "pos": "n.f.",
+      "en": "flight attendant; hostess",
+      "note": "female",
+      "ipa": "/otɛs/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Buvons à notre charmante hôtesse !",
+        "en": "Let's drink to our charming hostess!",
+        "hl": [
+          25,
+          32
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w456",
+      "fr": "pétillant",
+      "pos": "adj.",
+      "en": "sparkling; fizzy",
+      "note": "",
+      "ipa": "/petijɑ̃/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Ce vin pétillant est excellent.",
+        "en": "This sparkling wine is excellent.",
+        "hl": [
+          7,
+          16
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w457",
+      "fr": "bouteille",
+      "pos": "n.f.",
+      "en": "bottle; alcohol",
+      "note": "",
+      "ipa": "/butɛj/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Où est la bouteille de vin ?",
+        "en": "Where is the bottle of wine?",
+        "hl": [
+          10,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w458",
+      "fr": "soif",
+      "pos": "n.f.",
+      "en": "thirst; thirst, desire",
+      "note": "",
+      "ipa": "/swaf/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il a faim et soif.",
+        "en": "He's hungry and thirsty.",
+        "hl": [
+          13,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w459",
+      "fr": "le steward",
+      "pos": "n.m.",
+      "en": "flight attendant",
+      "note": "male",
+      "ipa": "/stiwaʁd/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Tom est steward.",
+        "en": "Tom is a flight attendant.",
+        "hl": [
+          8,
+          15
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w460",
+      "fr": "pilote",
+      "pos": "n.",
+      "en": "pilot; driver",
+      "note": "",
+      "ipa": "/pilɔt/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Mon rêve est de devenir pilote.",
+        "en": "My dream is to become a pilot.",
+        "hl": [
+          24,
+          30
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w461",
+      "fr": "bonbon",
+      "pos": "n.m.",
+      "en": "sweet, candy",
+      "note": "",
+      "ipa": "/bɔ̃bɔ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Quel est votre bonbon préféré ?",
+        "en": "What's your favorite candy?",
+        "hl": [
+          15,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w462",
+      "fr": "faim",
+      "pos": "n.f.",
+      "en": "hunger",
+      "note": "",
+      "ipa": "/fɛ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je meurs de faim.",
+        "en": "I'm dying of hunger.",
+        "hl": [
+          12,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w463",
+      "fr": "couverture",
+      "pos": "n.f.",
+      "en": "blanket; coverage",
+      "note": "",
+      "ipa": "/kuvɛʁtyʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ne juge pas un livre à sa couverture.",
+        "en": "Don't judge a book by its cover.",
+        "hl": [
+          26,
+          36
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w464",
+      "fr": "oh là là",
+      "pos": "",
+      "en": "oh dear",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Oh là là, il est déjà minuit !",
+        "en": "Oh dear, it is already midnight!",
+        "hl": [
+          0,
+          8
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w465",
+      "fr": "durer",
+      "pos": "v.",
+      "en": "to last",
+      "note": "",
+      "ipa": "/dyʁe/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Combien de temps va durer ce froid ?",
+        "en": "How long will this cold weather last?",
+        "hl": [
+          20,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w466",
+      "fr": "la tablette",
+      "pos": "n.f.",
+      "en": "tablet",
+      "note": "",
+      "ipa": "/tablɛt/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Ma tablette est dans le sac.",
+        "en": "My tablet is in the bag.",
+        "hl": [
+          3,
+          11
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w467",
+      "fr": "tout le monde",
+      "pos": "",
+      "en": "everyone",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Tout le monde est fier de toi.",
+        "en": "Everyone is proud of you.",
+        "hl": [
+          0,
+          13
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w468",
+      "fr": "sommeil",
+      "pos": "n.m.",
+      "en": "sleep",
+      "note": "",
+      "ipa": "/somɛj/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Passe une bonne nuit de sommeil.",
+        "en": "Get a good night's sleep.",
+        "hl": [
+          24,
+          31
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w469",
+      "fr": "chut",
+      "pos": "interj.",
+      "en": "shush",
+      "note": "",
+      "ipa": "/ʃyt/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "L'arbre chut.",
+        "en": "The tree fell down.",
+        "hl": [
+          8,
+          12
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w470",
+      "fr": "besoin de",
+      "pos": "",
+      "en": "need",
+      "note": "avoir besoin de = to need",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Le bébé a besoin de sa mère.",
+        "en": "The baby needs his mother.",
+        "hl": [
+          10,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w471",
+      "fr": "court",
+      "pos": "adj.",
+      "en": "short",
+      "note": "",
+      "ipa": "/kuʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je connais un chemin plus court.",
+        "en": "I know a shorter route.",
+        "hl": [
+          26,
+          31
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w472",
+      "fr": "pantalon",
+      "pos": "n.m.",
+      "en": "trousers, pants",
+      "note": "",
+      "ipa": "/pɑ̃talɔ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il portait un pantalon rouge.",
+        "en": "He wore red pants.",
+        "hl": [
+          14,
+          22
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w473",
+      "fr": "long",
+      "pos": "adj.",
+      "en": "long",
+      "note": "",
+      "ipa": "/lɔ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ça va être encore long ?",
+        "en": "Will it be much longer?",
+        "hl": [
+          18,
+          22
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w474",
+      "fr": "le t-shirt",
+      "pos": "n.m.",
+      "en": "T-shirt",
+      "note": "",
+      "ipa": "/tiʃœʁt/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Ce T-shirt est trop petit pour moi.",
+        "en": "This T-shirt is too small for me.",
+        "hl": [
+          3,
+          10
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w475",
+      "fr": "porter",
+      "pos": "v.",
+      "en": "to carry; to support, to bear",
+      "note": "",
+      "ipa": "/poʁte/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je peux porter ça pour toi.",
+        "en": "I can carry that for you.",
+        "hl": [
+          8,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w476",
+      "fr": "ces",
+      "pos": "adj.",
+      "en": "these; those",
+      "note": "",
+      "ipa": "/se/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je suis très occupé ces jours-ci.",
+        "en": "I'm very busy these days.",
+        "hl": [
+          20,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w477",
+      "fr": "essayer",
+      "pos": "v.",
+      "en": "to test, to try on; to try, to attempt",
+      "note": "",
+      "ipa": "/eseje/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Elle va essayer encore une fois.",
+        "en": "She'll try it once more.",
+        "hl": [
+          8,
+          15
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w478",
+      "fr": "gris",
+      "pos": "adj.",
+      "en": "grey / gray",
+      "note": "",
+      "ipa": "/ɡʁi/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Son pull est gris.",
+        "en": "His sweater is gray.",
+        "hl": [
+          13,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w479",
+      "fr": "veste",
+      "pos": "n.f.",
+      "en": "jacket",
+      "note": "",
+      "ipa": "/vɛst/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis content de ma nouvelle veste.",
+        "en": "I'm pleased with my new jacket.",
+        "hl": [
+          31,
+          36
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w480",
+      "fr": "chaussure",
+      "pos": "n.f.",
+      "en": "shoe; the shoe industry",
+      "note": "",
+      "ipa": "/ʃosyʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "J'ai un caillou dans ma chaussure.",
+        "en": "I have a pebble in my shoe.",
+        "hl": [
+          24,
+          33
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w481",
+      "fr": "moche",
+      "pos": "adj.",
+      "en": "ugly",
+      "note": "colloquial",
+      "ipa": "/mɔʃ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis moche.",
+        "en": "I'm ugly.",
+        "hl": [
+          8,
+          13
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w482",
+      "fr": "vieille",
+      "pos": "adj.",
+      "en": "old",
+      "note": "feminine of vieux",
+      "ipa": "/vjɛj/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je suis trop vieille pour vous.",
+        "en": "I'm too old for you.",
+        "hl": [
+          13,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w483",
+      "fr": "jupe",
+      "pos": "n.f.",
+      "en": "skirt",
+      "note": "",
+      "ipa": "/ʒyp/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ma jupe est trop longue.",
+        "en": "My skirt is too long.",
+        "hl": [
+          3,
+          7
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w484",
+      "fr": "vêtement",
+      "pos": "n.m.",
+      "en": "garment, item of clothing; clothes, clothing",
+      "note": "",
+      "ipa": "/vɛtəmɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Un manteau est un vêtement.",
+        "en": "A coat is an article of clothing.",
+        "hl": [
+          18,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w485",
+      "fr": "bizarre",
+      "pos": "adj.",
+      "en": "bizarre, odd, strange, funny; peculiar, quaint",
+      "note": "",
+      "ipa": "/bizaʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je me sens bizarre, aujourd'hui.",
+        "en": "I feel funny today.",
+        "hl": [
+          11,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w486",
+      "fr": "bof",
+      "pos": "interj.",
+      "en": "meh",
+      "note": "",
+      "ipa": "/bɔf/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Bof, ce film n'est pas très intéressant.",
+        "en": "Meh, this movie is not very interesting.",
+        "hl": [
+          0,
+          3
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w487",
+      "fr": "roman",
+      "pos": "n.m.",
+      "en": "a novel",
+      "note": "",
+      "ipa": "/ʁomɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Quel est le sujet du roman ?",
+        "en": "What's the theme of the novel?",
+        "hl": [
+          21,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w488",
+      "fr": "auteur",
+      "pos": "n.m.",
+      "en": "author; composer, artist",
+      "note": "",
+      "ipa": "/otœʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il est auteur.",
+        "en": "He's an author.",
+        "hl": [
+          7,
+          13
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w489",
+      "fr": "cet",
+      "pos": "adj.",
+      "en": "this",
+      "note": "",
+      "ipa": "/sɛt/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il est responsable de cet accident.",
+        "en": "He is responsible for the accident.",
+        "hl": [
+          22,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w490",
+      "fr": "album",
+      "pos": "n.m.",
+      "en": "album",
+      "note": "",
+      "ipa": "/albɔm/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Il y a un album sur le bureau.",
+        "en": "There's an album on the desk.",
+        "hl": [
+          10,
+          15
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w491",
+      "fr": "groupe",
+      "pos": "n.m.",
+      "en": "group",
+      "note": "",
+      "ipa": "/ɡʁup/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "J'aimerais faire partie de ton groupe.",
+        "en": "I'd like to join your group.",
+        "hl": [
+          31,
+          37
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w492",
+      "fr": "musique",
+      "pos": "n.f.",
+      "en": "music",
+      "note": "",
+      "ipa": "/myzik/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "La musique te plaît ?",
+        "en": "Do you like music?",
+        "hl": [
+          3,
+          10
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w493",
+      "fr": "choix",
+      "pos": "n.m.",
+      "en": "choice; pick, draft pick",
+      "note": "",
+      "ipa": "/ʃwa/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je te laisse le choix.",
+        "en": "I'm giving you a choice.",
+        "hl": [
+          16,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w494",
+      "fr": "coûter",
+      "pos": "v.",
+      "en": "to cost",
+      "note": "",
+      "ipa": "/kute/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Combien ça va coûter ?",
+        "en": "How much will that cost?",
+        "hl": [
+          14,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w495",
+      "fr": "le centime",
+      "pos": "n.m.",
+      "en": "cent",
+      "note": "",
+      "ipa": "/sɑ̃tim/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je n'ai pas un centime.",
+        "en": "I don't have a cent.",
+        "hl": [
+          15,
+          22
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w496",
+      "fr": "vingt",
+      "pos": "num.",
+      "en": "twenty",
+      "note": "",
+      "ipa": "/vɛ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il est dix heures vingt.",
+        "en": "It is twenty minutes past ten.",
+        "hl": [
+          18,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w497",
+      "fr": "combien",
+      "pos": "adv.",
+      "en": "how much; how many",
+      "note": "",
+      "ipa": "/kɔ̃bjɛ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Tu as besoin de combien ?",
+        "en": "How many do you need?",
+        "hl": [
+          16,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w498",
+      "fr": "en promotion",
+      "pos": "",
+      "en": "on sale",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Les pommes étaient en promotion aujourd'hui.",
+        "en": "Apples were on sale today.",
+        "hl": [
+          19,
+          31
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w499",
+      "fr": "gratuit",
+      "pos": "adj.",
+      "en": "free of charge; gratuitous, for no reason",
+      "note": "",
+      "ipa": "/ɡʁatɥi/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Rien n'est gratuit.",
+        "en": "Nothing is free.",
+        "hl": [
+          11,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w500",
+      "fr": "le ticket de caisse",
+      "pos": "",
+      "en": "receipt",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "N'oubliez pas le ticket de caisse.",
+        "en": "Don't forget the receipt.",
+        "hl": [
+          14,
+          33
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w501",
+      "fr": "célèbre",
+      "pos": "adj.",
+      "en": "famous",
+      "note": "",
+      "ipa": "/selɛbʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ma sœur est célèbre.",
+        "en": "My sister is famous.",
+        "hl": [
+          12,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w502",
+      "fr": "acteur",
+      "pos": "n.m.",
+      "en": "actor",
+      "note": "",
+      "ipa": "/aktœʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je ne suis pas un bon acteur.",
+        "en": "I'm not a good actor.",
+        "hl": [
+          22,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w503",
+      "fr": "hôtel",
+      "pos": "n.m.",
+      "en": "mansion, town house, hotel; hotel",
+      "note": "",
+      "ipa": "/otɛl/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je recherche un hôtel bon marché.",
+        "en": "I'm looking for a cheap hotel.",
+        "hl": [
+          16,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w504",
+      "fr": "homme",
+      "pos": "n.m.",
+      "en": "man; man, Man",
+      "note": "",
+      "ipa": "/ɔm/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis un homme libre.",
+        "en": "I'm a free man.",
+        "hl": [
+          11,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w505",
+      "fr": "à gauche de",
+      "pos": "",
+      "en": "to the left of",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "La boulangerie est à gauche de l'école.",
+        "en": "The bakery is to the left of the school.",
+        "hl": [
+          19,
+          30
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w506",
+      "fr": "entrer",
+      "pos": "v.",
+      "en": "to enter",
+      "note": "",
+      "ipa": "/ɑ̃tʁe/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Vous pouvez entrer, maintenant.",
+        "en": "You may enter now.",
+        "hl": [
+          12,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w507",
+      "fr": "arbre",
+      "pos": "n.m.",
+      "en": "tree; axle",
+      "note": "",
+      "ipa": "/aʁbʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je me suis tapé un arbre.",
+        "en": "I ran into a tree.",
+        "hl": [
+          19,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w508",
+      "fr": "à droite de",
+      "pos": "",
+      "en": "to the right of",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Le musée est à droite de la gare.",
+        "en": "The museum is to the right of the station.",
+        "hl": [
+          13,
+          24
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w509",
+      "fr": "quel",
+      "pos": "adj.",
+      "en": "which; what, what a",
+      "note": "",
+      "ipa": "/kɛl/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Quel gros chien !",
+        "en": "What a big dog!",
+        "hl": [
+          0,
+          4
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w510",
+      "fr": "chanteur",
+      "pos": "n.m.",
+      "en": "singer",
+      "note": "",
+      "ipa": "/ʃɑ̃tœʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je ne suis pas très bon chanteur.",
+        "en": "I'm not a very good singer.",
+        "hl": [
+          24,
+          32
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w511",
+      "fr": "les lunettes",
+      "pos": "n.f.",
+      "en": "glasses",
+      "note": "always plural",
+      "ipa": "/lynɛt/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je ne porte plus de lunettes.",
+        "en": "I no longer wear glasses.",
+        "hl": [
+          20,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w512",
+      "fr": "triste",
+      "pos": "adj.",
+      "en": "sad",
+      "note": "",
+      "ipa": "/tʁist/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis triste de partir.",
+        "en": "I'm sad to be leaving.",
+        "hl": [
+          8,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w513",
+      "fr": "blague",
+      "pos": "n.f.",
+      "en": "pouch, especially for tobacco; joke",
+      "note": "",
+      "ipa": "/blaɡ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il a fait une blague à ce propos.",
+        "en": "He made a joke about it.",
+        "hl": [
+          14,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w514",
+      "fr": "vrai",
+      "pos": "adj.",
+      "en": "true; real, proper",
+      "note": "",
+      "ipa": "/vʁɛ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "C'est trop beau pour être vrai.",
+        "en": "It's too good to be true.",
+        "hl": [
+          26,
+          30
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w515",
+      "fr": "en fait",
+      "pos": "",
+      "en": "actually; in fact",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Ce qu'il dit est en fait vrai.",
+        "en": "What he's saying is actually true.",
+        "hl": [
+          17,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w516",
+      "fr": "vendredi",
+      "pos": "n.m.",
+      "en": "Friday",
+      "note": "",
+      "ipa": "/vɑ̃dʁədi/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "On fait une fête vendredi soir.",
+        "en": "We're having a party Friday evening.",
+        "hl": [
+          17,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w517",
+      "fr": "à la campagne",
+      "pos": "",
+      "en": "in the countryside",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Il possède un domaine à la campagne.",
+        "en": "He has an estate in the country.",
+        "hl": [
+          22,
+          35
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w518",
+      "fr": "visiter",
+      "pos": "v.",
+      "en": "to visit",
+      "note": "",
+      "ipa": "/vizite/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Quel musée aimerais-tu visiter en premier ?",
+        "en": "Which museum would you like to visit first?",
+        "hl": [
+          23,
+          30
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w519",
+      "fr": "église",
+      "pos": "n.f.",
+      "en": "church",
+      "note": "",
+      "ipa": "/eɡliz/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Un jour, il y avait ici une église.",
+        "en": "There was a church here once.",
+        "hl": [
+          28,
+          34
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w520",
+      "fr": "village",
+      "pos": "n.m.",
+      "en": "village; town, city",
+      "note": "",
+      "ipa": "/vilaʒ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je vis dans un petit village.",
+        "en": "I live in a small village.",
+        "hl": [
+          21,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w521",
+      "fr": "samedi",
+      "pos": "n.m.",
+      "en": "Saturday",
+      "note": "",
+      "ipa": "/samədi/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Aujourd'hui c'est samedi.",
+        "en": "Today is Saturday.",
+        "hl": [
+          18,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w522",
+      "fr": "en ville",
+      "pos": "",
+      "en": "in town; downtown",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "On va en ville manger une pizza.",
+        "en": "We're going downtown to eat pizza.",
+        "hl": [
+          6,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w523",
+      "fr": "train",
+      "pos": "n.m.",
+      "en": "train; pace",
+      "note": "",
+      "ipa": "/tʁɛ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "On y va en train.",
+        "en": "We're going by train.",
+        "hl": [
+          11,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w524",
+      "fr": "rentrer",
+      "pos": "v.",
+      "en": "to go back, to re-enter; to go home, to come home",
+      "note": "",
+      "ipa": "/ʁɑ̃tʁe/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je viens de rentrer chez moi.",
+        "en": "I just got back home.",
+        "hl": [
+          12,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w525",
+      "fr": "après-midi",
+      "pos": "",
+      "en": "afternoon",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je suis libre cet après-midi.",
+        "en": "I'm free this afternoon.",
+        "hl": [
+          18,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w526",
+      "fr": "dimanche",
+      "pos": "n.m.",
+      "en": "Sunday",
+      "note": "",
+      "ipa": "/dimɑ̃ʃ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Peux-tu venir dimanche soir ?",
+        "en": "Can you come on Sunday evening?",
+        "hl": [
+          14,
+          22
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w527",
+      "fr": "tard",
+      "pos": "adv.",
+      "en": "late",
+      "note": "",
+      "ipa": "/taʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Trop tard.",
+        "en": "Too late.",
+        "hl": [
+          5,
+          9
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w528",
+      "fr": "semaine",
+      "pos": "n.f.",
+      "en": "week; menstrual period",
+      "note": "",
+      "ipa": "/səmɛn/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je partirai dans une semaine.",
+        "en": "I'm leaving in a week.",
+        "hl": [
+          21,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w529",
+      "fr": "pourquoi pas",
+      "pos": "",
+      "en": "why not",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Pourquoi pas les deux ?",
+        "en": "Why not both?",
+        "hl": [
+          0,
+          12
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w530",
+      "fr": "lundi",
+      "pos": "n.m.",
+      "en": "Monday",
+      "note": "",
+      "ipa": "/lœ̃di/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "À lundi !",
+        "en": "See you Monday.",
+        "hl": [
+          2,
+          7
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w531",
+      "fr": "eux",
+      "pos": "pron.",
+      "en": "them",
+      "note": "stressed pronoun: avec eux",
+      "ipa": "/ø/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Ne compte pas sur eux.",
+        "en": "Don't count on them.",
+        "hl": [
+          18,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w532",
+      "fr": "en vacances",
+      "pos": "",
+      "en": "on vacation",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Où allez-vous en vacances cet été ?",
+        "en": "Where are you going to vacation this summer?",
+        "hl": [
+          14,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w533",
+      "fr": "jour",
+      "pos": "n.m.",
+      "en": "day; daylight, light",
+      "note": "",
+      "ipa": "/ʒuʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "C'est un grand jour pour moi.",
+        "en": "This is a big day for me.",
+        "hl": [
+          15,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w534",
+      "fr": "mardi",
+      "pos": "n.m.",
+      "en": "Tuesday",
+      "note": "",
+      "ipa": "/maʁdi/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Voyons-nous mardi.",
+        "en": "Let's meet on Tuesday.",
+        "hl": [
+          12,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w535",
+      "fr": "mercredi",
+      "pos": "n.m.",
+      "en": "Wednesday",
+      "note": "",
+      "ipa": "/mɛʁkʁədi/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Aujourd'hui on est mercredi.",
+        "en": "Today is Wednesday.",
+        "hl": [
+          19,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w536",
+      "fr": "combien de",
+      "pos": "",
+      "en": "how many; how much",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Combien de temps va durer la tempête ?",
+        "en": "How long will the storm last?",
+        "hl": [
+          0,
+          10
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w537",
+      "fr": "jusqu'à",
+      "pos": "prep.",
+      "en": "until; up to",
+      "note": "",
+      "ipa": "/ʒyska/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Pourquoi ne pas attendre jusqu'à demain ?",
+        "en": "Why not wait until tomorrow?",
+        "hl": [
+          25,
+          32
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w538",
+      "fr": "plage",
+      "pos": "n.f.",
+      "en": "beach; range",
+      "note": "",
+      "ipa": "/plaʒ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis à la plage.",
+        "en": "I'm at the beach.",
+        "hl": [
+          13,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w539",
+      "fr": "midi",
+      "pos": "n.m.",
+      "en": "noon, midday; south",
+      "note": "",
+      "ipa": "/midi/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Elle devrait y être à midi.",
+        "en": "She should be there at noon.",
+        "hl": [
+          22,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w540",
+      "fr": "surfer",
+      "pos": "v.",
+      "en": "to surf",
+      "note": "",
+      "ipa": "/sœʁfe/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je ne sais pas surfer.",
+        "en": "I can't surf.",
+        "hl": [
+          15,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w541",
+      "fr": "bar",
+      "pos": "n.m.",
+      "en": "bar",
+      "note": "",
+      "ipa": "/baʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je me suis assis au bar.",
+        "en": "I sat at the bar.",
+        "hl": [
+          20,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w542",
+      "fr": "soirée",
+      "pos": "n.f.",
+      "en": "evening; evening activity, party",
+      "note": "",
+      "ipa": "/swaʁe/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Tu veux aller à une soirée ?",
+        "en": "Do you want to go to a party?",
+        "hl": [
+          20,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w543",
+      "fr": "serveur",
+      "pos": "n.m.",
+      "en": "waiter; server",
+      "note": "",
+      "ipa": "/sɛʁvœʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Êtes-vous serveur ?",
+        "en": "Are you my waiter?",
+        "hl": [
+          10,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w544",
+      "fr": "minuit",
+      "pos": "n.m.",
+      "en": "midnight",
+      "note": "",
+      "ipa": "/minɥi/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis partie à minuit.",
+        "en": "I left at midnight.",
+        "hl": [
+          17,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w545",
+      "fr": "onze",
+      "pos": "num.",
+      "en": "eleven",
+      "note": "",
+      "ipa": "/ɔ̃z/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Onze est un nombre premier.",
+        "en": "Eleven is a prime number.",
+        "hl": [
+          0,
+          4
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w546",
+      "fr": "tous",
+      "pos": "pron.",
+      "en": "all; everybody",
+      "note": "",
+      "ipa": "/tus/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis fier de vous tous.",
+        "en": "I'm proud of you all.",
+        "hl": [
+          21,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w547",
+      "fr": "depuis",
+      "pos": "prep.",
+      "en": "since; since, ever since",
+      "note": "",
+      "ipa": "/dəpɥi/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis ici depuis hier.",
+        "en": "I've been here since yesterday.",
+        "hl": [
+          12,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w548",
+      "fr": "beaucoup de",
+      "pos": "",
+      "en": "a lot of; many",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je ne bois pas beaucoup de bière.",
+        "en": "I don't drink a lot of beer.",
+        "hl": [
+          15,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w549",
+      "fr": "question",
+      "pos": "n.f.",
+      "en": "question; issue, matter, topic, problem",
+      "note": "",
+      "ipa": "/kɛstjɔ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "C'est une question de goût.",
+        "en": "It's a matter of taste.",
+        "hl": [
+          10,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w550",
+      "fr": "aide",
+      "pos": "n.",
+      "en": "help, support; assist",
+      "note": "",
+      "ipa": "/ɛd/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ça aide.",
+        "en": "It helps.",
+        "hl": [
+          3,
+          7
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w551",
+      "fr": "même",
+      "pos": "adv.",
+      "en": "even",
+      "note": "",
+      "ipa": "/mɛm/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ne me parle même pas.",
+        "en": "Don't even talk to me.",
+        "hl": [
+          12,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w552",
+      "fr": "couleur",
+      "pos": "n.f.",
+      "en": "color/colour; a flush",
+      "note": "",
+      "ipa": "/kulœʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Le noir est une couleur.",
+        "en": "Black is a color.",
+        "hl": [
+          16,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w553",
+      "fr": "truc",
+      "pos": "n.m.",
+      "en": "procedure, technique; trick",
+      "note": "",
+      "ipa": "/tʁyk/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "C'est un vieux truc.",
+        "en": "That's an old trick.",
+        "hl": [
+          15,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w554",
+      "fr": "mauvais",
+      "pos": "adj.",
+      "en": "bad; wrong, incorrect",
+      "note": "",
+      "ipa": "/movɛ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis un être mauvais.",
+        "en": "I am a bad person.",
+        "hl": [
+          16,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w555",
+      "fr": "seulement",
+      "pos": "adv.",
+      "en": "only",
+      "note": "",
+      "ipa": "/sœləmɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je viens seulement de commencer.",
+        "en": "I've only just begun.",
+        "hl": [
+          9,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w556",
+      "fr": "chéri",
+      "pos": "n.",
+      "en": "dear, darling, honey, sweetheart",
+      "note": "",
+      "ipa": "/ʃeʁi/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Bonne nuit, chéri.",
+        "en": "Good night, darling.",
+        "hl": [
+          12,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w557",
+      "fr": "chaussette",
+      "pos": "n.f.",
+      "en": "sock; woman's or child's sock",
+      "note": "",
+      "ipa": "/ʃosɛt/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il me manque une chaussette.",
+        "en": "I'm missing a sock.",
+        "hl": [
+          17,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w558",
+      "fr": "désolé",
+      "pos": "adj.",
+      "en": "desolate, forsaken; sorry; apologetic",
+      "note": "",
+      "ipa": "/dezole/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis désolé pour toi.",
+        "en": "I'm sorry for you.",
+        "hl": [
+          8,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w559",
+      "fr": "écharpe",
+      "pos": "n.f.",
+      "en": "scarf",
+      "note": "",
+      "ipa": "/eʃaʁp/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Mets cette écharpe autour de ton cou.",
+        "en": "Put this scarf around your neck.",
+        "hl": [
+          11,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w560",
+      "fr": "animal",
+      "pos": "n.m.",
+      "en": "animal",
+      "note": "",
+      "ipa": "/animal/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Un cheval, c'est un animal.",
+        "en": "A horse is an animal.",
+        "hl": [
+          20,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w561",
+      "fr": "cheval",
+      "pos": "n.m.",
+      "en": "horse; ellipsis of cheval-vapeur",
+      "note": "",
+      "ipa": "/ʃəval/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il est fort comme un cheval.",
+        "en": "He is strong as a horse.",
+        "hl": [
+          21,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w562",
+      "fr": "été",
+      "pos": "n.m.",
+      "en": "summer",
+      "note": "",
+      "ipa": "/ete/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "En été, je ne porte que du blanc.",
+        "en": "I only wear white in the summer.",
+        "hl": [
+          3,
+          6
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w563",
+      "fr": "blanc",
+      "pos": "adj.",
+      "en": "white color; blank, unused",
+      "note": "",
+      "ipa": "/blɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Le blanc te va bien.",
+        "en": "You look good in white.",
+        "hl": [
+          3,
+          8
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w564",
+      "fr": "fleur",
+      "pos": "n.f.",
+      "en": "flower",
+      "note": "",
+      "ipa": "/flœʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "De quel genre de fleur s'agit-il ?",
+        "en": "What kind of flower is this?",
+        "hl": [
+          17,
+          22
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w565",
+      "fr": "blanche",
+      "pos": "adj.",
+      "en": "white",
+      "note": "feminine of blanc",
+      "ipa": "/blɑ̃ʃə/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Où est ma chemise blanche ?",
+        "en": "Where's my white shirt?",
+        "hl": [
+          18,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w566",
+      "fr": "printemps",
+      "pos": "n.m.",
+      "en": "spring",
+      "note": "",
+      "ipa": "/pʁɛ̃tɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "C'est le premier jour du printemps.",
+        "en": "This is the first day of spring.",
+        "hl": [
+          25,
+          34
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w567",
+      "fr": "animal de compagnie",
+      "pos": "",
+      "en": "pet",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "J'ai un lapin comme animal de compagnie.",
+        "en": "I keep a rabbit as a pet.",
+        "hl": [
+          20,
+          39
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w568",
+      "fr": "différent",
+      "pos": "adj.",
+      "en": "different",
+      "note": "",
+      "ipa": "/difeʁɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je me sens différent, aujourd'hui.",
+        "en": "I feel different today.",
+        "hl": [
+          11,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w569",
+      "fr": "hiver",
+      "pos": "n.m.",
+      "en": "winter",
+      "note": "",
+      "ipa": "/ivɛʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "J'attrape toujours froid en hiver.",
+        "en": "I always catch colds in the winter.",
+        "hl": [
+          28,
+          33
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w570",
+      "fr": "saison",
+      "pos": "n.f.",
+      "en": "season",
+      "note": "",
+      "ipa": "/sɛzɔ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ma saison préférée est le printemps.",
+        "en": "My favorite season is spring.",
+        "hl": [
+          3,
+          9
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w571",
+      "fr": "pêcher",
+      "pos": "v.",
+      "en": "to fish",
+      "note": "",
+      "ipa": "/peʃe/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Mon père est parti pêcher.",
+        "en": "My dad went fishing.",
+        "hl": [
+          19,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w572",
+      "fr": "rivière",
+      "pos": "n.f.",
+      "en": "a river",
+      "note": "",
+      "ipa": "/ʁivjɛʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il va traverser la rivière.",
+        "en": "He's going to cross the river.",
+        "hl": [
+          19,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w573",
+      "fr": "automne",
+      "pos": "n.m.",
+      "en": "autumn, fall",
+      "note": "",
+      "ipa": "/otɔn/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "En automne, le feuillage devient jaune.",
+        "en": "In autumn the leaves turn yellow.",
+        "hl": [
+          3,
+          10
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w574",
+      "fr": "lait",
+      "pos": "n.m.",
+      "en": "milk",
+      "note": "",
+      "ipa": "/lɛ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il donna du lait au chat.",
+        "en": "He gave some milk to the cat.",
+        "hl": [
+          12,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w575",
+      "fr": "bois",
+      "pos": "n.m.",
+      "en": "wood; wood, woodland",
+      "note": "",
+      "ipa": "/bwa/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ce n'était pas fait de bois.",
+        "en": "It wasn't made of wood.",
+        "hl": [
+          23,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w576",
+      "fr": "le jus d'orange",
+      "pos": "",
+      "en": "orange juice",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "J'adore le jus d'orange.",
+        "en": "I love orange juice.",
+        "hl": [
+          8,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w577",
+      "fr": "miel",
+      "pos": "n.m.",
+      "en": "honey",
+      "note": "",
+      "ipa": "/mjɛl/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Où allez-vous pour votre lune de miel ?",
+        "en": "Where are you going on your honeymoon?",
+        "hl": [
+          33,
+          37
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w578",
+      "fr": "beurre",
+      "pos": "n.m.",
+      "en": "butter",
+      "note": "",
+      "ipa": "/bœʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Comme dans du beurre.",
+        "en": "It's a piece of cake.",
+        "hl": [
+          14,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w579",
+      "fr": "pain",
+      "pos": "n.m.",
+      "en": "bread; piece of bread",
+      "note": "",
+      "ipa": "/pɛ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "As-tu du pain pour déjeuner ?",
+        "en": "Do you have bread for lunch?",
+        "hl": [
+          9,
+          13
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w580",
+      "fr": "la confiture",
+      "pos": "n.f.",
+      "en": "jam",
+      "note": "",
+      "ipa": "/kɔ̃fityʁ/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Aimes-tu la confiture ?",
+        "en": "Do you like jam?",
+        "hl": [
+          12,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w581",
+      "fr": "le frigo",
+      "pos": "n.m.",
+      "en": "fridge",
+      "note": "",
+      "ipa": "/fʁiɡo/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Il est dans le frigo.",
+        "en": "It's in the fridge.",
+        "hl": [
+          15,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w582",
+      "fr": "avec plaisir",
+      "pos": "",
+      "en": "with pleasure; gladly",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Avec plaisir.",
+        "en": "I'll be glad to.",
+        "hl": [
+          0,
+          12
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w583",
+      "fr": "pomme",
+      "pos": "n.f.",
+      "en": "apple",
+      "note": "",
+      "ipa": "/pɔm/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ça ressemble à une pomme.",
+        "en": "It looks like an apple.",
+        "hl": [
+          19,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w584",
+      "fr": "jus",
+      "pos": "n.m.",
+      "en": "juice",
+      "note": "",
+      "ipa": "/ʒy/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je bois du jus.",
+        "en": "I'm drinking juice.",
+        "hl": [
+          11,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w585",
+      "fr": "brouillé",
+      "pos": "adj.",
+      "en": "scrambled",
+      "note": "œufs brouillés = scrambled eggs",
+      "ipa": "/bʁuje/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Il s'est brouillé avec ses amis.",
+        "en": "He had a falling-out with his friends.",
+        "hl": [
+          9,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w586",
+      "fr": "oeuf",
+      "pos": "n.m.",
+      "en": "egg; egg; ovum",
+      "note": "",
+      "ipa": "/œf/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "C'est un œuf frais.",
+        "en": "This egg is fresh.",
+        "hl": [
+          9,
+          12
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w587",
+      "fr": "fait",
+      "pos": "n.m.",
+      "en": "fact",
+      "note": "",
+      "ipa": "/fɛ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "En fait, je parle français.",
+        "en": "As a matter of fact, I do speak French.",
+        "hl": [
+          3,
+          7
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w588",
+      "fr": "les céréales",
+      "pos": "n.f.",
+      "en": "cereal",
+      "note": "",
+      "ipa": "/seʁeal/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je ne veux pas de céréales.",
+        "en": "I don't want cereal.",
+        "hl": [
+          18,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w589",
+      "fr": "par",
+      "pos": "prep.",
+      "en": "through; by",
+      "note": "",
+      "ipa": "/paʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Elle est entrée par la porte.",
+        "en": "She came in through the door.",
+        "hl": [
+          16,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w590",
+      "fr": "après",
+      "pos": "prep.",
+      "en": "after, later than in time; after, coming for, trying to get",
+      "note": "",
+      "ipa": "/apʁɛ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il est parti après moi.",
+        "en": "He left after me.",
+        "hl": [
+          13,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w591",
+      "fr": "le basket",
+      "pos": "n.m.",
+      "en": "basketball",
+      "note": "",
+      "ipa": "/baskɛt/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Le basket est un sport d'équipe.",
+        "en": "Basketball is a team sport.",
+        "hl": [
+          3,
+          9
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w592",
+      "fr": "détendu",
+      "pos": "adj.",
+      "en": "relaxed",
+      "note": "",
+      "ipa": "/detɑ̃dy/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je me sens très détendu.",
+        "en": "I feel very relaxed.",
+        "hl": [
+          16,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w593",
+      "fr": "à côté de",
+      "pos": "",
+      "en": "next to",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "C'est à côté de ce bâtiment.",
+        "en": "It's next to that building.",
+        "hl": [
+          6,
+          15
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w594",
+      "fr": "danse",
+      "pos": "n.f.",
+      "en": "dance",
+      "note": "",
+      "ipa": "/dɑ̃s/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Viens et danse avec moi.",
+        "en": "Come and dance with me.",
+        "hl": [
+          9,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w595",
+      "fr": "la natation",
+      "pos": "n.f.",
+      "en": "swimming",
+      "note": "",
+      "ipa": "/natasjɔ̃/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je suis nul en natation.",
+        "en": "I'm a lousy swimmer.",
+        "hl": [
+          15,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w596",
+      "fr": "une fois",
+      "pos": "",
+      "en": "once",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je me douche une fois par jour.",
+        "en": "I shower once a day.",
+        "hl": [
+          17,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w597",
+      "fr": "la salle de sport",
+      "pos": "",
+      "en": "gym",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je pars à la salle de sport.",
+        "en": "I'm off to the gym.",
+        "hl": [
+          10,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w598",
+      "fr": "à pied",
+      "pos": "",
+      "en": "on foot",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Combien de temps cela prend-il à pied ?",
+        "en": "How long does it take on foot?",
+        "hl": [
+          31,
+          37
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w599",
+      "fr": "fois",
+      "pos": "n.f.",
+      "en": "time",
+      "note": "",
+      "ipa": "/fwa/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je me suis endormi plusieurs fois en classe.",
+        "en": "I've fallen asleep in class several times.",
+        "hl": [
+          29,
+          33
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w600",
+      "fr": "moto",
+      "pos": "n.f.",
+      "en": "bike, motorbike",
+      "note": "",
+      "ipa": "/moto/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Reste loin de ma moto.",
+        "en": "Stay away from my motorcycle.",
+        "hl": [
+          17,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w601",
+      "fr": "le maillot de bain",
+      "pos": "",
+      "en": "swimsuit",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "C'est un nouveau maillot de bain ?",
+        "en": "Is that a new bathing suit?",
+        "hl": [
+          17,
+          32
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w602",
+      "fr": "d'habitude",
+      "pos": "",
+      "en": "usually",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Comme à son habitude, elle est arrivée en retard.",
+        "en": "She arrived late as usual.",
+        "hl": [
+          12,
+          20
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w603",
+      "fr": "écouter",
+      "pos": "v.",
+      "en": "to listen; to listen to",
+      "note": "",
+      "ipa": "/ekute/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis ici pour écouter.",
+        "en": "I'm here to listen.",
+        "hl": [
+          17,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w604",
+      "fr": "le musicien",
+      "pos": "n.m.",
+      "en": "musician",
+      "note": "",
+      "ipa": "/myzisjɛ̃/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "C'est un très bon musicien.",
+        "en": "He's a very fine musician.",
+        "hl": [
+          18,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w605",
+      "fr": "préféré",
+      "pos": "adj.",
+      "en": "favourite",
+      "note": "",
+      "ipa": "/pʁefeʁe/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Quel est votre poète préféré ?",
+        "en": "Who's your favorite poet?",
+        "hl": [
+          21,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w606",
+      "fr": "le jazz",
+      "pos": "n.m.",
+      "en": "jazz",
+      "note": "",
+      "ipa": "/dʒaz/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Il est dingue de jazz.",
+        "en": "He is crazy about jazz.",
+        "hl": [
+          17,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w607",
+      "fr": "piano",
+      "pos": "n.m.",
+      "en": "piano",
+      "note": "",
+      "ipa": "/pjano/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il joue souvent du piano.",
+        "en": "He often plays piano.",
+        "hl": [
+          19,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w608",
+      "fr": "le violon",
+      "pos": "n.m.",
+      "en": "violin",
+      "note": "",
+      "ipa": "/vjolɔ̃/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Il joue très bien du violon.",
+        "en": "He plays the violin very well.",
+        "hl": [
+          21,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w609",
+      "fr": "tout le temps",
+      "pos": "",
+      "en": "all the time",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je me sens tout le temps fatigué.",
+        "en": "I feel tired all the time.",
+        "hl": [
+          11,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w610",
+      "fr": "la guitare",
+      "pos": "n.f.",
+      "en": "guitar",
+      "note": "",
+      "ipa": "/ɡitaʁ/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Elle joue de la guitare.",
+        "en": "She plays the guitar.",
+        "hl": [
+          16,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w611",
+      "fr": "la batterie",
+      "pos": "n.f.",
+      "en": "drums; battery",
+      "note": "",
+      "ipa": "/batəʁi/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Ma batterie est vide.",
+        "en": "My battery is dead.",
+        "hl": [
+          3,
+          11
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w612",
+      "fr": "rock",
+      "pos": "n.m.",
+      "en": "rock",
+      "note": "",
+      "ipa": "/ʁɔk/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il est connu en tant que chanteur de rock.",
+        "en": "He is known as a rock singer.",
+        "hl": [
+          37,
+          41
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w613",
+      "fr": "artiste",
+      "pos": "n.",
+      "en": "artist",
+      "note": "",
+      "ipa": "/aʁtist/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis un artiste.",
+        "en": "I'm an artist.",
+        "hl": [
+          11,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w614",
+      "fr": "instrument",
+      "pos": "n.m.",
+      "en": "instrument; ellipsis of instrument de musique",
+      "note": "",
+      "ipa": "/ɛ̃stʁymɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Pouvez-vous jouer d'un instrument de musique ?",
+        "en": "Can you play any musical instruments?",
+        "hl": [
+          23,
+          33
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w615",
+      "fr": "chanson",
+      "pos": "n.f.",
+      "en": "song",
+      "note": "",
+      "ipa": "/ʃɑ̃sɔ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Chante-nous une chanson, s'il te plaît.",
+        "en": "Sing us a song, please.",
+        "hl": [
+          16,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w616",
+      "fr": "il pleut",
+      "pos": "",
+      "en": "it's raining",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "En juin, il pleut jour après jour.",
+        "en": "In June, it rains day after day.",
+        "hl": [
+          9,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w617",
+      "fr": "botte",
+      "pos": "n.f.",
+      "en": "boot; something resembling a boot",
+      "note": "",
+      "ipa": "/bɔt/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Le chien a rongé ma botte.",
+        "en": "The dog chewed up my boot.",
+        "hl": [
+          20,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w618",
+      "fr": "le festival",
+      "pos": "n.m.",
+      "en": "festival",
+      "note": "",
+      "ipa": "/fɛstival/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Voudriez-vous participer au festival ?",
+        "en": "Would you like to take part in the festival?",
+        "hl": [
+          28,
+          36
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w619",
+      "fr": "Angleterre",
+      "pos": "n.f.",
+      "en": "England",
+      "note": "",
+      "ipa": "/ɑ̃ɡløtɛʁ/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "En Angleterre, la fête du travail est en mai.",
+        "en": "In England, Labor Day is in May.",
+        "hl": [
+          3,
+          13
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w620",
+      "fr": "réserver",
+      "pos": "v.",
+      "en": "to reserve, to make a reservation, to book",
+      "note": "",
+      "ipa": "/ʁezɛʁve/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "J'aimerais réserver une table pour deux.",
+        "en": "I'd like to reserve a table for two.",
+        "hl": [
+          11,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w621",
+      "fr": "de l'après-midi",
+      "pos": "",
+      "en": "in the afternoon",
+      "note": "with clock times: trois heures de l'après-midi",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Il a plu tout au long de l'après-midi.",
+        "en": "It rained all through the afternoon.",
+        "hl": [
+          22,
+          37
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w622",
+      "fr": "le wifi",
+      "pos": "n.m.",
+      "en": "wifi",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Comment puis-je me connecter à votre réseau WiFi ?",
+        "en": "How do I connect to your Wi-Fi?",
+        "hl": [
+          44,
+          48
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w623",
+      "fr": "partir",
+      "pos": "v.",
+      "en": "to go away, leave, depart; to originate",
+      "note": "",
+      "ipa": "/paʁtiʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis prêt à partir.",
+        "en": "I'm ready to leave.",
+        "hl": [
+          15,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w624",
+      "fr": "avant",
+      "pos": "prep.",
+      "en": "before; before, in front of, ahead of",
+      "note": "",
+      "ipa": "/avɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je ne bois plus avant midi.",
+        "en": "I don't drink before noon.",
+        "hl": [
+          16,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w625",
+      "fr": "tôt",
+      "pos": "adv.",
+      "en": "early",
+      "note": "",
+      "ipa": "/to/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Tu viens tôt.",
+        "en": "You are early.",
+        "hl": [
+          9,
+          12
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w626",
+      "fr": "du matin",
+      "pos": "",
+      "en": "in the morning",
+      "note": "with clock times: huit heures du matin",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je ne suis pas du matin.",
+        "en": "I'm not a morning person.",
+        "hl": [
+          15,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w627",
+      "fr": "couloir",
+      "pos": "n.m.",
+      "en": "corridor, hallway; aisle",
+      "note": "",
+      "ipa": "/kulwaʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je voudrais un siège côté couloir, s'il vous plaît.",
+        "en": "I'd like an aisle seat, please.",
+        "hl": [
+          26,
+          33
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w628",
+      "fr": "client",
+      "pos": "n.m.",
+      "en": "client, retainer, follower; customer",
+      "note": "",
+      "ipa": "/klijɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis avec un client.",
+        "en": "I'm with a client.",
+        "hl": [
+          16,
+          22
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w629",
+      "fr": "du soir",
+      "pos": "",
+      "en": "in the evening",
+      "note": "with clock times: dix heures du soir",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Es-tu plutôt du matin ou du soir ?",
+        "en": "Are you a morning person or a night person?",
+        "hl": [
+          25,
+          32
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w630",
+      "fr": "employé",
+      "pos": "n.m.",
+      "en": "employee; nonmanagerial worker",
+      "note": "",
+      "ipa": "/ɑ̃plwaje/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis employé de banque.",
+        "en": "I'm a bank employee.",
+        "hl": [
+          8,
+          15
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w631",
+      "fr": "nouvel",
+      "pos": "adj.",
+      "en": "new",
+      "note": "form of nouveau before a masculine vowel: un nouvel ami",
+      "ipa": "/nuvɛl/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je suis un nouvel étudiant.",
+        "en": "I'm a new student.",
+        "hl": [
+          11,
+          17
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w632",
+      "fr": "utiliser",
+      "pos": "v.",
+      "en": "to use, to utilize",
+      "note": "",
+      "ipa": "/ytilize/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Puis-je utiliser un peu de papier ?",
+        "en": "May I use some paper?",
+        "hl": [
+          8,
+          16
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w633",
+      "fr": "ordinateur",
+      "pos": "n.m.",
+      "en": "computer",
+      "note": "",
+      "ipa": "/ɔʁdinatœʁ/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "À qui est cet ordinateur ?",
+        "en": "Whose computer is this?",
+        "hl": [
+          14,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w634",
+      "fr": "chaque",
+      "pos": "adj.",
+      "en": "each; every",
+      "note": "",
+      "ipa": "/ʃak/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je me douche chaque soir.",
+        "en": "I shower every night.",
+        "hl": [
+          13,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w635",
+      "fr": "assistant",
+      "pos": "n.m.",
+      "en": "assistant",
+      "note": "",
+      "ipa": "/asistɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je recherche un assistant.",
+        "en": "I'm looking for an assistant.",
+        "hl": [
+          16,
+          25
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w636",
+      "fr": "absent",
+      "pos": "adj.",
+      "en": "absent; absent-minded",
+      "note": "",
+      "ipa": "/apsɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il est absent pour cause de maladie.",
+        "en": "He is absent because of illness.",
+        "hl": [
+          7,
+          13
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w637",
+      "fr": "les toilettes",
+      "pos": "n.f.",
+      "en": "restroom, toilet",
+      "note": "always plural",
+      "ipa": "/twalɛt/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Les toilettes sont sur la gauche.",
+        "en": "The restrooms are on the left.",
+        "hl": [
+          4,
+          13
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w638",
+      "fr": "sûrement",
+      "pos": "adv.",
+      "en": "surely, certainly; probably",
+      "note": "",
+      "ipa": "/syʁəmɑ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Il va sûrement pleuvoir.",
+        "en": "It's going to rain for sure.",
+        "hl": [
+          6,
+          14
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w639",
+      "fr": "une pause",
+      "pos": "",
+      "en": "break",
+      "note": "faire une pause = to take a break",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je suis prêt pour une pause.",
+        "en": "I'm ready for a break.",
+        "hl": [
+          22,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w640",
+      "fr": "examen",
+      "pos": "n.m.",
+      "en": "examination, inspection, study, analysis; exam, test",
+      "note": "",
+      "ipa": "/ɛɡzamɛ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Demain j'ai un examen.",
+        "en": "I have a test tomorrow.",
+        "hl": [
+          15,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w641",
+      "fr": "note",
+      "pos": "n.f.",
+      "en": "note; mark, grade",
+      "note": "",
+      "ipa": "/nɔt/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je vous laissai une note.",
+        "en": "I left you a note.",
+        "hl": [
+          20,
+          24
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w642",
+      "fr": "mot",
+      "pos": "n.m.",
+      "en": "word; note, message",
+      "note": "",
+      "ipa": "/mo/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Elle le traduisit mot à mot.",
+        "en": "She translated that word for word.",
+        "hl": [
+          18,
+          21
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w643",
+      "fr": "le dictionnaire",
+      "pos": "n.m.",
+      "en": "dictionary",
+      "note": "",
+      "ipa": "/diksjonɛʁ/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Ce dictionnaire est à moi.",
+        "en": "That dictionary is mine.",
+        "hl": [
+          3,
+          15
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w644",
+      "fr": "exercice",
+      "pos": "n.m.",
+      "en": "exercise, performance; exercise, practice",
+      "note": "",
+      "ipa": "/ɛɡzɛʁsis/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Marcher est un bon exercice.",
+        "en": "Walking is a good exercise.",
+        "hl": [
+          19,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w645",
+      "fr": "phrase",
+      "pos": "n.f.",
+      "en": "sentence",
+      "note": "",
+      "ipa": "/fʁaz/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ce n'est pas une phrase.",
+        "en": "This isn't a sentence.",
+        "hl": [
+          17,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w646",
+      "fr": "traduire",
+      "pos": "v.",
+      "en": "to translate; to summon",
+      "note": "",
+      "ipa": "/tʁadɥiʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "C'est un mot difficile à traduire.",
+        "en": "It's a difficult word to translate.",
+        "hl": [
+          25,
+          33
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w647",
+      "fr": "réponse",
+      "pos": "n.f.",
+      "en": "response, answer, reply; response, reaction",
+      "note": "",
+      "ipa": "/ʁepɔ̃s/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je vous donnerai ma réponse demain.",
+        "en": "I'll give you my answer tomorrow.",
+        "hl": [
+          20,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w648",
+      "fr": "lire",
+      "pos": "v.",
+      "en": "to read; to be read",
+      "note": "",
+      "ipa": "/liʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis fatigué de lire.",
+        "en": "I am tired of reading.",
+        "hl": [
+          19,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w649",
+      "fr": "écrire",
+      "pos": "v.",
+      "en": "to write",
+      "note": "",
+      "ipa": "/ekʁiʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Aujourd'hui, je suis inspiré pour écrire.",
+        "en": "Today I'm inspired to write.",
+        "hl": [
+          34,
+          40
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w650",
+      "fr": "sonner",
+      "pos": "v.",
+      "en": "to sound; to ring",
+      "note": "",
+      "ipa": "/sone/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Ton téléphone est à nouveau en train de sonner.",
+        "en": "Your phone is ringing again.",
+        "hl": [
+          40,
+          46
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w651",
+      "fr": "quoi de neuf",
+      "pos": "",
+      "en": "what's up",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Alors, quoi de neuf, à part ça ?",
+        "en": "So what else is new?",
+        "hl": [
+          7,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w652",
+      "fr": "sous",
+      "pos": "prep.",
+      "en": "below, under",
+      "note": "",
+      "ipa": "/su/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis sous ton charme.",
+        "en": "I'm under your spell.",
+        "hl": [
+          8,
+          12
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w653",
+      "fr": "allô",
+      "pos": "interj.",
+      "en": "hello",
+      "note": "answering the phone",
+      "ipa": "/alo/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Allô, en quoi puis-je vous être utile ?",
+        "en": "Excuse me, but do you need any help?",
+        "hl": [
+          0,
+          4
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w654",
+      "fr": "finir",
+      "pos": "v.",
+      "en": "to finish, end, complete; to end up",
+      "note": "",
+      "ipa": "/finiʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "On va finir ça.",
+        "en": "We're going to finish this.",
+        "hl": [
+          6,
+          11
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w655",
+      "fr": "libre",
+      "pos": "adj.",
+      "en": "free, at liberty; clear, free, vacant",
+      "note": "",
+      "ipa": "/libʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis libre le dimanche.",
+        "en": "I'm free on Sunday.",
+        "hl": [
+          8,
+          13
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w656",
+      "fr": "et quart",
+      "pos": "",
+      "en": "and a quarter; quarter past",
+      "note": "with clock times",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Il est neuf heures et quart.",
+        "en": "It's a quarter past nine.",
+        "hl": [
+          19,
+          27
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w657",
+      "fr": "choisir",
+      "pos": "v.",
+      "en": "to choose",
+      "note": "",
+      "ipa": "/ʃwaziʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je vais en choisir un.",
+        "en": "I will choose one.",
+        "hl": [
+          11,
+          18
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w658",
+      "fr": "seconde",
+      "pos": "n.f.",
+      "en": "second",
+      "note": "",
+      "ipa": "/səɡɔ̃d/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je suis à toi dans une seconde.",
+        "en": "I'll be with you in a second.",
+        "hl": [
+          23,
+          30
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w659",
+      "fr": "et demie",
+      "pos": "",
+      "en": "and a half; half past",
+      "note": "with clock times",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Grand-mère a trois fois et demie votre âge.",
+        "en": "Grandma is three and a half times your age.",
+        "hl": [
+          24,
+          32
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w660",
+      "fr": "commander",
+      "pos": "v.",
+      "en": "to order",
+      "note": "",
+      "ipa": "/komɑ̃de/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Êtes-vous prêt à commander ?",
+        "en": "Are you ready to order?",
+        "hl": [
+          17,
+          26
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w661",
+      "fr": "le sushi",
+      "pos": "n.m.",
+      "en": "sushi",
+      "note": "",
+      "ipa": "/suʃi/",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Pourquoi ne pas goûter les sushi ?",
+        "en": "Why don't you have some sushi?",
+        "hl": [
+          27,
+          32
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w662",
+      "fr": "alors",
+      "pos": "adv.",
+      "en": "then; so, hence",
+      "note": "",
+      "ipa": "/alɔʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je ne vous connaissais pas, alors.",
+        "en": "I didn't know you then.",
+        "hl": [
+          28,
+          33
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w663",
+      "fr": "vers",
+      "pos": "prep.",
+      "en": "towards; to",
+      "note": "",
+      "ipa": "/vɛʁ/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Viens vers moi.",
+        "en": "Come towards me.",
+        "hl": [
+          6,
+          10
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w664",
+      "fr": "vin",
+      "pos": "n.m.",
+      "en": "wine",
+      "note": "",
+      "ipa": "/vɛ̃/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je bois beaucoup de vin.",
+        "en": "I drink a lot of wine.",
+        "hl": [
+          20,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w665",
+      "fr": "jeudi",
+      "pos": "n.m.",
+      "en": "Thursday",
+      "note": "",
+      "ipa": "/ʒødi/",
+      "added": "2026-09-08",
+      "ex": {
+        "fr": "Je viens seulement le mardi et le jeudi.",
+        "en": "I only come on Tuesdays and Thursdays.",
+        "hl": [
+          34,
+          39
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w666",
+      "fr": "ou pas",
+      "pos": "",
+      "en": "or not",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je sais si c'est un ennemi ou pas.",
+        "en": "I know whether or not he is an enemy.",
+        "hl": [
+          27,
+          33
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w667",
+      "fr": "ça marche",
+      "pos": "",
+      "en": "that works",
+      "note": "",
+      "ipa": "",
+      "added": "2026-09-08",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je ne sais pas comment ça marche.",
+        "en": "I don't know how it works.",
+        "hl": [
+          23,
+          32
+        ],
+        "src": "tatoeba"
+      }
     }
   ]
 }

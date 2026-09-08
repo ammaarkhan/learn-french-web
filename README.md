@@ -120,12 +120,14 @@ In `vocab.json` each sentence carries `ex.src`, so provenance is visible in the 
 only asserted here. `"tatoeba"` is an unmodified pair, verified against `fra.txt` by exact match on
 the French side. `"hand"` is a sentence written for this project, used where the corpus has nothing
 usable for the sense being taught — `éclair` is the pastry to a learner and lightning to Tatoeba.
-Every word in `vocab.json` has a sentence as of 2026-08-31: 143 tatoeba, 63 hand. A hand sentence
+Every word in `vocab.json` has a sentence as of 2026-09-08: 569 tatoeba, 76 hand. A hand sentence
 must be tagged; an untagged one is a mistake.
 
 Glosses follow the same rule. Where the Wiktionary extraction returns a dictionary artifact instead
 of a meaning — `soeur` arrived as *"nonstandard spelling of sœur"* — the gloss is corrected by hand
-and marked `en_src: "hand"`. Four pool entries carry one: `soeur`, `voeu`, `noeud`, `l'une`. Note
+and marked `en_src: "hand"`. Four pool entries carry one: `soeur`, `voeu`, `noeud`, `l'une`. The 139 words the Duolingo import
+brought in from outside the pool carry one too: Duolingo writes a gloss for whatever sentence taught
+the word, so `exercice` arrived as *"exercise, year's"* and every one of them was rewritten. Note
 that the pool holds only the `oe` spellings, so deleting those entries would remove the words from
 the curriculum altogether rather than deduplicating them.
 

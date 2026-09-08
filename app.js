@@ -27,6 +27,17 @@ const INTAKE_PER_DAY = 40;
    and the closing screen offers the next batch. The pace is a floor, not a ceiling. */
 const NEW_PER_SESSION = 40;
 
+/* The Duolingo practice-hub export was ingested on 2026-09-08: 439 words he had already been
+   taught there went onto the ladder as met once, 40 a day, so they are checked rather than
+   taught. While that runs, a session is reviews only, and the pool drip stands still instead
+   of running 11 days ahead — it resumes on the day it left off. Both ends are dates, so
+   nothing has to be switched back by hand. */
+const INTAKE_PAUSE_FROM = "2026-09-08";
+const NEW_PAUSE_UNTIL = "2026-09-19";   // exclusive: the first day new words come back
+
+const newPaused = () => todayISO() < NEW_PAUSE_UNTIL;
+const newPerSession = () => (newPaused() ? 0 : NEW_PER_SESSION);
+
 const DATA_REPO = "ammaarkhan/learn-french-data";
 const API = `https://api.github.com/repos/${DATA_REPO}/contents`;
 const LS = { token: "lf.token", prog: "lf.progress.v1" };
@@ -314,7 +325,16 @@ function failWrite(e) {
 function intakeCount() {
   const days = -daysUntil(INTAKE_START); // days since the start, 0 on the first day
   if (days < 0) return 0;
-  return (days + 1) * INTAKE_PER_DAY;
+  return (days + 1 - pausedDays()) * INTAKE_PER_DAY;
+}
+
+/* Whole days of the pause already elapsed. Subtracting them holds the promotion count still
+   inside the window, so no day of the pool drip is skipped, only deferred. */
+function pausedDays() {
+  const t = todayISO();
+  if (t <= INTAKE_PAUSE_FROM) return 0;
+  const end = t < NEW_PAUSE_UNTIL ? t : NEW_PAUSE_UNTIL;
+  return Math.round((Date.parse(end + "T00:00:00Z") - Date.parse(INTAKE_PAUSE_FROM + "T00:00:00Z")) / 86400000);
 }
 
 /* Two entries are the same word when they differ only by the oe ligature or a leading
@@ -436,7 +456,7 @@ const isFresh = (id) => card(id).reps === 0;
    how far the intake has run ahead. Hand-collected words enter before pool words. */
 function todaysQueue() {
   const due = dueIds();
-  const fresh = due.filter(isFresh).slice(0, NEW_PER_SESSION);
+  const fresh = due.filter(isFresh).slice(0, newPerSession());
   return due.filter((id) => !isFresh(id)).concat(fresh);
 }
 
@@ -449,7 +469,7 @@ function buildQueue() {
 
 /* Promoted but not yet reached, because of the new-card cap. */
 function waitingCount() {
-  return Math.max(0, dueIds().filter(isFresh).length - NEW_PER_SESSION);
+  return Math.max(0, dueIds().filter(isFresh).length - newPerSession());
 }
 
 function startSession() {
@@ -716,7 +736,10 @@ function viewToday() {
         : `Nothing due. ${total} cards in rotation across ${state.words.length} words.`
     }${
       waiting
-        ? ` ${waiting} more waiting: this sitting caps new words at ${NEW_PER_SESSION}, and you can
+        ? newPaused()
+          ? ` ${waiting} new words are on hold until ${NEW_PAUSE_UNTIL}, while the words Duolingo
+             already taught you are checked.`
+          : ` ${waiting} more waiting: this sitting caps new words at ${NEW_PER_SESSION}, and you can
            start another as soon as it closes.`
         : ""
     }</p>
@@ -911,7 +934,10 @@ function viewWords() {
     the frequency list. A word gains its english to french card once it reaches rung ${MATURE_RUNG}.</p>
     ${
       left > 0
-        ? `<p class="hint">${INTAKE_PER_DAY} more arrive each day. ${left} left in the list of
+        ? newPaused()
+        ? `<p class="hint">New words are on hold until ${NEW_PAUSE_UNTIL} while the words Duolingo
+           already taught you are checked. ${left} of ${state.poolTotal} are still to come.</p>`
+        : `<p class="hint">${INTAKE_PER_DAY} more arrive each day. ${left} left in the list of
            ${state.poolTotal}, so the last one lands ${esc(
              iso(addDays(new Date(), Math.ceil(left / INTAKE_PER_DAY)))
            )}.</p>`
