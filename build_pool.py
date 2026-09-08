@@ -47,6 +47,10 @@ ELIDED = {"l'", "d'", "j'", "n'", "s'", "c'", "m'", "t'", "qu'",
 # abbreviations and corpus noise, not vocabulary
 NOISE = {'m', 'mme', 'mlle', 'etc', 'in', 'ok', 'miss', 'mr'}
 
+# Ranked high by a homograph, but the lemma itself is a rare noun: "a" is the letter,
+# "mets" a dish. Lexique counts the verb forms, so both look far commoner than they are.
+NOISE |= {'a', 'mets'}
+
 # inflected forms Lexique failed to fold into their lemma. The base lemma is in the
 # list already, so these would only produce duplicate cards.
 INFLECTED = {

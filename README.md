@@ -54,8 +54,9 @@ individual words would ignore liaison and elision, and a wrong pronunciation is 
 
 ## The word pool
 
-`frequency-3000.json` holds the most frequent French lemmas — 2,999 after `clef` was dropped as a
-duplicate spelling of `clé` — each with an English gloss, an IPA pronunciation and an example
+`frequency-3000.json` holds the most frequent French lemmas — 2,997 after `clef` was dropped as a
+duplicate spelling of `clé`, and `a` and `mets` as lemmas ranked by a homograph (the letter A, a
+dish) rather than by the word Lexique actually counted — each with an English gloss, an IPA pronunciation and an example
 sentence. Forty enter the ladder per calendar day. Promotion is computed from the date
 rather than stored as a counter, so every device agrees without anything to merge, and re-ranking the
 list later cannot detach a card from its history — card ids are keyed on the word (`f-chien`).
@@ -125,9 +126,9 @@ must be tagged; an untagged one is a mistake.
 
 Glosses follow the same rule. Where the Wiktionary extraction returns a dictionary artifact instead
 of a meaning — `soeur` arrived as *"nonstandard spelling of sœur"* — the gloss is corrected by hand
-and marked `en_src: "hand"`. Four pool entries carry one: `soeur`, `voeu`, `noeud`, `l'une`. The 139 words the Duolingo import
-brought in from outside the pool carry one too: Duolingo writes a gloss for whatever sentence taught
-the word, so `exercice` arrived as *"exercise, year's"* and every one of them was rewritten. Note
+and marked `en_src: "hand"`. Four pool entries carry one: `soeur`, `voeu`, `noeud`, `l'une`. So do the 139 Duolingo words from outside the pool:
+its glosses are written for the sentence that taught the word — `exercice` arrived as
+*"exercise, year's"* — so all of them were rewritten. Note
 that the pool holds only the `oe` spellings, so deleting those entries would remove the words from
 the curriculum altogether rather than deduplicating them.
 
