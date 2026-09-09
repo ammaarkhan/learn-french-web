@@ -916,7 +916,7 @@
       "rank": 55,
       "fr": "apprendre",
       "pos": "v.",
-      "en": "to learn; to teach",
+      "en": "to learn; (apprendre qch à qn) to teach",
       "ipa": "/apʁɑ̃dʁ/",
       "note": "",
       "situation": "introduce",
@@ -927,7 +927,8 @@
           22,
           31
         ]
-      }
+      },
+      "en_src": "hand"
     },
     {
       "rank": 56,
