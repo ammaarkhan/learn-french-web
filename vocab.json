@@ -6490,7 +6490,7 @@
       "id": "w377",
       "fr": "plan",
       "pos": "n.m.",
-      "en": "map; plane",
+      "en": "plan; map",
       "note": "",
       "ipa": "/plɑ̃/",
       "added": "2026-09-08",
@@ -6502,7 +6502,8 @@
           30
         ],
         "src": "tatoeba"
-      }
+      },
+      "en_src": "hand"
     },
     {
       "id": "w378",

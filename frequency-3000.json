@@ -6445,7 +6445,7 @@
       "rank": 382,
       "fr": "plan",
       "pos": "n.m.",
-      "en": "map; plane",
+      "en": "plan; map",
       "ipa": "/plɑ̃/",
       "note": "",
       "situation": "directions",
@@ -6456,7 +6456,8 @@
           26,
           30
         ]
-      }
+      },
+      "en_src": "hand"
     },
     {
       "rank": 383,
