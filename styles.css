@@ -719,6 +719,37 @@ a:focus-visible {
   color: var(--ink-soft);
 }
 
+/* sources: three rows, done over total */
+
+.sources { display: grid; gap: 0.7rem; }
+
+.src-row {
+  display: grid;
+  grid-template-columns: 9.5rem 3.4rem 1fr;
+  grid-template-areas: "name total bar" "note note note";
+  align-items: center;
+  column-gap: 0.8rem;
+  row-gap: 0.3rem;
+}
+
+.src-name { grid-area: name; font-family: var(--serif); font-size: 1rem; }
+.src-total { grid-area: total; text-align: right; }
+.src-note { grid-area: note; }
+
+.src-bar {
+  grid-area: bar;
+  height: 8px;
+  background: var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.src-fill { display: block; height: 100%; background: var(--r4); border-radius: 4px; }
+
+@media (max-width: 30rem) {
+  .src-row { grid-template-columns: 1fr 3.4rem; grid-template-areas: "name total" "bar bar" "note note"; }
+}
+
 /* activity strip */
 
 .weeks {

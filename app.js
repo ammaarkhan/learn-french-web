@@ -420,6 +420,34 @@ function dueIds() {
   return activeIds().filter((id) => !isKnown(id) && card(id).due <= t);
 }
 
+/* A card counts as seen once it has been answered or retired. Words the drip has released
+   but never shown stay out of the chart and the totals until they come up. */
+const seen = (id) => card(id).reps > 0 || isKnown(id);
+const seenIds = () => activeIds().filter(seen);
+
+/* Where the words come from, three sources, each with done and to go.
+   Duolingo words are checked (seeded as met once, so done means answered since);
+   own words and list words are met (shown at least once). */
+function sources() {
+  const met = (w) => seen("r:" + w.id);
+  const duo = state.words.filter((w) => w.src === "duolingo");
+  const own = state.words.slice(0, state.own).filter((w) => w.src !== "duolingo");
+  /* The list is the whole top 3,000. A list word he collected by hand counts as met through
+     its hand card, so the total stays the list and nothing is counted twice. */
+  const pool = state.rawPool || [];
+  const handMet = new Set(state.words.slice(0, state.own).filter(met).map((w) => dedupeKey(w.fr)));
+  const listTotal = pool.length;
+  const listMet =
+    state.words.slice(state.own).filter(met).length +
+    pool.filter((p) => handMet.has(dedupeKey(p.fr))).length;
+  const duoDone = duo.filter((w) => card("r:" + w.id).reps > 1 || isKnown("r:" + w.id)).length;
+  return [
+    { name: "Duolingo", total: duo.length, done: duoDone, verb: "checked" },
+    { name: "Your own words", total: own.length, done: own.filter(met).length, verb: "met" },
+    { name: "Top 3,000 list", total: listTotal, done: listMet, verb: "met" },
+  ];
+}
+
 function anyMature() {
   return state.words.some((w) => wordIsMature(w.id));
 }
@@ -517,11 +545,6 @@ function todaysQueue() {
 function buildQueue() {
   const ids = todaysQueue();
   return anyMature() ? shuffle(ids) : ids;
-}
-
-/* Promoted but not yet reached, because of the new-card cap. */
-function waitingCount() {
-  return Math.max(0, dueIds().filter(isFresh).length - newPerSession());
 }
 
 function startSession(queue = buildQueue(), practice = false) {
@@ -711,13 +734,50 @@ const sayButton = (extra) =>
 
 const TARGET = "2026-12-15";
 
+/* The three places words come from, each as done over total. */
+function chartSources() {
+  const rows = sources()
+    .map((r) => {
+      const pct = r.total ? Math.round((r.done / r.total) * 100) : 0;
+      const left = r.total - r.done;
+      const n = (x) => x.toLocaleString("en-GB");
+      const note = left ? `${n(r.done)} ${r.verb} · ${n(left)} to go` : `all ${r.verb}`;
+      return `<div class="src-row">
+        <span class="src-name">${esc(r.name)}</span>
+        <span class="src-total meta">${r.total.toLocaleString("en-GB")}</span>
+        <span class="src-bar"><span class="src-fill" style="width:${pct}%"></span></span>
+        <span class="src-note meta">${esc(note)}</span>
+      </div>`;
+    })
+    .join("");
+  return `<div class="chart-block">
+    <div class="chart-head">
+      <h2 class="chart-title">Where your words come from</h2>
+      <span class="meta">${newPaused() ? "duolingo first" : `${INTAKE_PER_DAY} new a day`}</span>
+    </div>
+    <div class="sources">${rows}</div>
+  </div>`;
+}
+
+/* When progress last reached the repo. On localhost there is no repo. */
+function lastSaved() {
+  if (LOCAL) return "local";
+  const at = state.prog && state.prog.data.updatedAt;
+  if (!at) return "never";
+  const d = new Date(at);
+  const today = iso(d) === todayISO();
+  return today
+    ? d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })
+    : d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+}
+
 /* How many cards sit on each rung, 0 through 6, then a last bucket for retired cards.
    Mass moving right is the progress. */
 const KNOWN_COL = MAX_RUNG + 1;
 
 function rungCounts() {
   const counts = Array(KNOWN_COL + 1).fill(0);
-  for (const id of activeIds()) counts[isKnown(id) ? KNOWN_COL : card(id).rung] += 1;
+  for (const id of seenIds()) counts[isKnown(id) ? KNOWN_COL : card(id).rung] += 1;
   return counts;
 }
 
@@ -746,9 +806,8 @@ function chartRungs() {
       <h2 class="chart-title">Where your words sit</h2>
       <span class="meta">colour tracks the interval</span>
     </div>
-    <p class="chart-note">How long each word rests before you see it again. Getting one right moves
-      it a step to the right, so the pile drifting rightward is you needing them less often. The
-      last column is words you retired: counted, never asked.</p>
+    <p class="chart-note">Every card you have answered, by how long it rests before it comes back.
+      Right is better. The last column is words you retired.</p>
     <div class="rungs">${cols}</div>
     <div class="rung-axis">${labels.map((l) => `<span class="rung-lbl">${l}</span>`).join("")}</div>
   </div>`;
@@ -789,8 +848,6 @@ function chartActivity() {
 
 function viewToday() {
   const due = todaysQueue().length;
-  const total = activeIds().length;
-  const waiting = waitingCount();
   const open = openGaps().length;
   const live = state.session && !state.session.finished;
 
@@ -814,19 +871,7 @@ function viewToday() {
       <span class="count-n">${due}</span>
       <span class="meta">${due === 1 ? "card due" : "cards due"}</span>
     </div>
-    <p class="lede">${
-      due
-        ? `About ${Math.max(1, Math.round((due * 12) / 60))} min. ${total} cards in rotation across ${state.words.length} words.`
-        : `Nothing due. ${total} cards in rotation across ${state.words.length} words.`
-    }${
-      waiting
-        ? newPaused()
-          ? ` ${waiting} new words are on hold until ${NEW_PAUSE_UNTIL}, while the words Duolingo
-             already taught you are checked.`
-          : ` ${waiting} more waiting: this sitting caps new words at ${NEW_PER_SESSION}, and you can
-           start another as soon as it closes.`
-        : ""
-    }</p>
+    <p class="lede">${due ? `About ${Math.max(1, Math.round((due * 12) / 60))} min.` : "Nothing due."}</p>
     ${
       live
         ? `<button class="start" data-go="review">Resume review</button>
@@ -836,17 +881,18 @@ function viewToday() {
         : `<button class="start" data-start ${due ? "" : "disabled"}>${due ? "Begin review" : "Nothing to review"}</button>`
     }
 
+    ${chartSources()}
     ${chartRungs()}
     ${chartActivity()}
 
     <div class="stats">
       <div>
-        <div class="stat-n is-deep">${mature}</div>
-        <div class="stat-l meta">${mature === 1 ? "word tested both ways" : "words tested both ways"}</div>
+        <div class="stat-n">${esc(lastSaved())}</div>
+        <div class="stat-l meta">last saved</div>
       </div>
       <div>
-        <div class="stat-n">${state.words.length}</div>
-        <div class="stat-l meta">words in play</div>
+        <div class="stat-n is-deep">${mature}</div>
+        <div class="stat-l meta">${mature === 1 ? "word tested both ways" : "words tested both ways"}</div>
       </div>
       <div>
         <div class="stat-n${open ? " is-gap" : ""}">${open}</div>
@@ -1040,21 +1086,15 @@ function viewWords() {
     })
     .join("");
 
-  const left = state.poolTotal - state.pool;
+  const shown = state.words.filter((w) => seen("r:" + w.id)).length;
   return `<div class="page">
     <h1 class="page-title">Words</h1>
-    <p class="lede">${state.words.length} words: ${state.own} collected by hand, ${state.pool} from
-    the frequency list. A word gains its english to french card once it reaches rung ${MATURE_RUNG}.</p>
+    <p class="lede">${shown} words seen so far. A word gets its english to french card once it
+    reaches the 8-day rung.</p>
     ${
-      left > 0
-        ? newPaused()
-        ? `<p class="hint">New words are on hold until ${NEW_PAUSE_UNTIL} while the words Duolingo
-           already taught you are checked. ${left} of ${state.poolTotal} are still to come.</p>`
-        : `<p class="hint">${INTAKE_PER_DAY} more arrive each day. ${left} left in the list of
-           ${state.poolTotal}, so the last one lands ${esc(
-             iso(addDays(new Date(), Math.ceil(left / INTAKE_PER_DAY)))
-           )}.</p>`
-        : ""
+      newPaused()
+        ? `<p class="hint">Duolingo words first. New words start ${NEW_PAUSE_UNTIL}, ${INTAKE_PER_DAY} a day.</p>`
+        : `<p class="hint">${INTAKE_PER_DAY} new words a day.</p>`
     }
     ${rows || `<p class="empty">No words yet.</p>`}
     <p class="hint" style="margin-top:2rem">Add more by hand: <code>python3 web/add.py "le chien = the dog"</code></p>
