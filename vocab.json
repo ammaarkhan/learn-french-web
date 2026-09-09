@@ -5541,13 +5541,13 @@
       "added": "2026-09-08",
       "en_src": "hand",
       "ex": {
-        "fr": "C'est une baguette magique.",
-        "en": "This is a magic wand.",
+        "fr": "Je vais acheter une baguette à la boulangerie.",
+        "en": "I'm going to buy a baguette at the bakery.",
         "hl": [
-          10,
-          18
+          20,
+          28
         ],
-        "src": "tatoeba"
+        "src": "hand"
       }
     },
     {
