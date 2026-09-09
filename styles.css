@@ -530,6 +530,9 @@ body {
 
 .retire:hover { color: var(--ink); }
 
+/* practice grades carry no interval and no colour: nothing is about to change */
+.grades.practice .grade-ivl, .grades.practice .grade-chip { visibility: hidden; }
+
 /* ---------- ladder ticks ---------- */
 
 .ladder {

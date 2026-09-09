@@ -211,7 +211,7 @@ function mergeProgress(a, b) {
   out.gaps = dedupe(
     [...(a.gaps || []), ...(b.gaps || [])].sort((x, y) => (y.at || "").localeCompare(x.at || "")),
     (x) => x.id + x.at
-  ).slice(0, 200);
+  );
   out.sessions = dedupe(
     [...(a.sessions || []), ...(b.sessions || [])].sort((x, y) =>
       (y.at || "").localeCompare(x.at || "")
@@ -440,21 +440,54 @@ function previewDays(id, g) {
   return daysForRung(rungAfter(card(id).rung, g));
 }
 
-function grade(id, g) {
+/* `streak` counts scheduled passes since the card was last missed. The same-session requeue
+   pass does not count: it is minutes later and proves nothing. Two in a row closes the card's
+   gaps (Ammaar's rule, 2026-09-09). */
+const GAP_CLOSES_AT = 2;
+
+function grade(id, g, requeue = false) {
   const c = { ...card(id) };
   c.reps += 1;
-  if (g === "blank" || g === "struggled") c.lapses += 1;
+  const missed = g === "blank" || g === "struggled";
+  if (missed) c.lapses += 1;
   c.rung = rungAfter(c.rung, g);
   c.due = iso(addDays(new Date(), daysForRung(c.rung)));
+  if (missed) c.streak = 0;
+  else if (!requeue) c.streak = (c.streak || 0) + 1;
   c.updatedAt = stamp();
   P().cards[id] = c;
 
-  if (g === "blank" || g === "struggled") {
+  if (missed) {
     const w = wordOf(id);
     P().gaps.unshift({ id, fr: w.fr, en: w.en, dir: parseId(id).dir, grade: g, at: stamp() });
-    P().gaps = P().gaps.slice(0, 200);
   }
+  pruneGaps();
   save();
+}
+
+// ---------- gaps ----------
+
+/* A gap is open while its card has not yet passed GAP_CLOSES_AT scheduled reviews in a row.
+   Nothing is stored on the gap itself: open/closed is read off the card, so two devices
+   cannot disagree about it and a later miss reopens the old entries along with the new one. */
+const gapOpen = (g) => !isKnown(g.id) && (card(g.id).streak || 0) < GAP_CLOSES_AT;
+
+/* One row per card: the latest miss, and how many times it has been missed. */
+function openGaps() {
+  const rows = new Map();
+  for (const g of P().gaps) {
+    if (!gapOpen(g) || !wordOf(g.id)) continue;
+    const r = rows.get(g.id);
+    if (r) r.n += 1;
+    else rows.set(g.id, { ...g, n: 1 });
+  }
+  return [...rows.values()];
+}
+
+/* Closed gaps are history: kept ninety days, then dropped so the file stays small. */
+function pruneGaps() {
+  const cutoff = iso(addDays(new Date(), -90));
+  P().gaps = P().gaps.filter((g) => gapOpen(g) || g.at.slice(0, 10) >= cutoff);
 }
 
 // ---------- session ----------
@@ -491,8 +524,7 @@ function waitingCount() {
   return Math.max(0, dueIds().filter(isFresh).length - newPerSession());
 }
 
-function startSession() {
-  const queue = buildQueue();
+function startSession(queue = buildQueue(), practice = false) {
   if (!queue.length) return;
   state.session = {
     queue,
@@ -502,9 +534,17 @@ function startSession() {
     gaps: 0,
     started: todayISO(),
     sid: stamp() + ":" + Math.random().toString(36).slice(2, 8),
+    practice,
   };
   state.reveal = false;
   go("review");
+}
+
+/* Practice: the open gaps as a session of their own, same cards, same grades, same requeue
+   loop, but nothing is written. Rungs, due dates, streaks and the gaps list are untouched, so
+   it is extra reps, never a shortcut to closing a gap. */
+function startPractice() {
+  startSession(shuffle(openGaps().map((g) => g.id)), true);
 }
 
 function currentId() {
@@ -524,11 +564,12 @@ function answered(g) {
   const s = state.session;
   const id = currentId();
   if (!id) return;
-  grade(id, g);
+  const onRequeue = !s.queue.length;
+  if (!s.practice) grade(id, g, onRequeue);
   s.done += 1;
   const missed = g === "blank" || g === "struggled";
   if (missed) s.gaps += 1;
-  logSession();
+  if (!s.practice) logSession();
 
   // gap-filling loop: a miss comes back before the session closes
   if (missed) {
@@ -579,7 +620,7 @@ function logSession() {
 
 function endSession() {
   const s = state.session;
-  logSession();
+  if (!s.practice) logSession();
   state.session = { ...s, finished: true };
   render();
 }
@@ -750,7 +791,7 @@ function viewToday() {
   const due = todaysQueue().length;
   const total = activeIds().length;
   const waiting = waitingCount();
-  const openGaps = P().gaps.length;
+  const open = openGaps().length;
   const live = state.session && !state.session.finished;
 
   if (!state.words.length) {
@@ -801,15 +842,15 @@ function viewToday() {
     <div class="stats">
       <div>
         <div class="stat-n is-deep">${mature}</div>
-        <div class="stat-l meta">${mature === 1 ? "word known both ways" : "words known both ways"}</div>
+        <div class="stat-l meta">${mature === 1 ? "word tested both ways" : "words tested both ways"}</div>
       </div>
       <div>
         <div class="stat-n">${state.words.length}</div>
         <div class="stat-l meta">words in play</div>
       </div>
       <div>
-        <div class="stat-n${openGaps ? " is-gap" : ""}">${openGaps}</div>
-        <div class="stat-l meta">${openGaps === 1 ? "gap logged" : "gaps logged"}</div>
+        <div class="stat-n${open ? " is-gap" : ""}">${open}</div>
+        <div class="stat-l meta">${open === 1 ? "open gap" : "open gaps"}</div>
       </div>
     </div>
   </div>`;
@@ -818,6 +859,23 @@ function viewToday() {
 function viewReview() {
   const s = state.session;
   if (!s) return viewToday();
+
+  if (s.finished && s.practice) {
+    return `<div class="page">
+      <h1 class="page-title">Practice closed</h1>
+      <div class="summary-block">
+        <div class="summary-n">${s.done}</div>
+        <p class="meta">${s.done === 1 ? "card answered" : "cards answered"}</p>
+      </div>
+      <div class="summary-block">
+        <div class="summary-n${s.gaps ? " is-gap" : ""}">${s.gaps}</div>
+        <p class="meta">${s.gaps === 1 ? "miss" : "misses"}</p>
+      </div>
+      <p class="lede">Practice only: nothing moved on the ladder. A gap closes when its card
+        passes its next ${GAP_CLOSES_AT} scheduled reviews in a row.</p>
+      <button class="start" data-go="gaps">Back to gaps</button>
+    </div>`;
+  }
 
   if (s.finished) {
     const more = todaysQueue().length;
@@ -852,7 +910,7 @@ function viewReview() {
   const c = card(id);
   const left = s.queue.length + s.requeue.length;
 
-  const label = dir === "r" ? "input · french to english" : "output · english to french";
+  const label = (s.practice ? "practice · " : "") + (dir === "r" ? "input · french to english" : "output · english to french");
   const ex = w.ex;
 
   /* Input shows the pronunciation with the french prompt: it is a cue for saying
@@ -890,7 +948,7 @@ function viewReview() {
   }
 
   const controls = state.reveal
-    ? `<div class="grades">${GRADES.map((g) => {
+    ? `<div class="grades${s.practice ? " practice" : ""}">${GRADES.map((g) => {
         // the interval wears the colour the card is about to become
         const next = rungAfter(c.rung, g.key);
         const tint = g.gap ? "var(--gap)" : `var(--r${next})`;
@@ -935,21 +993,31 @@ function viewGate(msg) {
 }
 
 function viewGaps() {
-  const gaps = P().gaps;
+  const gaps = openGaps();
   return `<div class="page">
     <h1 class="page-title">Gaps</h1>
-    <p class="lede">Every word you drew a blank on or struggled with. This is the score. There is no other one.</p>
+    <p class="lede">Every word you drew a blank on or struggled with and have not yet put right.
+      This is the score. There is no other one. A gap closes once its card passes its next
+      ${GAP_CLOSES_AT} scheduled reviews in a row.</p>
+    ${
+      gaps.length
+        ? `<button class="start" data-practice>Practise these ${gaps.length}</button>
+           <p class="hint">Same cards, same grades, nothing written: the ladder does not move.</p>`
+        : ""
+    }
     ${
       gaps.length
         ? gaps
             .map(
               (g) => `<div class="row">
         <span class="row-main"><span class="gap-word">${esc(g.fr)}</span> <span class="row-en">${esc(g.en)}</span></span>
-        <span class="row-side meta">${esc(g.grade)} · ${esc(g.at.slice(0, 10))}</span>
+        <span class="row-side meta">${g.dir === "p" ? "en→fr · " : ""}${esc(g.grade)} · ${esc(g.at.slice(0, 10))}${
+          g.n > 1 ? ` · ×${g.n}` : ""
+        }</span>
       </div>`
             )
             .join("")
-        : `<p class="empty">No gaps logged yet.</p>`
+        : `<p class="empty">No open gaps.</p>`
     }
   </div>`;
 }
@@ -1079,7 +1147,7 @@ function reveal() {
 // ---------- events ----------
 
 document.addEventListener("click", (e) => {
-  const t = e.target.closest("[data-go], [data-start], [data-reveal], [data-grade], [data-retire], [data-say], [data-mute]");
+  const t = e.target.closest("[data-go], [data-start], [data-practice], [data-reveal], [data-grade], [data-retire], [data-say], [data-mute]");
   if (!t) return;
   e.preventDefault();
   if (t.dataset.say !== undefined) return speak(sayable(wordOf(currentId())));
@@ -1090,6 +1158,7 @@ document.addEventListener("click", (e) => {
   }
   if (t.dataset.go) return go(t.dataset.go);
   if (t.dataset.start !== undefined) return startSession();
+  if (t.dataset.practice !== undefined) return startPractice();
   if (t.dataset.reveal !== undefined) return reveal();
   if (t.dataset.grade) return answered(t.dataset.grade);
   if (t.dataset.retire !== undefined) return retired();
