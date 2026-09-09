@@ -1,11 +1,11 @@
-"""Build web/frequency-3000.json: the top 3,000 French lemmas by cross-register
+"""Build frequency-3000.json: the top 3,000 French lemmas by cross-register
 frequency, each with an English gloss and IPA.
 
 Sources
   Lexique 3.83   http://www.lexique.org        frequency, lemma, POS, gender, phonetics
   Wiktionary     https://kaikki.org/dictionary/French/   English glosses
 
-Both are share-alike licensed; see web/README.md for the attribution note.
+Both are share-alike licensed; see README.md for the attribution note.
 
 Usage: python3 build_pool.py Lexique383.tsv kaikki-fr.jsonl out.json
 """

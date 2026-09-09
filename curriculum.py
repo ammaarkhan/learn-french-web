@@ -12,7 +12,7 @@ situation; everything unclaimed stays in frequency order behind the themed run.
 Situations, not semantic sets. "the cafe" holds a noun, a verb, a person and a number
 because that is what one scene is made of. A set of all-the-colours or all-the-family
 is the shape that measurably slows learning (Tinkham 1993, Waring 1997, Erten & Tekin
-2008 — see ../resources/vocabulary.md), so no situation here is a single category.
+2008 — see ../vocabulary.md), so no situation here is a single category.
 
 Function words are deliberately absent from every seed list. They are scheduled by
 encounter count instead: a function word earns its card only once the example

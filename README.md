@@ -8,7 +8,7 @@ Words come from three places, shown on the home page: the Duolingo import, words
 hand, and the 3,000 most frequent French words. Duolingo words are checked first; the list
 feeds in at 40 a day once that is done.
 
-The rules of the ladder, grading, gaps and retiring are in `../resources/ladder.md`.
+The rules of the ladder, grading, gaps and retiring are in `../ladder.md`.
 
 ## Using it
 
