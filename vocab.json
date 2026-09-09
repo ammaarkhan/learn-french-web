@@ -4401,7 +4401,7 @@
       "id": "w263",
       "fr": "chauffeur",
       "pos": "n.m.",
-      "en": "stoker; fireman; driver",
+      "en": "driver",
       "note": "",
       "ipa": "/ʃofœʁ/",
       "added": "2026-09-08",
@@ -4413,7 +4413,8 @@
           24
         ],
         "src": "tatoeba"
-      }
+      },
+      "en_src": "hand"
     },
     {
       "id": "w264",
@@ -4765,7 +4766,7 @@
       "id": "w283",
       "fr": "fête",
       "pos": "n.f.",
-      "en": "winter holidays; party",
+      "en": "party",
       "note": "",
       "ipa": "/fɛt/",
       "added": "2026-09-08",
@@ -4777,7 +4778,8 @@
           19
         ],
         "src": "tatoeba"
-      }
+      },
+      "en_src": "hand"
     },
     {
       "id": "w284",
@@ -4893,7 +4895,7 @@
       "id": "w290",
       "fr": "billet",
       "pos": "n.m.",
-      "en": "note, a brief message; ticket",
+      "en": "ticket",
       "note": "",
       "ipa": "/bijɛ/",
       "added": "2026-09-08",
@@ -4905,7 +4907,8 @@
           16
         ],
         "src": "tatoeba"
-      }
+      },
+      "en_src": "hand"
     },
     {
       "id": "w291",
@@ -7257,19 +7260,20 @@
       "id": "w419",
       "fr": "difficile",
       "pos": "adj.",
-      "en": "difficult; choosy, fussy, picky",
+      "en": "difficult, hard",
       "note": "",
       "ipa": "/difisil/",
       "added": "2026-09-08",
       "ex": {
-        "fr": "Je suis difficile à table.",
-        "en": "I'm a fussy eater.",
+        "fr": "J'ai eu une journée très difficile.",
+        "en": "I've had a very hard day.",
         "hl": [
-          8,
-          17
+          25,
+          34
         ],
         "src": "tatoeba"
-      }
+      },
+      "en_src": "hand"
     },
     {
       "id": "w420",
@@ -7914,7 +7918,7 @@
       "id": "w455",
       "fr": "hôtesse",
       "pos": "n.f.",
-      "en": "flight attendant; hostess",
+      "en": "hostess; flight attendant",
       "note": "female",
       "ipa": "/otɛs/",
       "added": "2026-09-08",
@@ -8977,7 +8981,7 @@
       "id": "w513",
       "fr": "blague",
       "pos": "n.f.",
-      "en": "pouch, especially for tobacco; joke",
+      "en": "joke",
       "note": "",
       "ipa": "/blaɡ/",
       "added": "2026-09-08",
@@ -8989,7 +8993,8 @@
           20
         ],
         "src": "tatoeba"
-      }
+      },
+      "en_src": "hand"
     },
     {
       "id": "w514",
@@ -9636,19 +9641,20 @@
       "id": "w549",
       "fr": "question",
       "pos": "n.f.",
-      "en": "question; issue, matter, topic, problem",
+      "en": "question; matter, issue",
       "note": "",
       "ipa": "/kɛstjɔ̃/",
       "added": "2026-09-08",
       "ex": {
-        "fr": "C'est une question de goût.",
-        "en": "It's a matter of taste.",
+        "fr": "J'ai juste une petite question.",
+        "en": "I have just one small question.",
         "hl": [
-          10,
-          18
+          22,
+          30
         ],
         "src": "tatoeba"
-      }
+      },
+      "en_src": "hand"
     },
     {
       "id": "w550",
@@ -9708,7 +9714,7 @@
       "id": "w553",
       "fr": "truc",
       "pos": "n.m.",
-      "en": "procedure, technique; trick",
+      "en": "trick; thing, thingy",
       "note": "",
       "ipa": "/tʁyk/",
       "added": "2026-09-08",
@@ -9720,7 +9726,8 @@
           19
         ],
         "src": "tatoeba"
-      }
+      },
+      "en_src": "hand"
     },
     {
       "id": "w554",
@@ -9798,7 +9805,7 @@
       "id": "w558",
       "fr": "désolé",
       "pos": "adj.",
-      "en": "desolate, forsaken; sorry; apologetic",
+      "en": "sorry",
       "note": "",
       "ipa": "/dezole/",
       "added": "2026-09-08",
@@ -9810,7 +9817,8 @@
           14
         ],
         "src": "tatoeba"
-      }
+      },
+      "en_src": "hand"
     },
     {
       "id": "w559",
@@ -10776,7 +10784,7 @@
       "id": "w611",
       "fr": "la batterie",
       "pos": "n.f.",
-      "en": "drums; battery",
+      "en": "battery; drums",
       "note": "",
       "ipa": "/batəʁi/",
       "added": "2026-09-08",
@@ -11310,7 +11318,7 @@
       "id": "w640",
       "fr": "examen",
       "pos": "n.m.",
-      "en": "examination, inspection, study, analysis; exam, test",
+      "en": "exam, test",
       "note": "",
       "ipa": "/ɛɡzamɛ̃/",
       "added": "2026-09-08",
@@ -11322,7 +11330,8 @@
           21
         ],
         "src": "tatoeba"
-      }
+      },
+      "en_src": "hand"
     },
     {
       "id": "w641",
