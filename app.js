@@ -34,12 +34,12 @@ const INTAKE_PER_DAY = 40;
 const NEW_PER_SESSION = 40;
 
 /* The Duolingo practice-hub export was ingested on 2026-09-08: 439 words he had already been
-   taught there went onto the ladder as met once, 40 a day, so they are checked rather than
-   taught. While that runs, a session is reviews only, and the pool drip stands still instead
-   of running 11 days ahead — it resumes on the day it left off. Both ends are dates, so
-   nothing has to be switched back by hand. */
+   taught there went onto the ladder as met once, 40 a day to 2026-09-18, so they are checked
+   rather than taught. New words were held while that ran, and the pool drip stood still
+   rather than running ahead. Ammaar ended the hold after one day (2026-09-09): the check and
+   the drip now run side by side. Both ends are dates, so nothing is switched by hand. */
 const INTAKE_PAUSE_FROM = "2026-09-08";
-const NEW_PAUSE_UNTIL = "2026-09-19";   // exclusive: the first day new words come back
+const NEW_PAUSE_UNTIL = "2026-09-09";   // exclusive: the first day new words come back
 
 const newPaused = () => todayISO() < NEW_PAUSE_UNTIL;
 const newPerSession = () => (newPaused() ? 0 : NEW_PER_SESSION);
