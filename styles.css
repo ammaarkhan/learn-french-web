@@ -664,7 +664,7 @@ a:focus-visible {
 
 .rungs {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 4px;
   align-items: end;
   height: 148px;
@@ -697,14 +697,11 @@ a:focus-visible {
   transition: filter 140ms ease;
 }
 
-/* rung 0 is not on the ladder yet, so it stays off the ramp */
-.rung-col:first-child .rung-bar { opacity: 0.55; }
-
 .rung-col:hover .rung-bar { filter: brightness(1.12); }
 
 .rung-axis {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 4px;
   padding-top: 7px;
   border-top: 1px solid var(--rule);

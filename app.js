@@ -771,28 +771,29 @@ function lastSaved() {
     : d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
 }
 
-/* How many cards sit on each rung, 0 through 6, then a last bucket for retired cards.
-   Mass moving right is the progress. */
-const KNOWN_COL = MAX_RUNG + 1;
+/* How many cards sit on each rung, 1 through 6, then a last bucket for retired cards.
+   A card at rung 0 comes back in a day, so it is counted with rung 1: no "new" column
+   (Ammaar, 2026-09-09). Mass moving right is the progress. */
+const KNOWN_COL = MAX_RUNG;   // index in counts: rungs 1..6 sit at 0..5
 
 function rungCounts() {
   const counts = Array(KNOWN_COL + 1).fill(0);
-  for (const id of seenIds()) counts[isKnown(id) ? KNOWN_COL : card(id).rung] += 1;
+  for (const id of seenIds()) counts[isKnown(id) ? KNOWN_COL : Math.max(1, card(id).rung) - 1] += 1;
   return counts;
 }
 
 function chartRungs() {
   const counts = rungCounts();
   const max = Math.max(...counts, 1);
-  const labels = ["new", ...RUNGS.map((d) => ivlText(d)), "known"];
+  const labels = [...RUNGS.map((d) => ivlText(d)), "known"];
 
   const cols = counts
     .map((n, i) => {
       const h = n ? Math.max(6, Math.round((n / max) * 112)) : 2;
       // known sits past the end of the ramp, so it wears the ink, not a violet
-      const fill = i === KNOWN_COL ? "var(--ink)" : `var(--r${i})`;
+      const fill = i === KNOWN_COL ? "var(--ink)" : `var(--r${i + 1})`;
       const tip = `${n} ${n === 1 ? "card" : "cards"} · ${
-        i === 0 ? "not passed yet" : i === KNOWN_COL ? "retired, never comes back" : "every " + labels[i]
+        i === KNOWN_COL ? "retired, never comes back" : "every " + labels[i]
       }`;
       return `<div class="rung-col" data-tip="${esc(tip)}">
         <span class="rung-n${n ? " has" : ""}">${n || ""}</span>
