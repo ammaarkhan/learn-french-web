@@ -15,6 +15,10 @@ once it reaches rung 3, which is also when the review queue starts shuffling ord
 types. Grades are blank / struggled / got / fluent. Anything you blank or struggle on is requeued
 inside the same session, so a session does not close until you have come back to it.
 
+A word you already own can be retired: key 5 or the button under the grades marks both of its
+cards known, so they count but are never asked again. `../data/mark_known.py` does the same for a
+list. It is a flag on the card, kept alongside its history, so it can be undone.
+
 No streaks, no points. The gaps list is the score.
 
 The scheduling model comes from the Spaced Interleaved Retrieval approach in the iCanStudy course.

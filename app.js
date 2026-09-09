@@ -11,6 +11,12 @@ const MAX_RUNG = RUNGS.length;
 // a word's output card unlocks once its input card reaches this rung
 const MATURE_RUNG = 3;
 
+/* A retired card. "Known" is a flag on the record, not a rung: the queue skips it, the chart
+   gives it its own column past the ramp, and it never comes back (Ammaar's call, 2026-09-09).
+   The far due date is a guard, so a stale cached build that ignores the flag still never
+   draws it. Reversible by deleting the flag. */
+const KNOWN_DUE = "2099-12-31";
+
 /* Word intake. frequency-3000.json holds the 3,000 most frequent French lemmas
    (Lexique 3.83 + Wiktionary, see build_pool.py), ordered for teaching rather than by
    rank (see build_order.py). Words enter the ladder on a drip: INTAKE_PER_DAY of them
@@ -385,6 +391,18 @@ function wordIsMature(wid) {
   return card("r:" + wid).rung >= MATURE_RUNG;
 }
 
+const isKnown = (id) => !!card(id).known;
+const wordIsKnown = (wid) => isKnown("r:" + wid);
+
+/* Retire a word: both directions at once, or the output card would surface later on its
+   own. Reps and lapses are kept, so the history survives an un-retire. */
+function markKnown(wid) {
+  for (const id of ["r:" + wid, "p:" + wid]) {
+    P().cards[id] = { ...card(id), rung: MAX_RUNG, due: KNOWN_DUE, known: true, updatedAt: stamp() };
+  }
+  save();
+}
+
 /* Early stage: input only. Output unlocks at the maturity flip, which is
    what turns "one card type, fixed order" into "mixed types, shuffled". */
 function activeIds() {
@@ -398,7 +416,7 @@ function activeIds() {
 
 function dueIds() {
   const t = todayISO();
-  return activeIds().filter((id) => card(id).due <= t);
+  return activeIds().filter((id) => !isKnown(id) && card(id).due <= t);
 }
 
 function anyMature() {
@@ -526,6 +544,23 @@ function answered(g) {
   render();
 }
 
+/* "I know this": retire the word mid-session. Not a grade and not a rep, so the session
+   count is untouched; the card and its partner leave the queue and the requeue loop. */
+function retired() {
+  const s = state.session;
+  const id = currentId();
+  if (!id) return;
+  const { wid } = parseId(id);
+  markKnown(wid);
+  const gone = (x) => parseId(x).wid === wid;
+  s.queue = s.queue.filter((x) => !gone(x));
+  s.requeue = s.requeue.filter((x) => !gone(x));
+  s.total = Math.max(s.done, s.total - 1);
+  state.reveal = false;
+  if (!currentId()) return endSession();
+  render();
+}
+
 /* Upsert keyed on the session's own id, called after every card: a sitting abandoned
    halfway still counts, and rewriting the entry in place is what stops it counting twice.
    Two devices on one day keep separate ids, so the day's chart sums them. */
@@ -634,23 +669,29 @@ const sayButton = (extra) =>
 
 const TARGET = "2026-12-15";
 
-/* How many cards sit on each rung, 0 through 6. Mass moving right is the progress. */
+/* How many cards sit on each rung, 0 through 6, then a last bucket for retired cards.
+   Mass moving right is the progress. */
+const KNOWN_COL = MAX_RUNG + 1;
+
 function rungCounts() {
-  const counts = Array(MAX_RUNG + 1).fill(0);
-  for (const id of activeIds()) counts[card(id).rung] += 1;
+  const counts = Array(KNOWN_COL + 1).fill(0);
+  for (const id of activeIds()) counts[isKnown(id) ? KNOWN_COL : card(id).rung] += 1;
   return counts;
 }
 
 function chartRungs() {
   const counts = rungCounts();
   const max = Math.max(...counts, 1);
-  const labels = ["new", ...RUNGS.map((d) => ivlText(d))];
+  const labels = ["new", ...RUNGS.map((d) => ivlText(d)), "known"];
 
   const cols = counts
     .map((n, i) => {
       const h = n ? Math.max(6, Math.round((n / max) * 112)) : 2;
-      const fill = `var(--r${i})`;
-      const tip = `${n} ${n === 1 ? "card" : "cards"} · ${i === 0 ? "not passed yet" : "every " + labels[i]}`;
+      // known sits past the end of the ramp, so it wears the ink, not a violet
+      const fill = i === KNOWN_COL ? "var(--ink)" : `var(--r${i})`;
+      const tip = `${n} ${n === 1 ? "card" : "cards"} · ${
+        i === 0 ? "not passed yet" : i === KNOWN_COL ? "retired, never comes back" : "every " + labels[i]
+      }`;
       return `<div class="rung-col" data-tip="${esc(tip)}">
         <span class="rung-n${n ? " has" : ""}">${n || ""}</span>
         <span class="rung-bar" style="height:${h}px;background:${n ? fill : "var(--rule)"}"></span>
@@ -664,7 +705,8 @@ function chartRungs() {
       <span class="meta">colour tracks the interval</span>
     </div>
     <p class="chart-note">How long each word rests before you see it again. Getting one right moves
-      it a step to the right, so the pile drifting rightward is you needing them less often.</p>
+      it a step to the right, so the pile drifting rightward is you needing them less often. The
+      last column is words you retired: counted, never asked.</p>
     <div class="rungs">${cols}</div>
     <div class="rung-axis">${labels.map((l) => `<span class="rung-lbl">${l}</span>`).join("")}</div>
   </div>`;
@@ -857,7 +899,8 @@ function viewReview() {
           <span class="grade-chip" style="background:${tint}"></span>
         </button>`;
       }).join("")}</div>
-      <p class="meta dim keys">1 &nbsp;2 &nbsp;3 &nbsp;4 to grade</p>`
+      <button class="retire" data-retire>I know this, retire it</button>
+      <p class="meta dim keys">1 &nbsp;2 &nbsp;3 &nbsp;4 to grade &nbsp;·&nbsp; 5 retires</p>`
     : `<button class="reveal" data-reveal>Reveal</button>
        <p class="meta dim keys">space to reveal</p>`;
 
@@ -915,13 +958,14 @@ function viewWords() {
     .map((w) => {
       const r = card("r:" + w.id);
       const mature = wordIsMature(w.id);
+      const known = wordIsKnown(w.id);
       return `<div class="row">
       <span class="row-main"><span class="row-fr">${esc(w.fr)}</span>${
         w.ipa ? ` <span class="row-ipa">${esc(w.ipa)}</span>` : ""
       } <span class="row-en">${esc(w.en)}</span></span>
       <span class="row-side">
         ${ladderHTML(r.rung, true)}
-        <div class="meta dim" style="margin-top:5px">${esc(whenText(r.due))}${mature ? " · both ways" : ""}</div>
+        <div class="meta dim" style="margin-top:5px">${known ? "known" : esc(whenText(r.due)) + (mature ? " · both ways" : "")}</div>
       </span>
     </div>`;
     })
@@ -1034,7 +1078,7 @@ function reveal() {
 // ---------- events ----------
 
 document.addEventListener("click", (e) => {
-  const t = e.target.closest("[data-go], [data-start], [data-reveal], [data-grade], [data-say], [data-mute]");
+  const t = e.target.closest("[data-go], [data-start], [data-reveal], [data-grade], [data-retire], [data-say], [data-mute]");
   if (!t) return;
   e.preventDefault();
   if (t.dataset.say !== undefined) return speak(sayable(wordOf(currentId())));
@@ -1047,6 +1091,7 @@ document.addEventListener("click", (e) => {
   if (t.dataset.start !== undefined) return startSession();
   if (t.dataset.reveal !== undefined) return reveal();
   if (t.dataset.grade) return answered(t.dataset.grade);
+  if (t.dataset.retire !== undefined) return retired();
 });
 
 document.addEventListener("keydown", (e) => {
@@ -1059,6 +1104,10 @@ document.addEventListener("keydown", (e) => {
   if (state.reveal && ["1", "2", "3", "4"].includes(e.key)) {
     e.preventDefault();
     answered(GRADES[Number(e.key) - 1].key);
+  }
+  if (state.reveal && e.key === "5") {
+    e.preventDefault();
+    retired();
   }
 });
 
