@@ -4819,7 +4819,7 @@
       "id": "w286",
       "fr": "assiette",
       "pos": "n.f.",
-      "en": "seat; trim, attitude, pitch attitude",
+      "en": "plate",
       "note": "",
       "ipa": "/asjɛt/",
       "added": "2026-09-08",
@@ -4831,7 +4831,8 @@
           17
         ],
         "src": "tatoeba"
-      }
+      },
+      "en_src": "hand"
     },
     {
       "id": "w287",
