@@ -5042,11 +5042,11 @@
       "ipa": "/aʁive/",
       "added": "2026-09-08",
       "ex": {
-        "fr": "Ça ne va jamais arriver.",
-        "en": "It's never going to happen.",
+        "fr": "Je viens d'arriver à la gare.",
+        "en": "I've just arrived at the station.",
         "hl": [
-          16,
-          23
+          11,
+          18
         ],
         "src": "tatoeba"
       }
