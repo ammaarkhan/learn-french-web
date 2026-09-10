@@ -1,76 +1,59 @@
 # français
 
 A flashcard site. Each card is a French sentence with one word marked. Reveal shows the English,
-the gloss, and speaks the sentence. Grade it 1 to 4 and the card comes back on a fixed ladder:
-1, 3, 8, 18, 40, 90 days. Anything missed replays in the same sitting and goes on the gaps list.
-
-Words come from three places, shown on the home page: the Duolingo import, words collected by
-hand, and the 3,000 most frequent French words. Duolingo words are checked first; the list
-feeds in at 40 a day once that is done.
-
-The rules of the ladder, grading, gaps and retiring are in `../ladder.md`.
-
-## Using it
+the gloss, and speaks the sentence. Grade it and the card comes back on a fixed ladder; anything
+missed replays in the same sitting and goes on the gaps list.
 
 Live at https://ammaarkhan.github.io/learn-french-web/, and that is the one to use: it syncs, so
 the phone and the laptop share one ladder. Space reveals, 1 to 4 grades, 5 retires a word you
 already own. The gaps tab lists what is still open and can run them as practice, which writes
-nothing to the ladder.
+nothing.
 
 ## How it works
 
-The one place for this. `app.js` is the implementation; nothing here needs it.
+The one place for the mechanics. `app.js` is the implementation; nothing here needs it. The
+ladder, grades, gaps and retiring are specified in `../ladder.md` and not repeated.
 
-**Which words exist.** Every word in `vocab.json` (hand-collected, plus the Duolingo import),
-then list words released on a drip: 40 a day since 2026-08-25, in the order of
-`frequency-3000.json`. The drip is a function of the date, not a counter, so every device agrees.
-It stood still from 2026-09-08 and resumes on 2026-09-19 where it left off.
+1. **Words.** Everything in `vocab.json` (hand-collected, plus the Duolingo import), then list
+   words from `frequency-3000.json` on a drip: 40 a day since 2026-08-25, in the file's order.
+   The drip is a function of the date, not a stored counter, so every device agrees. It stood
+   still from 2026-09-08 and resumes on 2026-09-19 where it left off.
 
-**Which cards exist.** One French→English card per word from the start. The English→French card
-appears when the first card reaches rung 3.
+2. **Cards.** One French→English card per word from the start. The English→French card appears
+   when the first card reaches rung 3. A card that has never been answered is due today at rung 0.
 
-**Cards due** is every card whose due date is today or earlier, in UTC, minus retired words,
-minus cards never shown. Never-shown cards are added at most 40 per sitting, and none at all
-until 2026-09-19. Reviews are never capped. A card missed in a sitting comes back in the same
-sitting; that replay is not a second review.
+3. **The queue.** Every card whose due date is today or earlier (UTC), minus retired words.
+   Reviews are never capped. Cards never answered before are capped at 40 per sitting, and at
+   none until 2026-09-19. Until any word reaches rung 3 the order is fixed; after that it is
+   shuffled and the two directions mix.
 
-**A word's life.** A new card is due today at rung 0. Each grade moves it (`../ladder.md`) and
-sets the next due date from the rung: 1, 3, 8, 18, 40, 90 days. Missed cards go on the gaps
-list; a gap closes after two scheduled passes in a row.
+4. **A sitting.** A missed card is asked again before the sitting ends; that replay changes
+   nothing on the ladder. Every grade saves to the browser at once and pushes 2.5 seconds
+   later. Each sitting is one entry in the session log, rewritten as it goes, so a sitting
+   abandoned halfway still counts.
 
-**The home page numbers.** Sources: Duolingo words count as checked once reviewed more than
-once (they arrived as met once); other words count as met once reviewed at all. Rung chart:
-every reviewed card by its current rung, rung 0 shown with 1d, retired words last. Activity:
-reps per UTC day from the session log, requeues included. Last saved: the time of the last
-push that landed, from any device. Open gaps: gap words whose card has not yet passed twice.
+5. **Sync.** Progress is `progress.json` in the private `learn-french-data` repo, read and
+   written through the GitHub contents API with a fine-grained token (Contents: read and
+   write) that each browser stores once. On open the browser shows its own copy, fetches the
+   repo, and either merges and pushes (if it had unsaved work) or takes the repo copy. Merging
+   is per card by timestamp, gaps and sessions by id. Every push is a commit, so `git log` in
+   `data/` is the record of what reached the repo. On `localhost` nothing leaves the browser.
 
-**To answer "why does it show N due":** `python3 ../data/due.py` prints what the repo says
-should be due today, by source and rung. If the page shows a different number, a device holds
-reviews that have not reached the repo: look at that device's dot.
+   The dot in the masthead: grey saved, pale violet syncing, hollow offline and retrying every
+   20 seconds, red not saving with the reason on the home page. While it is red or hollow,
+   every review since lives in that browser only. The repo file is read whole, and the API
+   returns files up to 1 MB; it was 145 KB at 750 cards. When it nears the limit, drop the
+   indent in all three writers (`app.js`, `mark_known.py`, `pull_forward.py`) together.
 
-## Sync
+6. **The home page.** *Sources*: Duolingo words count as checked once answered more than once
+   (they arrived as met once); other words count as met once answered at all. *Rung chart*:
+   every answered card by its rung, rung 0 with 1d, retired words last. *Activity*: reps per
+   UTC day from the session log, replays included. *Last saved*: the last push that landed,
+   from any device. *Open gaps*: gap words whose card has not passed twice since.
 
-Progress lives in `progress.json` in the private `learn-french-data` repo. Each device needs the
-fine-grained GitHub token once (Contents: read and write on that repo); it stays in that browser.
-Served from `localhost` the app keeps progress in that browser only, for development.
-
-On open, the browser shows its own copy, then fetches the repo. If the browser has unsaved
-changes it merges and pushes; otherwise it takes the repo copy. Every grade saves to the
-browser at once and pushes 2.5 seconds later. Each push is a commit on the data repo, so
-`git log` there is the record of what reached it.
-
-Merging is per card by timestamp, gaps and sessions by id. That is why any script that writes
-`progress.json` must run only when no sitting is open anywhere: a script's stamps beat any
-review that has not synced yet.
-
-The dot in the masthead: grey is saved, pale violet is syncing, hollow is offline and retrying
-every 20 seconds, red is not saving and the home page says why. A red dot means every review
-since it turned red lives in that browser only. Reload with the fix in place and it pushes.
-
-Size: the file is read through the GitHub contents API, which returns files up to 1 MB. It was
-138 KB at 735 cards; at all 3,000 words on both cards it will approach the limit. When it
-nears it, drop the indent in all three writers (`app.js`, `mark_known.py`, `pull_forward.py`)
-together.
+**"Why does it show N due?"** `python3 ../data/due.py` prints what the repo says is due today,
+by source and rung. A different number on screen means a device holds reviews the repo has not
+seen: look at that device's dot.
 
 ## How to
 
