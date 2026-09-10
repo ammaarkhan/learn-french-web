@@ -21,6 +21,8 @@ ladder, grades, gaps and retiring are specified in `../ladder.md` and not repeat
 
 2. **Cards.** One French→English card per word from the start. The English→French card appears
    when the first card reaches rung 3. A card that has never been answered is due today at rung 0.
+   In `progress.json` a card is `r:<word id>` or `p:<word id>`; hand words are `w001`..., list
+   words `f-<word>`. Each record holds rung, due, reps, lapses, streak, updatedAt, known.
 
 3. **The queue.** Every card whose due date is today or earlier (UTC), minus retired words.
    Reviews are never capped. Cards never answered before are capped at 40 per sitting, and at
