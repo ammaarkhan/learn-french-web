@@ -37,8 +37,8 @@ const NEW_PER_SESSION = 40;
    taught there went onto the ladder as met once, 40 a day to 2026-09-18, so they are checked
    rather than taught. While that runs, a session is reviews only, and the pool drip stands
    still instead of running 11 days ahead — it resumes on the day it left off. Both ends are
-   dates, so nothing has to be switched back by hand. To clear the check faster, pull the
-   next batch forward with data/pull_forward.py rather than lifting the hold. */
+   dates, so nothing has to be switched back by hand. To go faster, "Add more" on the home
+   page (addMore) brings the next batch forward rather than lifting the hold. */
 const INTAKE_PAUSE_FROM = "2026-09-08";
 const NEW_PAUSE_UNTIL = "2026-09-19";   // exclusive: the first day new words come back
 
@@ -591,8 +591,41 @@ const isFresh = (id) => card(id).reps === 0;
    how far the intake has run ahead. Hand-collected words enter before pool words. */
 function todaysQueue() {
   const due = dueIds();
-  const fresh = due.filter(isFresh).slice(0, newPerSession());
-  return due.filter((id) => !isFresh(id)).concat(fresh);
+  const fresh = due.filter((id) => isFresh(id) && !invited(id)).slice(0, newPerSession());
+  return due.filter((id) => !isFresh(id) || invited(id)).concat(fresh);
+}
+
+/* A never-shown card that already has a record was asked for with "Add more", so it goes
+   through regardless of the new-word cap or hold. The drip's own cards have no record. */
+const invited = (id) => isFresh(id) && !!P().cards[id];
+
+/* "Add more": bring the day forward by hand. First the cards resting at the one-day step
+   that are not due yet, earliest date first (the seeded Duolingo checks live there); then
+   words never shown, hand words first, then the list in teaching order, past the drip if
+   need be. Writes through save(), so it syncs like a grade. */
+const ADD_MORE = 40;
+function addMore() {
+  const t = todayISO();
+  let left = ADD_MORE;
+  const early = activeIds()
+    .filter((id) => !isKnown(id) && !isFresh(id) && card(id).rung <= 1 && card(id).due > t)
+    .sort((a, b) => card(a).due.localeCompare(card(b).due));
+  for (const id of early.slice(0, left)) P().cards[id] = { ...card(id), due: t, updatedAt: stamp() };
+  left -= Math.min(left, early.length);
+  if (left > 0) {
+    const mine = new Set(state.words.map((w) => dedupeKey(w.fr)));
+    const unseen = activeIds()
+      .filter((id) => id.startsWith("r:") && isFresh(id) && !invited(id))
+      .concat((state.rawPool || []).filter((p) => !mine.has(dedupeKey(p.fr))).map((p) => "r:f-" + p.fr));
+    for (const id of unseen.slice(0, left))
+      P().cards[id] = { rung: 0, due: t, reps: 0, lapses: 0, streak: 0, updatedAt: stamp() };
+  }
+  save();
+  if (state.rawPool) {
+    state.words = state.words.slice(0, state.own);   // must land before intake reads it
+    state.words = state.words.concat(intake(state.rawPool));
+  }
+  render();
 }
 
 /* Early stage keeps a fixed order and one card type; once any word has matured the
@@ -911,7 +944,7 @@ function viewToday() {
     return `<div class="page">
       <h1 class="page-title">No words yet</h1>
       <p class="lede">Add words from the terminal, then reload.</p>
-      <p class="hint"><code>python3 tool/add.py "le chien = the dog"</code></p>
+      <p class="hint"><code>python3 add.py "le chien = the dog"</code></p>
     </div>`;
   }
 
@@ -934,7 +967,11 @@ function viewToday() {
            <p class="hint">${state.session.queue.length + state.session.requeue.length} cards still open in this session${
              state.session.requeue.length ? `, ${state.session.requeue.length} requeued` : ""
            }.</p>`
-        : `<button class="start" data-start ${due ? "" : "disabled"}>${due ? "Begin review" : "Nothing to review"}</button>`
+        : `<div class="starts">
+             <button class="start" data-start ${due ? "" : "disabled"}>${due ? "Begin review" : "Nothing to review"}</button>
+             <button class="start ghost" data-more>Add ${ADD_MORE} more</button>
+           </div>
+           <p class="hint">Add more brings forward the next ${ADD_MORE} cards resting at one day, then words not shown yet.</p>`
     }
 
     ${chartSources()}
@@ -1243,7 +1280,7 @@ function reveal() {
 // ---------- events ----------
 
 document.addEventListener("click", (e) => {
-  const t = e.target.closest("[data-go], [data-start], [data-practice], [data-reveal], [data-grade], [data-retire], [data-say], [data-mute]");
+  const t = e.target.closest("[data-go], [data-start], [data-more], [data-practice], [data-reveal], [data-grade], [data-retire], [data-say], [data-mute]");
   if (!t) return;
   e.preventDefault();
   if (t.dataset.say !== undefined) return speak(sayable(wordOf(currentId())));
@@ -1254,6 +1291,7 @@ document.addEventListener("click", (e) => {
   }
   if (t.dataset.go) return go(t.dataset.go);
   if (t.dataset.start !== undefined) return startSession();
+  if (t.dataset.more !== undefined) return addMore();
   if (t.dataset.practice !== undefined) return startPractice();
   if (t.dataset.reveal !== undefined) return reveal();
   if (t.dataset.grade) return answered(t.dataset.grade);

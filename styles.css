@@ -180,6 +180,10 @@ body {
 .start:hover { opacity: 0.82; }
 .start[disabled] { opacity: 0.3; cursor: default; }
 
+/* two buttons side by side on the home page; the ghost keeps its own top margin elsewhere */
+.starts { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; }
+.starts .start { margin-top: 2.4rem; }
+
 /* the secondary way out, when carrying on is the primary one */
 .start.ghost {
   margin-top: 1.1rem;

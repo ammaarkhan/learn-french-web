@@ -28,7 +28,11 @@ ladder, grades, gaps and retiring are specified in `../ladder.md` and not repeat
 
 3. **The queue.** Every card whose due date is today or earlier (UTC), minus retired words.
    Reviews are never capped. Cards never answered before are capped at 40 per sitting, and at
-   none until 2026-09-19. Until any word reaches rung 3 the order is fixed; after that it is
+   none until 2026-09-19, unless he asked for them with **Add 40 more**. That button on the
+   home page pulls the next 40 cards resting at the one-day step forward to today, earliest
+   date first, and when that step is empty invites words never shown: his own words first,
+   then the list in teaching order. An invited word gets a record and passes the hold. Press
+   it as often as wanted. Until any word reaches rung 3 the order is fixed; after that it is
    shuffled and the two directions mix.
 
 4. **A sitting.** A missed card is asked again before the sitting ends; that replay changes
@@ -78,8 +82,8 @@ gloss, so check the first sense and the sentence agree.
 
 **Retire words.** `python3 ../data/mark_known.py je tu "ça va"`
 
-**Pull Duolingo forward.** `python3 ../data/pull_forward.py 80` makes the next 80 unchecked
-Duolingo cards due today.
+**More cards today.** The Add 40 more button on the home page. From the terminal,
+`python3 ../data/pull_forward.py 80` does the first half of the same thing for Duolingo cards.
 
 **Deploy.** Bump `?v=N` on both lines of `index.html`, commit, push, then curl the live URL for a
 string from the change until it appears. Pages lags by a minute or so.
