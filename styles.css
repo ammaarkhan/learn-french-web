@@ -180,10 +180,6 @@ body {
 .start:hover { opacity: 0.82; }
 .start[disabled] { opacity: 0.3; cursor: default; }
 
-/* two buttons side by side on the home page; the ghost keeps its own top margin elsewhere */
-.starts { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; }
-.starts .start { margin-top: 2.4rem; }
-
 /* the secondary way out, when carrying on is the primary one */
 .start.ghost {
   margin-top: 1.1rem;
@@ -191,6 +187,11 @@ body {
   color: var(--ink-soft);
   box-shadow: inset 0 0 0 1px var(--rule);
 }
+
+/* two buttons side by side on the home page: the row carries the top margin, not the buttons,
+   so the ghost's own margin cannot drop it out of line */
+.starts { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: stretch; margin-top: 2.4rem; }
+.starts .start, .starts .start.ghost { margin-top: 0; }
 
 .hint {
   margin-top: 1.5rem;
