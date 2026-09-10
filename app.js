@@ -70,6 +70,7 @@ const state = {
   own: 0, // how many of state.words came from vocab.json
   pool: 0, // how many frequency words are promoted so far
   poolTotal: 0,
+  duo: new Set(), // dedupe keys of every word on duolingo.tsv
   token: localStorage.getItem(LS.token) || "",
   prog: null, // { data, sha, dirty }
   sync: "idle",
@@ -453,21 +454,50 @@ const seenIds = () => activeIds().filter(seen);
 /* Where the words come from, three sources, each with done and to go.
    Duolingo words are checked (seeded as met once, so done means answered since);
    own words and list words are met (shown at least once). */
+/* The Duolingo list, duolingo.tsv: every word Duolingo has taught him, one per line with its
+   Duolingo gloss. A word is Duolingo's when its dedupe key is on the list, whichever file
+   its card lives in. A `# skip:` line names words whose list entry is an unrelated homograph. */
+function parseDuolingo(text) {
+  const keys = new Set();
+  const skip = new Set();
+  for (const raw of text.split("\n")) {
+    const line = raw.trim();
+    if (!line) continue;
+    if (line.startsWith("#")) {
+      const m = line.match(/^#\s*skip:\s*(.+)$/);
+      if (m) m[1].split(",").forEach((w) => skip.add(dedupeKey(w)));
+      continue;
+    }
+    keys.add(dedupeKey(line.split("\t")[0]));
+  }
+  for (const k of skip) keys.delete(k);
+  return keys;
+}
+const isDuo = (fr) => state.duo.has(dedupeKey(fr));
+
 function sources() {
   const met = (w) => seen("r:" + w.id);
-  const duo = state.words.filter((w) => w.src === "duolingo");
-  const own = state.words.slice(0, state.own).filter((w) => w.src !== "duolingo");
+  const hand = state.words.slice(0, state.own);
+  const pool = state.rawPool || [];
+  const handKeys = new Set(hand.map((w) => dedupeKey(w.fr)));
+  /* Duolingo is every listed word that has a card, in vocab.json or the pool. A word in both
+     counts as Duolingo's. Cards seeded from the export (src "duolingo") arrived as met once,
+     so they count as checked only once answered again. */
+  const duoHand = hand.filter((w) => isDuo(w.fr));
+  const duoPool = pool.filter((p) => isDuo(p.fr) && !handKeys.has(dedupeKey(p.fr)));
+  const duoDone =
+    duoHand.filter((w) => isKnown("r:" + w.id) || card("r:" + w.id).reps > (w.src === "duolingo" ? 1 : 0)).length +
+    duoPool.filter((p) => seen("r:f-" + p.fr)).length;
+  const own = hand.filter((w) => !isDuo(w.fr));
   /* The list is the whole top 3,000. A list word he collected by hand counts as met through
      its hand card, so the total stays the list and nothing is counted twice. */
-  const pool = state.rawPool || [];
-  const handMet = new Set(state.words.slice(0, state.own).filter(met).map((w) => dedupeKey(w.fr)));
+  const handMet = new Set(hand.filter(met).map((w) => dedupeKey(w.fr)));
   const listTotal = pool.length;
   const listMet =
     state.words.slice(state.own).filter(met).length +
     pool.filter((p) => handMet.has(dedupeKey(p.fr))).length;
-  const duoDone = duo.filter((w) => card("r:" + w.id).reps > 1 || isKnown("r:" + w.id)).length;
   return [
-    { name: "Duolingo", total: duo.length, done: duoDone, verb: "checked" },
+    { name: "Duolingo", total: duoHand.length + duoPool.length, done: duoDone, verb: "checked" },
     { name: "Your own words", total: own.length, done: own.filter(met).length, verb: "met" },
     { name: "Top 3,000 list", total: listTotal, done: listMet, verb: "met" },
   ];
@@ -1260,6 +1290,13 @@ document.addEventListener("keydown", (e) => {
     state.words = [];
   }
   state.own = state.words.length;
+
+  try {
+    const res = await fetch("duolingo.tsv?t=" + Date.now(), { cache: "no-store" });
+    state.duo = parseDuolingo(await res.text());
+  } catch (e) {
+    state.duo = new Set(state.words.filter((w) => w.src === "duolingo").map((w) => dedupeKey(w.fr)));
+  }
 
   try {
     const res = await fetch("frequency-3000.json?t=" + Date.now(), { cache: "no-store" });

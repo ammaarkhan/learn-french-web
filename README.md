@@ -14,8 +14,10 @@ nothing.
 The one place for the mechanics. `app.js` is the implementation; nothing here needs it. The
 ladder, grades, gaps and retiring are specified in `../ladder.md` and not repeated.
 
-1. **Words.** Everything in `vocab.json` (hand-collected, plus the Duolingo import), then list
-   words from `frequency-3000.json` on a drip: 40 a day since 2026-08-25, in the file's order.
+1. **Words.** Three sources. Duolingo: every word on `duolingo.tsv`, his export, wherever its
+   card lives; a word on that list is Duolingo's even if he also collected it or it is on the
+   frequency list. His own words: the rest of `vocab.json`. The list: `frequency-3000.json`,
+   on a drip of 40 a day since 2026-08-25, in the file's order.
    The drip is a function of the date, not a stored counter, so every device agrees. It stood
    still from 2026-09-08 and resumes on 2026-09-19 where it left off.
 
@@ -47,8 +49,9 @@ ladder, grades, gaps and retiring are specified in `../ladder.md` and not repeat
    returns files up to 1 MB; it was 145 KB at 750 cards. When it nears the limit, drop the
    indent in all three writers (`app.js`, `mark_known.py`, `pull_forward.py`) together.
 
-6. **The home page.** *Sources*: Duolingo words count as checked once answered more than once
-   (they arrived as met once); other words count as met once answered at all. *Rung chart*:
+6. **The home page.** *Sources*: a Duolingo word counts as checked once answered; the 439
+   seeded from the export (`src: "duolingo"`) arrived as met once, so those need a second
+   answer. Own and list words count as met once answered at all. *Rung chart*:
    every answered card by its rung, rung 0 with 1d, retired words last. *Activity*: reps per
    UTC day from the session log, replays included. *Last saved*: the last push that landed,
    from any device. *Open gaps*: gap words whose card has not passed twice since.
@@ -93,7 +96,8 @@ string from the change until it appears. Pages lags by a minute or so.
 | File | What |
 |---|---|
 | `index.html`, `app.js`, `styles.css` | The app. No build step. |
-| `vocab.json` | Hand-collected words, including the Duolingo import (`src: "duolingo"`) |
+| `duolingo.tsv` | His Duolingo export, word and gloss per line. `# skip:` names homographs of unrelated list words |
+| `vocab.json` | Hand-collected words, including the 439 seeded from Duolingo (`src: "duolingo"`) |
 | `frequency-3000.json` | The list: 2,997 lemmas with gloss, IPA and a sentence, in teaching order |
 | `add.py` | Adds a word, fills POS and IPA from `ipa.json.gz`, pushes |
 | `curriculum.py`, `build_order.py` | The 34 situations and the teaching order |
