@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Add words to the French trainer from the terminal.
 
-    python3 tool/add.py "le chien = the dog"
-    python3 tool/add.py "le chien = the dog" "la maison = the house"
-    python3 tool/add.py "le chien | n.m. | the dog | note about usage"
+    python3 add.py "le chien = the dog"
+    python3 add.py "le chien = the dog" "la maison = the house"
+    python3 add.py "le chien | n.m. | the dog | note about usage"
 
 Fields are french | pos | english | note. The short form (french = english) fills
 pos and note as blank. Duplicates on the french side are skipped.

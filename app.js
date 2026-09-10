@@ -1,5 +1,5 @@
 /* français — SIR ladder vocabulary trainer.
-   Scheduling is the ladder from ~/Desktop/projects/quran-translation, see ../resources/ladder.md.
+   Scheduling is the ladder from ~/Desktop/projects/quran-translation, see ../ladder.md.
    No streaks, no points. The gaps list is the score. */
 
 // ---------- constants ----------
@@ -1190,7 +1190,7 @@ function viewWords() {
         : `<p class="hint">${INTAKE_PER_DAY} new words a day.</p>`
     }
     ${rows || `<p class="empty">No words yet.</p>`}
-    <p class="hint" style="margin-top:2rem">Add more by hand: <code>python3 web/add.py "le chien = the dog"</code></p>
+    <p class="hint" style="margin-top:2rem">Add a word from the terminal: <code>python3 add.py "le chien = the dog"</code></p>
   </div>`;
 }
 
