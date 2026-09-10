@@ -141,7 +141,15 @@ function save() {
 
 // ---------- github ----------
 
-const b64encode = (t) => btoa(String.fromCharCode(...new TextEncoder().encode(t)));
+/* Encoded in chunks. Spreading the whole file into one fromCharCode call hits the engine's
+   argument limit (about 124 KB in Chrome) and throws, which is how every push failed for a
+   day once progress.json passed that size (2026-09-09). */
+function b64encode(t) {
+  const bytes = new TextEncoder().encode(t);
+  let s = "";
+  for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+  return btoa(s);
+}
 const b64decode = (t) =>
   new TextDecoder().decode(Uint8Array.from(atob(t.replace(/\n/g, "")), (c) => c.charCodeAt(0)));
 
@@ -218,6 +226,8 @@ function mergeProgress(a, b) {
     ),
     (x) => x.id || x.at
   ).slice(0, 200);
+  /* Keep the later save time, or the home page reads "never" after every merge. */
+  out.updatedAt = (a.updatedAt || "") > (b.updatedAt || "") ? a.updatedAt : b.updatedAt || null;
   return out;
 }
 
@@ -271,9 +281,16 @@ function schedulePush(ms = PUSH_DEBOUNCE_MS) {
   pushTimer = setTimeout(pushProgress, ms);
 }
 
+/* The home page re-renders after a push settles so "last saved" and the error line are
+   current; mid-session nothing is repainted, the dot alone reports. */
+const repaintIfIdle = () => {
+  if (!state.session || state.session.finished) render();
+};
+
 async function pushProgress() {
   if (LOCAL || !state.token || !state.prog || !state.prog.dirty) return;
   setSync("syncing");
+  const wasSaved = state.prog.data.updatedAt;
   try {
     state.prog.data.updatedAt = stamp();
     const sha = await ghPut("progress.json", state.prog.data, state.prog.sha, `progress · ${stamp()}`);
@@ -281,16 +298,17 @@ async function pushProgress() {
     state.prog.dirty = false;
     saveProgLocal();
     setSync("idle");
-    if (state.writeError) {
-      state.writeError = null;
-      render();
-    }
+    state.writeError = null;
+    repaintIfIdle();
   } catch (e) {
+    /* Not saved, so the save time must not say otherwise. */
+    state.prog.data.updatedAt = wasSaved;
     if (e.status === 409 || e.status === 422) {
       try {
         const remote = await ghGet("progress.json");
         state.prog.data = mergeProgress(state.prog.data, remote.data);
         state.prog.sha = remote.sha;
+        state.prog.data.updatedAt = stamp();
         state.prog.sha = await ghPut(
           "progress.json",
           state.prog.data,
@@ -300,14 +318,21 @@ async function pushProgress() {
         state.prog.dirty = false;
         saveProgLocal();
         setSync("idle");
-        render();
+        state.writeError = null;
+        repaintIfIdle();
       } catch (e2) {
+        state.prog.data.updatedAt = wasSaved;
         setSync("error");
         failWrite(e2);
       }
     } else if (e.status === 401 || e.status === 403 || e.status === 404) {
       /* Never treat this as offline. Offline retries forever, looks fine, and silently keeps
          every review in this one browser. */
+      setSync("error");
+      failWrite(e);
+    } else if (e.status === undefined && !(e instanceof TypeError)) {
+      /* Not an HTTP answer and not the network: the app itself threw before or during the
+         request. Retrying will not help, so say so instead of looking offline. */
       setSync("error");
       failWrite(e);
     } else {
@@ -321,7 +346,7 @@ function failWrite(e) {
   state.writeError =
     e.status === 401 || e.status === 403 || e.status === 404
       ? "This key cannot write to learn-french-data. It needs that repo added to it with Contents: Read and write. Nothing is being saved beyond this browser until that is fixed."
-      : "Could not save to the repo. Your work is still in this browser.";
+      : `Could not save to the repo (${e.message || e}). Your work is still in this browser.`;
   render();
 }
 
