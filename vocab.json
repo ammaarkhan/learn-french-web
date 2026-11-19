@@ -12266,6 +12266,462 @@
         "src": "tatoeba"
       },
       "src": "duolingo"
+    },
+    {
+      "id": "w668",
+      "fr": "la nationalité",
+      "pos": "n.f.",
+      "en": "nationality",
+      "note": "",
+      "ipa": "/nasjonalite/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "Quelle est votre nationalité ?",
+        "en": "What's your nationality?",
+        "hl": [
+          17,
+          28
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w669",
+      "fr": "célibataire",
+      "pos": "adj.",
+      "en": "single (not married)",
+      "note": "",
+      "ipa": "/selibatɛʁ/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "Je suis une mère célibataire.",
+        "en": "I'm a single mother.",
+        "hl": [
+          17,
+          28
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w670",
+      "fr": "la musculation",
+      "pos": "n.f.",
+      "en": "weight training",
+      "note": "faire de la musculation = to lift weights",
+      "ipa": "/myskylasjɔ̃/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "Il s'entraîne régulièrement avec un appareil de musculation.",
+        "en": "He regularly trains with bodybuilding equipment.",
+        "hl": [
+          48,
+          59
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w671",
+      "fr": "entrepreneur",
+      "pos": "n.m.",
+      "en": "entrepreneur",
+      "note": "no article after être: je suis entrepreneur",
+      "ipa": "/ɑ̃tʁəpʁənœʁ/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "Tom est entrepreneur.",
+        "en": "Tom is an entrepreneur.",
+        "hl": [
+          8,
+          20
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w672",
+      "fr": "le poste",
+      "pos": "n.m.",
+      "en": "position, job",
+      "note": "la poste = the post office",
+      "ipa": "/pɔst/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "Ça va me coûter mon poste.",
+        "en": "It'll cost me my job.",
+        "hl": [
+          20,
+          25
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w673",
+      "fr": "s'intéresser à",
+      "pos": "v.",
+      "en": "to be interested in",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-19",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je m'intéresse beaucoup à l'histoire.",
+        "en": "I'm very interested in history.",
+        "hl": [
+          3,
+          25
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w674",
+      "fr": "découvrir",
+      "pos": "v.",
+      "en": "to discover",
+      "note": "",
+      "ipa": "/dekuvʁiʁ/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "J'aime découvrir de nouvelles choses.",
+        "en": "I like discovering new things.",
+        "hl": [
+          7,
+          16
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w675",
+      "fr": "la culture",
+      "pos": "n.f.",
+      "en": "culture",
+      "note": "not couture (sewing)",
+      "ipa": "/kyltyʁ/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "Qui suis-je pour juger cette culture ?",
+        "en": "Who am I to judge this culture?",
+        "hl": [
+          29,
+          36
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w676",
+      "fr": "courir",
+      "pos": "v.",
+      "en": "to run",
+      "note": "",
+      "ipa": "/kuʁiʁ/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "Il est trop gros pour courir rapidement.",
+        "en": "He is too fat to run fast.",
+        "hl": [
+          22,
+          28
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w677",
+      "fr": "la recherche",
+      "pos": "n.f.",
+      "en": "research",
+      "note": "faire des recherches = to do research",
+      "ipa": "/ʁəʃɛʁʃ/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "Il se consacre à la recherche.",
+        "en": "He dedicates himself to research.",
+        "hl": [
+          20,
+          29
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w678",
+      "fr": "avoir besoin de",
+      "pos": "loc. v.",
+      "en": "to need",
+      "note": "j'ai besoin de ton aide",
+      "ipa": "",
+      "added": "2026-11-19",
+      "en_src": "hand",
+      "ex": {
+        "fr": "J'ai besoin de ton aide.",
+        "en": "I need your help.",
+        "hl": [
+          2,
+          14
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w679",
+      "fr": "raconter",
+      "pos": "v.",
+      "en": "to tell (a story, news)",
+      "note": "not 'to contact'",
+      "ipa": "/ʁakɔ̃te/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "C'est mon tour de te raconter un secret.",
+        "en": "It's my turn to tell you a secret.",
+        "hl": [
+          21,
+          29
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w680",
+      "fr": "la mosquée",
+      "pos": "n.f.",
+      "en": "mosque",
+      "note": "",
+      "ipa": "/mɔske/",
+      "added": "2026-11-19",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je vais à la mosquée le vendredi.",
+        "en": "I go to the mosque on Fridays.",
+        "hl": [
+          13,
+          20
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w681",
+      "fr": "lire des livres",
+      "pos": "phrase",
+      "en": "to read books",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-19",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Le soir, j'aime lire des livres.",
+        "en": "In the evening, I like reading books.",
+        "hl": [
+          16,
+          31
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w682",
+      "fr": "travailler dans des cafés",
+      "pos": "phrase",
+      "en": "to work from cafés",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-19",
+      "en_src": "hand",
+      "ex": {
+        "fr": "J'aime travailler dans des cafés à Dubaï.",
+        "en": "I like working from cafés in Dubai.",
+        "hl": [
+          7,
+          32
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w683",
+      "fr": "ma chambre est petite",
+      "pos": "phrase",
+      "en": "my room is small",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-19",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Ma chambre est petite mais confortable.",
+        "en": "My room is small but comfortable.",
+        "hl": [
+          0,
+          21
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w684",
+      "fr": "je m'intéresse au design",
+      "pos": "phrase",
+      "en": "I'm interested in design",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-19",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je m'intéresse au design depuis longtemps.",
+        "en": "I've been interested in design for a long time.",
+        "hl": [
+          0,
+          24
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w685",
+      "fr": "écrire des essais",
+      "pos": "phrase",
+      "en": "to write essays",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-19",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Pour mon travail, j'aime écrire des essais.",
+        "en": "For my work, I like writing essays.",
+        "hl": [
+          25,
+          42
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w686",
+      "fr": "enregistrer des vidéos",
+      "pos": "phrase",
+      "en": "to record videos",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-19",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Demain, je vais enregistrer des vidéos.",
+        "en": "Tomorrow, I'm going to record videos.",
+        "hl": [
+          16,
+          38
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w687",
+      "fr": "publier sur les réseaux sociaux",
+      "pos": "phrase",
+      "en": "to post on social media",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-19",
+      "en_src": "hand",
+      "ex": {
+        "fr": "J'aime publier sur les réseaux sociaux.",
+        "en": "I like posting on social media.",
+        "hl": [
+          7,
+          38
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w688",
+      "fr": "j'aime les défis",
+      "pos": "phrase",
+      "en": "I like a challenge",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-19",
+      "en_src": "hand",
+      "ex": {
+        "fr": "J'aime les défis, c'est motivant.",
+        "en": "I like a challenge; it's motivating.",
+        "hl": [
+          0,
+          16
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w689",
+      "fr": "je joue au padel",
+      "pos": "phrase",
+      "en": "I play padel",
+      "note": "jouer à + sport: au padel, au basket",
+      "ipa": "",
+      "added": "2026-11-19",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Le week-end, je joue au padel.",
+        "en": "At the weekend, I play padel.",
+        "hl": [
+          13,
+          29
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w690",
+      "fr": "j'apprends le français",
+      "pos": "phrase",
+      "en": "I'm learning French",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-19",
+      "en_src": "hand",
+      "ex": {
+        "fr": "J'apprends le français pour le Canada.",
+        "en": "I'm learning French for Canada.",
+        "hl": [
+          0,
+          22
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w691",
+      "fr": "j'ai une licence en informatique de l'UBC",
+      "pos": "phrase",
+      "en": "I have a bachelor's in computer science from UBC",
+      "note": "in Quebec a bachelor's is un baccalauréat; in France le bac is the school-leaving exam",
+      "ipa": "",
+      "added": "2026-11-19",
+      "en_src": "hand",
+      "ex": {
+        "fr": "J'ai une licence en informatique de l'UBC.",
+        "en": "I have a bachelor's in computer science from UBC.",
+        "hl": [
+          0,
+          41
+        ],
+        "src": "hand"
+      }
     }
   ]
 }
