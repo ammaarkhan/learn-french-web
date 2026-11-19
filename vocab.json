@@ -12722,6 +12722,120 @@
         ],
         "src": "hand"
       }
+    },
+    {
+      "id": "w692",
+      "fr": "rejoindre",
+      "pos": "v.",
+      "en": "to join",
+      "note": "rejoignez-nous = join us",
+      "ipa": "/ʁəʒwɛ̃dʁ/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "Pourquoi ne pas nous rejoindre pour le déjeuner ?",
+        "en": "Why not join us for lunch?",
+        "hl": [
+          21,
+          30
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w693",
+      "fr": "le dirigeant",
+      "pos": "n.m.",
+      "en": "leader",
+      "note": "diriger = to lead",
+      "ipa": "/diʁiʒɑ̃/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "Nous le respectons en tant que notre dirigeant.",
+        "en": "We look up to him as our leader.",
+        "hl": [
+          37,
+          46
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w694",
+      "fr": "plaider",
+      "pos": "v.",
+      "en": "to plead, to argue for",
+      "note": "plaider pour = to call for",
+      "ipa": "/plede/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "Mon client souhaite plaider coupable.",
+        "en": "My client wants to plead guilty.",
+        "hl": [
+          20,
+          27
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w695",
+      "fr": "la frappe",
+      "pos": "n.f.",
+      "en": "strike (military)",
+      "note": "des frappes aériennes = air strikes",
+      "ipa": "/fʁap/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "Il y a eu des frappes aériennes cette nuit.",
+        "en": "There were air strikes last night.",
+        "hl": [
+          14,
+          21
+        ],
+        "src": "hand"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w696",
+      "fr": "la menace",
+      "pos": "n.f.",
+      "en": "threat",
+      "note": "menacer = to threaten",
+      "ipa": "/mənas/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "Quelle est la menace, exactement ?",
+        "en": "What exactly is the threat?",
+        "hl": [
+          14,
+          20
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w697",
+      "fr": "la bande",
+      "pos": "n.f.",
+      "en": "strip, band, gang",
+      "note": "la bande de Gaza = the Gaza Strip",
+      "ipa": "/bɑ̃d/",
+      "added": "2026-11-19",
+      "ex": {
+        "fr": "Toute la bande est là.",
+        "en": "The gang is all here.",
+        "hl": [
+          9,
+          14
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
     }
   ]
 }
