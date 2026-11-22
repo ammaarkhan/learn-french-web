@@ -12836,6 +12836,519 @@
         "src": "tatoeba"
       },
       "en_src": "hand"
+    },
+    {
+      "id": "w698",
+      "fr": "se réveiller",
+      "pos": "",
+      "en": "to wake up",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je me réveille à six heures.",
+        "en": "I wake up at six.",
+        "hl": [
+          3,
+          14
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w699",
+      "fr": "se lever",
+      "pos": "",
+      "en": "to get up",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Le matin, je me lève tôt.",
+        "en": "In the morning, I get up early.",
+        "hl": [
+          13,
+          20
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w700",
+      "fr": "se doucher",
+      "pos": "",
+      "en": "to take a shower",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je me douche avant le travail.",
+        "en": "I shower before work.",
+        "hl": [
+          3,
+          12
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w701",
+      "fr": "se brosser les dents",
+      "pos": "",
+      "en": "to brush your teeth",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je me brosse les dents le soir.",
+        "en": "I brush my teeth in the evening.",
+        "hl": [
+          3,
+          22
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w702",
+      "fr": "s'habiller",
+      "pos": "",
+      "en": "to get dressed",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-22",
+      "ex": {
+        "fr": "Elle aida sa fille à s'habiller.",
+        "en": "She helped her daughter get dressed.",
+        "hl": [
+          21,
+          31
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w703",
+      "fr": "se reposer",
+      "pos": "",
+      "en": "to rest",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Le week-end, je me repose.",
+        "en": "At the weekend, I rest.",
+        "hl": [
+          16,
+          25
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w704",
+      "fr": "se coucher",
+      "pos": "",
+      "en": "to go to bed",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je me couche à onze heures.",
+        "en": "I go to bed at eleven.",
+        "hl": [
+          3,
+          12
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w705",
+      "fr": "se trouver",
+      "pos": "v.",
+      "en": "to be located",
+      "note": "Où se trouve la salle ? = Where is the gym?",
+      "ipa": "",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Où se trouve la salle de sport ?",
+        "en": "Where is the gym?",
+        "hl": [
+          3,
+          12
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w706",
+      "fr": "commencer",
+      "pos": "v.",
+      "en": "to start, to begin",
+      "note": "",
+      "ipa": "/komɑ̃se/",
+      "added": "2026-11-22",
+      "ex": {
+        "fr": "Pourquoi ne pas commencer maintenant ?",
+        "en": "Why not start now?",
+        "hl": [
+          16,
+          25
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w707",
+      "fr": "ouvrir",
+      "pos": "v.",
+      "en": "to open",
+      "note": "",
+      "ipa": "/uvʁiʁ/",
+      "added": "2026-11-22",
+      "ex": {
+        "fr": "J'ai entendu quelqu'un ouvrir la porte.",
+        "en": "I heard someone opening the door.",
+        "hl": [
+          23,
+          29
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w708",
+      "fr": "fermer",
+      "pos": "v.",
+      "en": "to close",
+      "note": "",
+      "ipa": "/fɛʁme/",
+      "added": "2026-11-22",
+      "ex": {
+        "fr": "J'ai entendu la porte se fermer.",
+        "en": "I heard the door close.",
+        "hl": [
+          25,
+          31
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w709",
+      "fr": "proposer",
+      "pos": "v.",
+      "en": "to suggest, to propose",
+      "note": "proposer à quelqu'un de + infinitive: je te propose de faire du sport",
+      "ipa": "/pʁopoze/",
+      "added": "2026-11-22",
+      "ex": {
+        "fr": "J'allais proposer la possibilité suivante.",
+        "en": "I was going to suggest the following possibility.",
+        "hl": [
+          9,
+          17
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w710",
+      "fr": "qu'est-ce que",
+      "pos": "",
+      "en": "what (in questions)",
+      "note": "Qu'est-ce que tu fais le week-end ?",
+      "ipa": "",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Qu'est-ce que tu fais samedi ?",
+        "en": "What are you doing on Saturday?",
+        "hl": [
+          0,
+          13
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w711",
+      "fr": "Quelle heure est-il ?",
+      "pos": "",
+      "en": "What time is it?",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Pardon, quelle heure est-il ?",
+        "en": "Excuse me, what time is it?",
+        "hl": [
+          8,
+          27
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w712",
+      "fr": "moins le quart",
+      "pos": "",
+      "en": "quarter to (the hour)",
+      "note": "neuf heures moins le quart = 8:45",
+      "ipa": "",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Il est neuf heures moins le quart.",
+        "en": "It's quarter to nine.",
+        "hl": [
+          19,
+          33
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w713",
+      "fr": "ne … jamais",
+      "pos": "adv.",
+      "en": "never",
+      "note": "the verb goes in the middle: je ne cours jamais",
+      "ipa": "",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je ne cours jamais le lundi.",
+        "en": "I never run on Mondays.",
+        "hl": [
+          3,
+          18
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w714",
+      "fr": "ensuite",
+      "pos": "adv.",
+      "en": "then, next",
+      "note": "",
+      "ipa": "/ɑ̃sɥit/",
+      "added": "2026-11-22",
+      "ex": {
+        "fr": "Je sais ce qui se passe ensuite.",
+        "en": "I know what happens next.",
+        "hl": [
+          24,
+          31
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w715",
+      "fr": "puis",
+      "pos": "conj.",
+      "en": "then",
+      "note": "",
+      "ipa": "/pɥi/",
+      "added": "2026-11-22",
+      "ex": {
+        "fr": "Je me douche, puis je m'habille.",
+        "en": "I shower, then I get dressed.",
+        "hl": [
+          14,
+          18
+        ],
+        "src": "hand"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w716",
+      "fr": "par semaine",
+      "pos": "",
+      "en": "per week, a week",
+      "note": "deux fois par semaine = twice a week",
+      "ipa": "",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Je vais à la salle trois fois par semaine.",
+        "en": "I go to the gym three times a week.",
+        "hl": [
+          30,
+          41
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w717",
+      "fr": "il n'y a pas de",
+      "pos": "",
+      "en": "there isn't any, there aren't any",
+      "note": "des becomes de: il n'y a pas de cours de boxe",
+      "ipa": "",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Il n'y a pas de cours de boxe.",
+        "en": "There are no boxing classes.",
+        "hl": [
+          0,
+          15
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w718",
+      "fr": "en voiture",
+      "pos": "",
+      "en": "by car",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "Mon père va au travail en voiture.",
+        "en": "My father goes to work by car.",
+        "hl": [
+          23,
+          33
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w719",
+      "fr": "abonnement",
+      "pos": "n.m.",
+      "en": "the membership, the subscription",
+      "note": "un abonnement",
+      "ipa": "/abɔnəmɑ̃/",
+      "added": "2026-11-22",
+      "ex": {
+        "fr": "Combien coûte un abonnement à un journal ?",
+        "en": "How much does a newspaper subscription cost?",
+        "hl": [
+          17,
+          27
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w720",
+      "fr": "la séance d'essai",
+      "pos": "",
+      "en": "the trial session",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "La séance d'essai est gratuite.",
+        "en": "The trial session is free.",
+        "hl": [
+          3,
+          17
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w721",
+      "fr": "le petit-déjeuner",
+      "pos": "n.m.",
+      "en": "the breakfast",
+      "note": "",
+      "ipa": "/pətideʒœne/",
+      "added": "2026-11-22",
+      "ex": {
+        "fr": "Il a pris son petit-déjeuner tout seul.",
+        "en": "He had breakfast all alone.",
+        "hl": [
+          14,
+          28
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w722",
+      "fr": "le parking",
+      "pos": "n.m.",
+      "en": "the car park",
+      "note": "",
+      "ipa": "/paʁkiŋ/",
+      "added": "2026-11-22",
+      "ex": {
+        "fr": "Le parking est vide.",
+        "en": "The parking lot is empty.",
+        "hl": [
+          3,
+          10
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
+    },
+    {
+      "id": "w723",
+      "fr": "Bises",
+      "pos": "n.f.",
+      "en": "love, hugs (signing off to a friend)",
+      "note": "À bientôt ! Bises,",
+      "ipa": "/biz/",
+      "added": "2026-11-22",
+      "en_src": "hand",
+      "ex": {
+        "fr": "À bientôt ! Bises, Ammaar",
+        "en": "See you soon! Love, Ammaar",
+        "hl": [
+          12,
+          17
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w724",
+      "fr": "la dent",
+      "pos": "n.f.",
+      "en": "the tooth",
+      "note": "",
+      "ipa": "/dɑ̃/",
+      "added": "2026-11-22",
+      "ex": {
+        "fr": "J'ai mal à la dent.",
+        "en": "My tooth hurts.",
+        "hl": [
+          14,
+          18
+        ],
+        "src": "tatoeba"
+      },
+      "en_src": "hand"
     }
   ]
 }
