@@ -13349,6 +13349,546 @@
         "src": "tatoeba"
       },
       "en_src": "hand"
+    },
+    {
+      "id": "w725",
+      "fr": "j'ai fait",
+      "pos": "v.",
+      "en": "I did, I made",
+      "note": "past of faire (avoir)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Samedi, j'ai fait du sport avec mon frère.",
+        "en": "On Saturday, I did sport with my brother.",
+        "hl": [
+          8,
+          17
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w726",
+      "fr": "j'ai pris",
+      "pos": "v.",
+      "en": "I took, I had (food, drink)",
+      "note": "past of prendre (avoir)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Ce matin, j'ai pris un thé vert.",
+        "en": "This morning, I had a green tea.",
+        "hl": [
+          10,
+          19
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w727",
+      "fr": "j'ai lu",
+      "pos": "v.",
+      "en": "I read (past)",
+      "note": "past of lire (avoir)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Hier soir, j'ai lu un livre d'histoire.",
+        "en": "Last night, I read a history book.",
+        "hl": [
+          11,
+          18
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w728",
+      "fr": "j'ai vu",
+      "pos": "v.",
+      "en": "I saw",
+      "note": "past of voir (avoir)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Dimanche, j'ai vu des amis au café.",
+        "en": "On Sunday, I saw friends at the café.",
+        "hl": [
+          10,
+          17
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w729",
+      "fr": "j'ai bu",
+      "pos": "v.",
+      "en": "I drank",
+      "note": "past of boire (avoir)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Après le sport, j'ai bu beaucoup d'eau.",
+        "en": "After sport, I drank a lot of water.",
+        "hl": [
+          16,
+          23
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w730",
+      "fr": "j'ai eu",
+      "pos": "v.",
+      "en": "I had",
+      "note": "past of avoir (avoir)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Hier, j'ai eu un cours de français.",
+        "en": "Yesterday, I had a French lesson.",
+        "hl": [
+          6,
+          13
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w731",
+      "fr": "j'ai été",
+      "pos": "v.",
+      "en": "I was, I have been",
+      "note": "past of être (avoir)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "La semaine dernière, j'ai été très occupé.",
+        "en": "Last week, I was very busy.",
+        "hl": [
+          21,
+          29
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w732",
+      "fr": "j'ai écrit",
+      "pos": "v.",
+      "en": "I wrote",
+      "note": "past of écrire (avoir)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Hier, j'ai écrit un message à Julie.",
+        "en": "Yesterday, I wrote a message to Julie.",
+        "hl": [
+          6,
+          16
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w733",
+      "fr": "j'ai couru",
+      "pos": "v.",
+      "en": "I ran",
+      "note": "past of courir (avoir)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Samedi, j'ai couru à la plage.",
+        "en": "On Saturday, I ran on the beach.",
+        "hl": [
+          8,
+          18
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w734",
+      "fr": "je suis allé",
+      "pos": "v.",
+      "en": "I went",
+      "note": "past of aller (être)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Hier, je suis allé à la salle de sport.",
+        "en": "Yesterday, I went to the gym.",
+        "hl": [
+          6,
+          18
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w735",
+      "fr": "je suis parti",
+      "pos": "v.",
+      "en": "I left",
+      "note": "past of partir (être)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Je suis parti de la maison à huit heures.",
+        "en": "I left the house at eight o'clock.",
+        "hl": [
+          0,
+          13
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w736",
+      "fr": "je suis venu",
+      "pos": "v.",
+      "en": "I came",
+      "note": "past of venir (être)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Je suis venu à Dubaï avec ma famille.",
+        "en": "I came to Dubai with my family.",
+        "hl": [
+          0,
+          12
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w737",
+      "fr": "je suis sorti",
+      "pos": "v.",
+      "en": "I went out",
+      "note": "past of sortir (être)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Samedi soir, je suis sorti avec des amis.",
+        "en": "On Saturday night, I went out with friends.",
+        "hl": [
+          13,
+          26
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w738",
+      "fr": "je suis arrivé",
+      "pos": "v.",
+      "en": "I arrived",
+      "note": "past of arriver (être)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Je suis arrivé au travail à neuf heures.",
+        "en": "I arrived at work at nine o'clock.",
+        "hl": [
+          0,
+          14
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w739",
+      "fr": "je suis rentré",
+      "pos": "v.",
+      "en": "I came home, I went back",
+      "note": "past of rentrer (être)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Je suis rentré chez moi à dix heures.",
+        "en": "I came home at ten o'clock.",
+        "hl": [
+          0,
+          14
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w740",
+      "fr": "je suis resté",
+      "pos": "v.",
+      "en": "I stayed",
+      "note": "past of rester (être)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Dimanche, je suis resté à la maison.",
+        "en": "On Sunday, I stayed at home.",
+        "hl": [
+          10,
+          23
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w741",
+      "fr": "je suis né",
+      "pos": "v.",
+      "en": "I was born",
+      "note": "past of naître (être)",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Je suis né un lundi.",
+        "en": "I was born on a Monday.",
+        "hl": [
+          0,
+          10
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w742",
+      "fr": "faire de la musculation",
+      "pos": "v.",
+      "en": "to do weight training",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Je vais à la salle pour faire de la musculation.",
+        "en": "I go to the gym to do weight training.",
+        "hl": [
+          24,
+          47
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w743",
+      "fr": "faire du vélo",
+      "pos": "v.",
+      "en": "to cycle, to ride a bike",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Le samedi, j'aime faire du vélo.",
+        "en": "On Saturdays, I like to go cycling.",
+        "hl": [
+          18,
+          31
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w744",
+      "fr": "se promener",
+      "pos": "v.",
+      "en": "to go for a walk",
+      "note": "je me promène",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Le soir, on aime se promener à la plage.",
+        "en": "In the evening, we like to walk on the beach.",
+        "hl": [
+          17,
+          28
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w745",
+      "fr": "faire les courses",
+      "pos": "v.",
+      "en": "to do the grocery shopping",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Je vais au supermarché pour faire les courses.",
+        "en": "I'm going to the supermarket to do the shopping.",
+        "hl": [
+          28,
+          45
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w746",
+      "fr": "faire le ménage",
+      "pos": "v.",
+      "en": "to do the housework, to clean",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Dimanche matin, je dois faire le ménage.",
+        "en": "On Sunday morning, I have to clean the house.",
+        "hl": [
+          24,
+          39
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w747",
+      "fr": "fatigant",
+      "pos": "adj.",
+      "en": "tiring",
+      "note": "",
+      "ipa": "/fatiɡɑ̃/",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Je pense que ce travail est fatigant.",
+        "en": "I think this work is tiring.",
+        "hl": [
+          28,
+          36
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w748",
+      "fr": "c'était",
+      "pos": "v.",
+      "en": "it was",
+      "note": "c'était super / sympa / fatigant",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Je sais que c'était toi.",
+        "en": "I know it was you.",
+        "hl": [
+          12,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w749",
+      "fr": "hier",
+      "pos": "adv.",
+      "en": "yesterday",
+      "note": "",
+      "ipa": "/jɛʁ/",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "J'ai bu du thé hier.",
+        "en": "I drank tea yesterday.",
+        "hl": [
+          15,
+          19
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w750",
+      "fr": "hier soir",
+      "pos": "adv.",
+      "en": "last night",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Hier soir, j'ai regardé un match.",
+        "en": "Last night, I watched a match.",
+        "hl": [
+          0,
+          9
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w751",
+      "fr": "la semaine dernière",
+      "pos": "adv.",
+      "en": "last week",
+      "note": "",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Je suis allé au cinéma la semaine dernière.",
+        "en": "I went to the cinema last week.",
+        "hl": [
+          23,
+          42
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w752",
+      "fr": "il y a deux jours",
+      "pos": "adv.",
+      "en": "two days ago",
+      "note": "il y a + time = ago",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Je suis rentré il y a deux jours.",
+        "en": "I came back two days ago.",
+        "hl": [
+          15,
+          32
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w753",
+      "fr": "d'abord",
+      "pos": "adv.",
+      "en": "first, first of all",
+      "note": "",
+      "ipa": "/dabɔʁ/",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "D'abord, je me suis levé à six heures.",
+        "en": "First, I got up at six o'clock.",
+        "hl": [
+          0,
+          7
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w754",
+      "fr": "chez moi",
+      "pos": "adv.",
+      "en": "at home, at my place",
+      "note": "rentrer chez moi = to go home",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Le soir, je reste chez moi.",
+        "en": "In the evening, I stay at home.",
+        "hl": [
+          18,
+          26
+        ],
+        "src": "hand"
+      }
     }
   ]
 }
