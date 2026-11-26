@@ -71,6 +71,7 @@ const state = {
   pool: 0, // how many frequency words are promoted so far
   poolTotal: 0,
   duo: new Set(), // dedupe keys of every word on duolingo.tsv
+  tiers: {}, // dedupe key -> tier, from priority.json
   token: localStorage.getItem(LS.token) || "",
   prog: null, // { data, sha, dirty }
   sync: "idle",
@@ -408,7 +409,13 @@ function intake(pool) {
 // id shape: "r:w001" input (fr -> en), "p:w001" output (en -> fr)
 
 const parseId = (id) => ({ dir: id.slice(0, 1), wid: id.slice(2) });
-const wordOf = (id) => state.words.find((w) => w.id === parseId(id).wid);
+/* Looked up by id through a map rebuilt whenever state.words is replaced: the tier sort calls
+   this thousands of times per render, and a linear find made that quadratic. */
+let byId = { words: null, map: null };
+function wordOf(id) {
+  if (byId.words !== state.words) byId = { words: state.words, map: new Map(state.words.map((w) => [w.id, w])) };
+  return byId.map.get(parseId(id).wid);
+}
 
 function card(id) {
   return P().cards[id] || { rung: 0, due: todayISO(), reps: 0, lapses: 0 };
@@ -441,9 +448,31 @@ function activeIds() {
   return out;
 }
 
+/* Priority (Ammaar's call, 2026-11-26): words from the tutor's lessons first, then verbs and
+   nouns, then adjectives and the like. Phrases and small words (en fait, pour, ce) are parked:
+   off the queue until he wants them back. Tiers come from priority.json, built by
+   build_priority.py from lessons.txt and each word's part of speech. A word added since the
+   last build counts as a lesson word if it is hand-added, core if it is a list word. */
+const TIER = { lesson: 0, core: 1, more: 2, later: 3 };
+function tierOf(id) {
+  const w = wordOf(id);
+  if (!w) return TIER.core;
+  const t = state.tiers[dedupeKey(w.fr)];
+  if (t !== undefined) return t;
+  return w.id.startsWith("f-") ? TIER.core : TIER.lesson;
+}
+const isParked = (id) => tierOf(id) === TIER.later;
+const byTier = (ids) => ids.slice().sort((a, b) => tierOf(a) - tierOf(b)); // stable
+
 function dueIds() {
   const t = todayISO();
-  return activeIds().filter((id) => !isKnown(id) && card(id).due <= t);
+  return activeIds().filter((id) => !isKnown(id) && !isParked(id) && card(id).due <= t);
+}
+
+/* Parked cards that would otherwise be due today, for the home page. */
+function parkedDue() {
+  const t = todayISO();
+  return activeIds().filter((id) => !isKnown(id) && isParked(id) && !isFresh(id) && card(id).due <= t).length;
 }
 
 /* A card counts as seen once it has been answered or retired. Words the drip has released
@@ -590,8 +619,13 @@ const isFresh = (id) => card(id).reps === 0;
    how a ladder rots. New cards are capped, so the day's work stays finite no matter
    how far the intake has run ahead. Hand-collected words enter before pool words. */
 function todaysQueue() {
-  const due = dueIds();
-  const fresh = due.filter((id) => isFresh(id) && !invited(id)).slice(0, newPerSession());
+  const due = byTier(dueIds());
+  /* New words before the english-to-french card of a word already known one way, so a
+     lesson's new words are not crowded out of the cap. */
+  const fresh = due
+    .filter((id) => isFresh(id) && !invited(id))
+    .sort((a, b) => tierOf(a) - tierOf(b) || (a[0] === "r" ? 0 : 1) - (b[0] === "r" ? 0 : 1))
+    .slice(0, newPerSession());
   return due.filter((id) => !isFresh(id) || invited(id)).concat(fresh);
 }
 
@@ -608,15 +642,18 @@ function addMore() {
   const t = todayISO();
   let left = ADD_MORE;
   const early = activeIds()
-    .filter((id) => !isKnown(id) && !isFresh(id) && card(id).rung <= 1 && card(id).due > t)
-    .sort((a, b) => card(a).due.localeCompare(card(b).due));
+    .filter((id) => !isKnown(id) && !isParked(id) && !isFresh(id) && card(id).rung <= 1 && card(id).due > t)
+    .sort((a, b) => tierOf(a) - tierOf(b) || card(a).due.localeCompare(card(b).due));
   for (const id of early.slice(0, left)) P().cards[id] = { ...card(id), due: t, updatedAt: stamp() };
   left -= Math.min(left, early.length);
   if (left > 0) {
     const mine = new Set(state.words.map((w) => dedupeKey(w.fr)));
-    const unseen = activeIds()
-      .filter((id) => id.startsWith("r:") && isFresh(id) && !invited(id))
-      .concat((state.rawPool || []).filter((p) => !mine.has(dedupeKey(p.fr))).map((p) => "r:f-" + p.fr));
+    const unseen = byTier(
+      activeIds()
+        .filter((id) => id.startsWith("r:") && isFresh(id) && !invited(id))
+        .concat((state.rawPool || []).filter((p) => !mine.has(dedupeKey(p.fr))).map((p) => "r:f-" + p.fr))
+        .filter((id, i, all) => !isParked(id) && all.indexOf(id) === i)
+    );
     for (const id of unseen.slice(0, left))
       P().cards[id] = { rung: 0, due: t, reps: 0, lapses: 0, streak: 0, updatedAt: stamp() };
   }
@@ -629,10 +666,15 @@ function addMore() {
 }
 
 /* Early stage keeps a fixed order and one card type; once any word has matured the
-   queue mixes order and type. Volume, order, type: the three SIR variables. */
+   queue mixes order and type. Volume, order, type: the three SIR variables. The shuffle stays
+   inside each tier, so lesson words always come first and stopping early skips the least
+   useful cards. */
 function buildQueue() {
   const ids = todaysQueue();
-  return anyMature() ? shuffle(ids) : ids;
+  if (!anyMature()) return ids;
+  const out = [];
+  for (const t of [TIER.lesson, TIER.core, TIER.more]) out.push(...shuffle(ids.filter((id) => tierOf(id) === t)));
+  return out;
 }
 
 function startSession(queue = buildQueue(), practice = false) {
@@ -973,6 +1015,9 @@ function viewToday() {
            </div>
            <p class="hint">Add more brings forward the next ${ADD_MORE} cards resting at one day, then words not shown yet.</p>`
     }
+    <p class="hint">Lesson words first, then verbs and nouns.${
+      parkedDue() ? ` ${parkedDue()} cards of phrases and small words are parked for later.` : ""
+    }</p>
 
     ${chartSources()}
     ${chartRungs()}
@@ -1334,6 +1379,13 @@ document.addEventListener("keydown", (e) => {
     state.duo = parseDuolingo(await res.text());
   } catch (e) {
     state.duo = new Set(state.words.filter((w) => w.src === "duolingo").map((w) => dedupeKey(w.fr)));
+  }
+
+  try {
+    const res = await fetch("priority.json?t=" + Date.now(), { cache: "no-store" });
+    state.tiers = (await res.json()).tiers || {};
+  } catch (e) {
+    /* no priority file: every word in play, as before */
   }
 
   try {

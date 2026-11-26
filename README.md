@@ -35,6 +35,14 @@ ladder, grades, gaps and retiring are specified in `../ladder.md` and not repeat
    it as often as wanted. Until any word reaches rung 3 the order is fixed; after that it is
    shuffled and the two directions mix.
 
+   **Priority** (his call, 2026-11-26). Every word has a tier in `priority.json`: 0 words from
+   the tutor's lessons, 1 verbs and nouns, 2 adjectives, numbers and meaningful adverbs, 3
+   phrases and small words (*en fait*, *pour*, *ce*). The queue runs tier 0, then 1, then 2,
+   shuffled only inside a tier, so stopping early skips the least useful cards. Tier 3 is
+   parked: never queued, never added by Add 40 more; the home page counts what is parked. The
+   40-new cap fills by tier, new words before a word's english-to-french card. A word added
+   after the last build is tier 0 if hand-added, tier 1 if a list word.
+
 4. **A sitting.** A missed card is asked again before the sitting ends; that replay changes
    nothing on the ladder. Every grade saves to the browser at once and pushes 2.5 seconds
    later. Each sitting is one entry in the session log, rewritten as it goes, so a sitting
@@ -80,6 +88,12 @@ hand-written gloss `en_src: "hand"` and a hand-written sentence `ex.src: "hand"`
 Wiktionary often leads with an obscure sense and the sentence picker matches any sense in the
 gloss, so check the first sense and the sentence agree.
 
+**After a tutor lesson.** Add a `# LNN` block of its content words to `lessons.txt`, add
+any card he wants that does not exist yet (`add.py`), run `python3 build_priority.py`, deploy.
+A word wrongly parked or kept: the `KEEP`, `PARK` or `NOT_LESSON` sets in `build_priority.py`.
+
+**Unpark everything.** Delete `priority.json` and deploy: every word comes back into play.
+
 **Retire words.** `python3 ../data/mark_known.py je tu "ça va"`
 
 **More cards today.** The Add 40 more button on the home page. From the terminal,
@@ -104,6 +118,8 @@ string from the change until it appears. Pages lags by a minute or so.
 | `vocab.json` | Hand-collected words, including the 439 seeded from Duolingo (`src: "duolingo"`) |
 | `frequency-3000.json` | The list: 2,997 lemmas with gloss, IPA and a sentence, in teaching order |
 | `add.py` | Adds a word, fills POS and IPA from `ipa.json.gz`, pushes |
+| `lessons.txt` | Words from each tutor lesson, by lesson. Moves existing cards to tier 0; adds none |
+| `build_priority.py` | Writes `priority.json` from `lessons.txt` and part of speech. Overrides at its top |
 | `curriculum.py`, `build_order.py` | The 34 situations and the teaching order |
 | `build_pool.py`, `fill_sentences.py` | Build the list; attach sentences to hand words |
 

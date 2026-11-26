@@ -13889,6 +13889,150 @@
         ],
         "src": "hand"
       }
+    },
+    {
+      "id": "w755",
+      "fr": "immigrer",
+      "pos": "v.",
+      "en": "to immigrate",
+      "note": "immigrer au Canada",
+      "ipa": "/imiɡʁe/",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Je veux immigrer au Canada avec ma famille.",
+        "en": "I want to immigrate to Canada with my family.",
+        "hl": [
+          8,
+          16
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w756",
+      "fr": "objectif",
+      "pos": "n.m.",
+      "en": "the goal, the objective",
+      "note": "mon objectif, c'est de…",
+      "ipa": "/ɔbʒɛktif/",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Ceci est notre objectif principal.",
+        "en": "This is our main goal.",
+        "hl": [
+          15,
+          23
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w757",
+      "fr": "les études",
+      "pos": "n.f.pl.",
+      "en": "studies (at school or university)",
+      "note": "faire des études",
+      "ipa": "",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Mes études sont finies depuis deux ans.",
+        "en": "My studies have been over for two years.",
+        "hl": [
+          4,
+          10
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w758",
+      "fr": "le loisir",
+      "pos": "n.m.",
+      "en": "the hobby, leisure",
+      "note": "mes loisirs = my hobbies",
+      "ipa": "/lwaziʁ/",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Mon loisir, c'est de jouer du piano.",
+        "en": "My hobby is playing the piano.",
+        "hl": [
+          4,
+          10
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w759",
+      "fr": "stressant",
+      "pos": "adj.",
+      "en": "stressful",
+      "note": "",
+      "ipa": "/stʁɛsɑ̃/",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "C'est un boulot très stressant.",
+        "en": "It's a very stressful job.",
+        "hl": [
+          21,
+          30
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w760",
+      "fr": "neiger",
+      "pos": "v.",
+      "en": "to snow",
+      "note": "il a neigé = it snowed",
+      "ipa": "/neʒe/",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Je me demande s'il va neiger.",
+        "en": "I wonder whether it'll snow.",
+        "hl": [
+          22,
+          28
+        ],
+        "src": "tatoeba"
+      }
+    },
+    {
+      "id": "w761",
+      "fr": "le diplôme",
+      "pos": "n.m.",
+      "en": "the degree, the diploma",
+      "note": "",
+      "ipa": "/diplom/",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "J'ai un diplôme en informatique.",
+        "en": "I have a degree in computer science.",
+        "hl": [
+          8,
+          15
+        ],
+        "src": "hand"
+      }
+    },
+    {
+      "id": "w762",
+      "fr": "économiser",
+      "pos": "v.",
+      "en": "to save (money)",
+      "note": "",
+      "ipa": "/ekonomize/",
+      "added": "2026-11-26",
+      "ex": {
+        "fr": "Je veux économiser de l'argent pour le voyage.",
+        "en": "I want to save money for the trip.",
+        "hl": [
+          8,
+          18
+        ],
+        "src": "hand"
+      }
     }
   ]
 }
