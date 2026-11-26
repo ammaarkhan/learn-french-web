@@ -19,7 +19,8 @@ ladder, grades, gaps and retiring are specified in `../ladder.md` and not repeat
    frequency list. His own words: the rest of `vocab.json`. The list: `frequency-3000.json`,
    on a drip of 40 a day since 2026-08-25, in the file's order.
    The drip is a function of the date, not a stored counter, so every device agrees. It stood
-   still from 2026-09-08 and resumes on 2026-09-19 where it left off.
+   still 2026-09-08 to 09-19, and had released the whole list by November, so in practice new
+   words now arrive only through the 40-new cap per sitting, in priority order (step 3).
 
 2. **Cards.** One French→English card per word from the start. The English→French card appears
    when the first card reaches rung 3. A card that has never been answered is due today at rung 0.
