@@ -72,6 +72,9 @@ const state = {
   poolTotal: 0,
   duo: new Set(), // dedupe keys of every word on duolingo.tsv
   tiers: {}, // dedupe key -> tier, from priority.json
+  groups: [], // [{slug, title}] in page order, from priority.json
+  groupOf: {}, // dedupe key -> group slug
+  openGroups: new Set(), // groups expanded on the Words page
   token: localStorage.getItem(LS.token) || "",
   prog: null, // { data, sha, dirty }
   sync: "idle",
@@ -1206,35 +1209,83 @@ function viewGaps() {
   </div>`;
 }
 
+/* The Words page: every word in one group (his call, 2026-11-26). Lessons first, then Asking
+   questions, then topics, Miscellaneous, and the parked phrases last. Groups come from
+   priority.json (build_priority.py); a word added since the last build sits in its lesson
+   group if lessons.txt names it, else Miscellaneous. Rows are built only for open groups:
+   there are 3,700 words. */
+function wordRow(w) {
+  const r = card("r:" + w.id);
+  const known = wordIsKnown(w.id);
+  const met = seen("r:" + w.id);
+  const side = known
+    ? "known"
+    : !met
+    ? "not yet"
+    : isParked("r:" + w.id)
+    ? "parked"
+    : whenText(r.due) + (wordIsMature(w.id) ? " · both ways" : "");
+  return `<div class="row${met ? "" : " row-unseen"}">
+    <span class="row-main"><span class="row-fr">${esc(w.fr)}</span>${
+      w.ipa ? ` <span class="row-ipa">${esc(w.ipa)}</span>` : ""
+    } <span class="row-en">${esc(w.en)}</span></span>
+    <span class="row-side">
+      ${ladderHTML(r.rung, true)}
+      <div class="meta dim" style="margin-top:5px">${esc(side)}</div>
+    </span>
+  </div>`;
+}
+
+/* One thin bar per group: how its words sit on the ladder, known first, then the ramp from
+   the top rung down, then the words not met yet. Marks wear the ramp, text does not. */
+function groupBar(ws) {
+  const n = Array(MAX_RUNG + 2).fill(0); // [known, r6..r1, unseen]
+  for (const w of ws) {
+    const id = "r:" + w.id;
+    if (isKnown(id)) n[0] += 1;
+    else if (!seen(id)) n[MAX_RUNG + 1] += 1;
+    else n[MAX_RUNG + 1 - Math.max(1, card(id).rung)] += 1;
+  }
+  const colour = (i) => (i === 0 ? "var(--ink)" : i === MAX_RUNG + 1 ? "var(--rule)" : `var(--r${MAX_RUNG + 1 - i})`);
+  return `<span class="group-bar">${n
+    .map((c, i) => (c ? `<span style="flex:${c};background:${colour(i)}"></span>` : ""))
+    .join("")}</span>`;
+}
+
 function viewWords() {
-  const rows = state.words
-    .map((w) => {
-      const r = card("r:" + w.id);
-      const mature = wordIsMature(w.id);
-      const known = wordIsKnown(w.id);
-      return `<div class="row">
-      <span class="row-main"><span class="row-fr">${esc(w.fr)}</span>${
-        w.ipa ? ` <span class="row-ipa">${esc(w.ipa)}</span>` : ""
-      } <span class="row-en">${esc(w.en)}</span></span>
-      <span class="row-side">
-        ${ladderHTML(r.rung, true)}
-        <div class="meta dim" style="margin-top:5px">${known ? "known" : esc(whenText(r.due)) + (mature ? " · both ways" : "")}</div>
-      </span>
-    </div>`;
+  const slugs = new Set(state.groups.map((g) => g.slug));
+  const buckets = new Map(state.groups.map((g) => [g.slug, []]));
+  if (!buckets.has("misc")) buckets.set("misc", []);
+  for (const w of state.words) {
+    const g = state.groupOf[dedupeKey(w.fr)];
+    buckets.get(slugs.has(g) ? g : "misc").push(w);
+  }
+  const groups = state.groups.length ? state.groups : [{ slug: "misc", title: "All words" }];
+
+  const html = groups
+    .map((g) => {
+      const ws = buckets.get(g.slug) || [];
+      if (!ws.length) return "";
+      const met = ws.filter((w) => seen("r:" + w.id));
+      const open = state.openGroups.has(g.slug);
+      const rows = open ? met.concat(ws.filter((w) => !seen("r:" + w.id))).map(wordRow).join("") : "";
+      return `<section class="group${open ? " open" : ""}">
+        <button class="group-head" data-group="${esc(g.slug)}" aria-expanded="${open}">
+          <span class="group-title">${esc(g.title)}</span>
+          <span class="meta group-count">${met.length} of ${ws.length} met</span>
+          ${groupBar(ws)}
+        </button>
+        ${open ? `<div class="group-rows">${rows}</div>` : ""}
+      </section>`;
     })
     .join("");
 
   const shown = state.words.filter((w) => seen("r:" + w.id)).length;
   return `<div class="page">
     <h1 class="page-title">Words</h1>
-    <p class="lede">${shown} words seen so far. A word gets its english to french card once it
-    reaches the 8-day rung.</p>
-    ${
-      newPaused()
-        ? `<p class="hint">Duolingo words first. New words start ${NEW_PAUSE_UNTIL}, ${INTAKE_PER_DAY} a day.</p>`
-        : `<p class="hint">${INTAKE_PER_DAY} new words a day.</p>`
-    }
-    ${rows || `<p class="empty">No words yet.</p>`}
+    <p class="lede">${shown} words met so far, in groups: your lessons first, then topics. Tap a
+    group to open it.</p>
+    ${html || `<p class="empty">No words yet.</p>`}
     <p class="hint" style="margin-top:2rem">Add a word from the terminal: <code>python3 add.py "le chien = the dog"</code></p>
   </div>`;
 }
@@ -1325,7 +1376,7 @@ function reveal() {
 // ---------- events ----------
 
 document.addEventListener("click", (e) => {
-  const t = e.target.closest("[data-go], [data-start], [data-more], [data-practice], [data-reveal], [data-grade], [data-retire], [data-say], [data-mute]");
+  const t = e.target.closest("[data-go], [data-start], [data-more], [data-practice], [data-reveal], [data-grade], [data-retire], [data-say], [data-mute], [data-group]");
   if (!t) return;
   e.preventDefault();
   if (t.dataset.say !== undefined) return speak(sayable(wordOf(currentId())));
@@ -1335,6 +1386,11 @@ document.addEventListener("click", (e) => {
     return render();
   }
   if (t.dataset.go) return go(t.dataset.go);
+  if (t.dataset.group) {
+    const g = t.dataset.group;
+    state.openGroups.has(g) ? state.openGroups.delete(g) : state.openGroups.add(g);
+    return render();
+  }
   if (t.dataset.start !== undefined) return startSession();
   if (t.dataset.more !== undefined) return addMore();
   if (t.dataset.practice !== undefined) return startPractice();
@@ -1383,7 +1439,10 @@ document.addEventListener("keydown", (e) => {
 
   try {
     const res = await fetch("priority.json?t=" + Date.now(), { cache: "no-store" });
-    state.tiers = (await res.json()).tiers || {};
+    const pr = await res.json();
+    state.tiers = pr.tiers || {};
+    state.groups = pr.groups || [];
+    state.groupOf = pr.group || {};
   } catch (e) {
     /* no priority file: every word in play, as before */
   }

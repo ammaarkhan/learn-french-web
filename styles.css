@@ -888,3 +888,46 @@ a:focus-visible {
   font-size: 0.98rem;
   margin: 0 0 1.2rem;
 }
+
+/* Words page groups: a heading per group that opens its rows. */
+.group { border-bottom: 1px solid var(--rule); }
+.group-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "title count" "bar bar";
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  width: 100%;
+  padding: 1.05rem 0 0.95rem;
+  background: none;
+  border: 0;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.group-title {
+  grid-area: title;
+  font-size: 1.22rem;
+}
+.group-title::before {
+  content: "+";
+  display: inline-block;
+  width: 1.1rem;
+  font-family: var(--mono);
+  color: var(--ink-soft);
+}
+.group.open .group-title::before { content: "–"; }
+.group-count { grid-area: count; }
+.group-bar {
+  grid-area: bar;
+  display: flex;
+  height: 5px;
+  margin-left: 1.1rem;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--rule);
+}
+.group-rows { padding: 0 0 1rem 1.1rem; }
+.group-rows .row:last-child { border-bottom: 0; }
+.row-unseen .row-main { opacity: 0.62; }

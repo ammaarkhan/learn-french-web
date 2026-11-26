@@ -2,10 +2,12 @@
 # One word per line, as it appears in the deck (le/la optional). A line that matches no card is
 # ignored, so this file never adds a card: it only moves existing cards to the front.
 # Every word added to vocab.json since 2026-11-16 counts as a lesson word automatically.
-# After each new tutor lesson: add a "# LNN" block from its handout, then run
+# After each new tutor lesson: add a "# LNN · Title" block from its handout (the title names its
+# group on the Words page), then run
 #   python3 build_priority.py
 
-# L1 Point de départ: identity, work, family, hobbies, the 6 irregular verbs
+# L1 · Introducing yourself
+# Point de départ: identity, work, family, hobbies, the 6 irregular verbs
 appeler
 s'appeler
 âge
@@ -75,7 +77,8 @@ intéressant
 pays
 ville
 
-# L2 Ma journée: daily routine, time, question words, how often
+# L2 · Your day
+# Ma journée: daily routine, time, question words, how often
 réveiller
 lever
 doucher
@@ -157,7 +160,8 @@ eau
 temps
 vite
 
-# L3 Le week-end dernier: passé composé, weekend activities, storytelling
+# L3 · Last weekend
+# Le week-end dernier: passé composé, weekend activities, storytelling
 hier
 dernier
 il y a
@@ -212,7 +216,8 @@ froid
 neiger
 neige
 
-# L4 Mes voyages: être verbs, countries, transport, airport, hotel, weather
+# L4 · Trips
+# Mes voyages: être verbs, countries, transport, airport, hotel, weather
 voyage
 entrer
 monter
@@ -272,7 +277,8 @@ Angleterre
 Mexique
 États-Unis
 
-# L5 (next) Mes projets: futur proche, work, studies, immigration, goals
+# L5 · Your plans (next lesson)
+# Mes projets: futur proche, work, studies, immigration, goals
 projet
 avenir
 futur

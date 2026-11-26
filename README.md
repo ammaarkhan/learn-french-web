@@ -61,7 +61,15 @@ ladder, grades, gaps and retiring are specified in `../ladder.md` and not repeat
    returns files up to 1 MB; it was 145 KB at 750 cards. When it nears the limit, drop the
    indent in all three writers (`app.js`, `mark_known.py`, `pull_forward.py`) together.
 
-6. **The home page.** *Sources*: a Duolingo word counts as checked once answered; the 439
+6. **The Words page** (2026-11-26). Every word in one group, closed until tapped: one group
+   per tutor lesson (the `# LNN · Title` blocks of `lessons.txt`), Asking questions, 17 topics
+   (People and family, Food and drink…), Miscellaneous, and last the parked phrases and small
+   words. Each heading shows how many of its words he has met and a thin bar of where they sit
+   on the ladder (known, then the ramp, then not yet met). Inside, met words first, then the
+   rest dimmed. Groups come from `priority.json`; `build_priority.py` says which group wins
+   when a word fits several. Topics live in `themes.json`, sorted once on 2026-11-26.
+
+7. **The home page.** *Sources*: a Duolingo word counts as checked once answered; the 439
    seeded from the export (`src: "duolingo"`) arrived as met once, so those need a second
    answer. Own and list words count as met once answered at all. *Rung chart*:
    every answered card by its rung, rung 0 with 1d, retired words last. *Activity*: reps per
@@ -90,7 +98,9 @@ gloss, so check the first sense and the sentence agree.
 
 **After a tutor lesson.** Add a `# LNN` block of its content words to `lessons.txt`, add
 any card he wants that does not exist yet (`add.py`), run `python3 build_priority.py`, deploy.
-A word wrongly parked or kept: the `KEEP`, `PARK` or `NOT_LESSON` sets in `build_priority.py`.
+A word added that is not a lesson word: give it a topic in `themes.json`
+(slugs in `THEMES` in `build_priority.py`) before rebuilding, or it lands in Miscellaneous.
+A word in the wrong group: move it in `themes.json` or `lessons.txt`. A word wrongly parked or kept: the `KEEP`, `PARK` or `NOT_LESSON` sets in `build_priority.py`.
 
 **Unpark everything.** Delete `priority.json` and deploy: every word comes back into play.
 
@@ -118,8 +128,9 @@ string from the change until it appears. Pages lags by a minute or so.
 | `vocab.json` | Hand-collected words, including the 439 seeded from Duolingo (`src: "duolingo"`) |
 | `frequency-3000.json` | The list: 2,997 lemmas with gloss, IPA and a sentence, in teaching order |
 | `add.py` | Adds a word, fills POS and IPA from `ipa.json.gz`, pushes |
-| `lessons.txt` | Words from each tutor lesson, by lesson. Moves existing cards to tier 0; adds none |
-| `build_priority.py` | Writes `priority.json` from `lessons.txt` and part of speech. Overrides at its top |
+| `lessons.txt` | Words from each tutor lesson, by lesson. Moves existing cards to tier 0 and into that lesson's group; adds none |
+| `themes.json` | Topic of every word outside the lessons and the parked set. A word not in it shows under Miscellaneous |
+| `build_priority.py` | Writes `priority.json` (tiers and Words-page groups) from `lessons.txt`, `themes.json` and part of speech. Overrides at its top |
 | `curriculum.py`, `build_order.py` | The 34 situations and the teaching order |
 | `build_pool.py`, `fill_sentences.py` | Build the list; attach sentences to hand words |
 

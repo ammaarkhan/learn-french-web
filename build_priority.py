@@ -8,13 +8,44 @@ lower tiers first and keeps tier 3 off the queue entirely.
   3  later    phrases, pronouns, prepositions, conjunctions, interjections, filler adverbs
 
 Ammaar's call (2026-11-26): lesson words first, then verbs and nouns; "in fact"-type phrases
-and small words wait. Run after editing lessons.txt or adding words:  python3 build_priority.py
+and small words wait.
+
+It also puts every word in one group for the Words page, first match wins: Asking questions
+(QUESTIONS below), then its tutor lesson (lessons.txt blocks, LESSON_IDS for hand-added
+words), then "Phrases and small words" if parked, then its topic from themes.json, else
+Miscellaneous.
+
+Run after editing lessons.txt or themes.json, or adding words:  python3 build_priority.py
 """
 import json
 import re
 from pathlib import Path
 
 HERE = Path(__file__).parent
+
+# Hand-added words carded straight from a lesson's homework, by id range (inclusive).
+LESSON_IDS = {"L1": ("w668", "w691"), "L2": ("w698", "w724"), "L3": ("w725", "w754")}
+
+QUESTIONS = {
+    "où", "quand", "comment", "combien", "combien de", "pourquoi", "pourquoi pas", "qui", "quel",
+    "quelle", "quoi", "qu'est-ce que", "qu'est-ce qui", "est-ce que", "à quelle heure",
+    "avec qui", "d'où", "quelle heure est-il ?", "combien ça coûte", "comment ça va",
+    "comment vas-tu", "comment allez-vous", "comment tu t'appelles", "tu viens d'où",
+    "quoi de neuf", "lequel",
+}
+
+# Topic groups for themes.json, in page order. Lessons come before them, Questions after the
+# lessons, Miscellaneous and the parked words last.
+THEMES = [
+    ("people", "People and family"), ("home", "Home"), ("food", "Food and drink"),
+    ("work", "Work and study"), ("town", "Town and getting around"),
+    ("shopping", "Shopping and money"), ("time", "Time and numbers"),
+    ("body", "Body and health"), ("nature", "Weather and nature"),
+    ("feelings", "Feelings and opinions"), ("clothes", "Clothes"),
+    ("leisure", "Free time and culture"), ("travel", "Travel and the world"),
+    ("talk", "Talking and media"), ("society", "News and society"),
+    ("actions", "Everyday actions"), ("describing", "Describing things"),
+]
 LESSONS_FROM = "2026-11-16"  # the first tutor lesson: everything added since is lesson material
 
 
@@ -81,24 +112,53 @@ def tier_for(w, lesson_keys):
 
 def main():
     lesson_keys = set()
+    lesson_of = {}                      # key or loose key -> lesson slug, first block wins
+    lessons = []                        # (slug, title) in file order
+    current = None
     for line in (HERE / "lessons.txt").read_text().splitlines():
         line = line.strip()
-        if line and not line.startswith("#"):
-            lesson_keys.add(key(line))
-            lesson_keys.add(loose(line))
+        m = re.match(r"^# (L\d+) · (.+)$", line)
+        if m:
+            current = m.group(1)
+            lessons.append((current, "Lesson %s · %s" % (current[1:], m.group(2))))
+        elif line and not line.startswith("#"):
+            for k in (key(line), loose(line)):
+                lesson_keys.add(k)
+                if current:
+                    lesson_of.setdefault(k, current)
+    themes = json.loads((HERE / "themes.json").read_text()) if (HERE / "themes.json").exists() else {}
 
     vocab = json.loads((HERE / "vocab.json").read_text())["words"]
     pool = json.loads((HERE / "frequency-3000.json").read_text())["words"]
 
-    tiers = {}
+    tiers, group = {}, {}
     for w in vocab + pool:
         k = key(w["fr"])
-        if k not in tiers:              # a hand word wins over the list word it shadows
-            tiers[k] = tier_for(w, lesson_keys)
+        if k in tiers:                  # a hand word wins over the list word it shadows
+            continue
+        tiers[k] = tier_for(w, lesson_keys)
+        wid = w.get("id", "")
+        by_id = next((l for l, (a, b) in LESSON_IDS.items() if a <= wid <= b and len(wid) == len(a)), None)
+        if k in QUESTIONS or w["fr"].lower() in QUESTIONS:
+            group[k] = "questions"
+        elif k not in NOT_LESSON and (by_id or lesson_of.get(k) or lesson_of.get(loose(w["fr"]))):
+            group[k] = by_id or lesson_of.get(k) or lesson_of.get(loose(w["fr"]))
+        elif tiers[k] == 3:
+            group[k] = "later"
+        else:
+            group[k] = themes.get(k, "misc")
 
-    (HERE / "priority.json").write_text(json.dumps({"tiers": tiers}, ensure_ascii=False, sort_keys=True))
+    groups = ([{"slug": s, "title": t} for s, t in lessons]
+              + [{"slug": "questions", "title": "Asking questions"}]
+              + [{"slug": s, "title": t} for s, t in THEMES]
+              + [{"slug": "misc", "title": "Miscellaneous"},
+                 {"slug": "later", "title": "Phrases and small words, parked for later"}])
+    out = {"tiers": tiers, "groups": groups, "group": group}
+    (HERE / "priority.json").write_text(json.dumps(out, ensure_ascii=False, sort_keys=True))
     counts = [sum(1 for t in tiers.values() if t == n) for n in range(4)]
     print("lesson %d · verbs and nouns %d · more %d · later %d" % tuple(counts))
+    sizes = {g["slug"]: sum(1 for v in group.values() if v == g["slug"]) for g in groups}
+    print("groups: " + ", ".join("%s %d" % (s, n) for s, n in sizes.items()))
 
 
 if __name__ == "__main__":
